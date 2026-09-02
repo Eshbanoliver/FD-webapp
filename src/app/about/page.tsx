@@ -193,17 +193,58 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Trusted Platforms Grid */}
-            <section className="section">
+            {/* Our Growth Methodology */}
+            <section className="section bg-light">
                 <div className="container">
-                    <div style={{ textAlign: "center", marginBottom: 48 }}>
-                        <span className="section-label">Tech &amp; Platforms</span>
-                        <h2 className="section-title">Platforms We Leverage</h2>
-                        <p className="section-subtitle" style={{ margin: "0 auto" }}>
-                            We build on industry-leading web frameworks, ad platforms, and analytics engines.
+                    <div style={{ textAlign: "center", marginBottom: 54 }}>
+                        <span className="section-label">Proven Process</span>
+                        <h2 className="section-title">Our Growth Methodology</h2>
+                        <p className="section-subtitle" style={{ margin: "0 auto", maxWidth: "640px" }}>
+                            A systematic 4-step execution framework engineered to transform your online presence and scale revenue.
                         </p>
                     </div>
-                    <BrandsGrid />
+
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "24px" }}>
+                        {[
+                            {
+                                step: "01",
+                                title: "Audit & Growth Roadmap",
+                                desc: "In-depth technical SEO audit, target keyword research, and competitor benchmark analysis for Udaipur and regional markets.",
+                                icon: <FaBullseye />
+                            },
+                            {
+                                step: "02",
+                                title: "Funnel & Brand Design",
+                                desc: "Designing sub-second Next.js web experiences, high-converting ad copy, visual assets, and high-impact lead forms.",
+                                icon: <FaLaptopCode />
+                            },
+                            {
+                                step: "03",
+                                title: "Traffic & Ad Execution",
+                                desc: "Deploying high-ROAS Meta and Google ads paired with organic local SEO optimization and instant WhatsApp AI lead capture.",
+                                icon: <FaRocket />
+                            },
+                            {
+                                step: "04",
+                                title: "Analytics & Optimization",
+                                desc: "Continuous conversion rate tuning (CRO), A/B testing, audience retargeting, and transparent monthly performance reporting.",
+                                icon: <FaChartLine />
+                            }
+                        ].map((item, idx) => (
+                            <div key={idx} className="glass-card" style={{ padding: "36px 28px", background: "var(--white)", border: "1px solid var(--border)", borderRadius: "24px", position: "relative", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                                <div>
+                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
+                                        <div style={{ width: "50px", height: "50px", borderRadius: "14px", background: "rgba(34, 121, 190, 0.1)", color: "var(--teal)", fontSize: "1.4rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                            {item.icon}
+                                        </div>
+                                        <span style={{ fontSize: "1.8rem", fontWeight: 900, color: "rgba(29, 49, 82, 0.15)", fontFamily: "Inter, sans-serif" }}>{item.step}</span>
+                                    </div>
+                                    <h3 style={{ color: "var(--navy)", fontSize: "1.2rem", fontWeight: 800, marginBottom: "12px" }}>{item.title}</h3>
+                                    <p style={{ color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: "1.7", margin: 0 }}>{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
