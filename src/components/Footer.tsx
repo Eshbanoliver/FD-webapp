@@ -15,11 +15,11 @@ export default function Footer() {
                     <div className="footer-grid-v3">
                         {/* Column 1: Brand & Contact */}
                         <div className="footer-brand-v3">
-                            <div className="footer-logo-v3" style={{ marginBottom: '16px' }}>
+                            <div className="footer-logo-v3" style={{ marginBottom: '20px' }}>
                                 <img
                                     src="/logo.png"
                                     alt="FutureX Digital Marketing Logo"
-                                    style={{ height: '72px', width: 'auto', objectFit: 'contain', background: '#fff', padding: '8px 18px', borderRadius: '12px', display: 'inline-block' }}
+                                    style={{ height: '95px', width: 'auto', objectFit: 'contain', background: '#fff', padding: '10px 24px', borderRadius: '14px', display: 'inline-block' }}
                                 />
                             </div>
                             <p className="footer-desc-v3">

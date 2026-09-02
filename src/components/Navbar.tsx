@@ -87,13 +87,12 @@ export default function Navbar() {
 
             {/* Main Header */}
             <div className="header-wrapper">
-                {/* Logo Section */}
-                <div className="header-logo-section">
+                <div className="header-logo-section" style={{ overflow: 'visible', zIndex: 10 }}>
                     <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
                         <img
                             src="/logo.png"
                             alt="FutureX Digital Marketing Logo"
-                            style={{ height: '68px', width: 'auto', objectFit: 'contain', maxWidth: '280px', display: 'block' }}
+                            style={{ height: '90px', width: 'auto', objectFit: 'contain', maxWidth: '350px', display: 'block', margin: '-10px 0' }}
                         />
                     </Link>
                 </div>
