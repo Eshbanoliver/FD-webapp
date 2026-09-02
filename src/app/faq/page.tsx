@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FaHome, FaChevronRight, FaChevronDown, FaPhoneAlt, FaArrowRight } from "react-icons/fa";
+import PremiumCTA from "@/components/PremiumCTA";
+import { FaHome, FaChevronRight, FaChevronDown, FaArrowRight } from "react-icons/fa";
 
 const faqCategories = [
     {
@@ -41,21 +42,16 @@ const faqCategories = [
 function FAQAccordionItem({ q, a }: { q: string; a: string }) {
     const [open, setOpen] = useState(false);
     return (
-        <div style={{ background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.2)", borderRadius: "16px", overflow: "hidden", marginBottom: "16px" }}>
-            <button
-                onClick={() => setOpen(!open)}
-                style={{ width: "100%", padding: "22px 24px", background: "none", border: "none", color: "#F8FAFC", fontSize: "1.1rem", fontWeight: 700, textAlign: "left", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
-            >
-                <span>{q}</span>
-                <span style={{ color: "#06B6D4", transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "0.3s" }}>
-                    <FaChevronDown />
+        <div className={`faq-item-v3 ${open ? "open" : ""}`} style={{ marginBottom: "16px" }}>
+            <button className="faq-question-v3" onClick={() => setOpen(!open)}>
+                {q}
+                <span className="faq-icon-v3">
+                    {open ? <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>-</span> : <FaChevronDown />}
                 </span>
             </button>
-            {open && (
-                <div style={{ padding: "0 24px 22px", color: "#94A3B8", fontSize: "0.98rem", lineHeight: "1.7", borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: "16px" }}>
-                    {a}
-                </div>
-            )}
+            <div className="faq-answer-v3">
+                <div className="faq-answer-content-v3">{a}</div>
+            </div>
         </div>
     );
 }
@@ -64,30 +60,28 @@ export default function FAQPage() {
     return (
         <>
             {/* Page Header */}
-            <section className="page-header" style={{ padding: "120px 0 60px", background: "#0B0F19", borderBottom: "1px solid rgba(6, 182, 212, 0.2)" }}>
+            <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb" style={{ display: "flex", gap: "10px", alignItems: "center", color: "#94A3B8", fontSize: "0.9rem", marginBottom: "16px" }}>
-                        <Link href="/" style={{ color: "#06B6D4", textDecoration: "none" }}>
+                    <div className="breadcrumb">
+                        <Link href="/">
                             <FaHome />
                         </Link>
-                        <FaChevronRight style={{ fontSize: "0.75rem" }} />
+                        <FaChevronRight />
                         <span>Frequently Asked Questions</span>
                     </div>
-                    <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#F8FAFC", marginBottom: "16px" }}>
-                        Frequently Asked Questions
-                    </h1>
-                    <p style={{ fontSize: "1.15rem", color: "#94A3B8", maxWidth: "750px", lineHeight: "1.8" }}>
+                    <h1>Frequently Asked Questions</h1>
+                    <p>
                         Everything you need to know about partnering with FutureX Digital Marketing in Udaipur.
                     </p>
                 </div>
             </section>
 
             {/* FAQ Accordions */}
-            <section className="section" style={{ padding: "100px 0", background: "#0B0F19" }}>
+            <section className="section bg-light">
                 <div className="container" style={{ maxWidth: "900px" }}>
                     {faqCategories.map((cat, idx) => (
                         <div key={idx} style={{ marginBottom: "50px" }}>
-                            <h2 style={{ color: "#06B6D4", fontSize: "1.4rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>
+                            <h2 style={{ color: "var(--navy)", fontSize: "1.4rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>
                                 {cat.category}
                             </h2>
                             {cat.items.map((item, itemIdx) => (
@@ -95,16 +89,10 @@ export default function FAQPage() {
                             ))}
                         </div>
                     ))}
-
-                    <div style={{ textAlign: "center", background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.3)", borderRadius: "24px", padding: "40px", marginTop: "60px" }}>
-                        <h3 style={{ color: "#F8FAFC", fontSize: "1.6rem", fontWeight: 800, marginBottom: "12px" }}>Have More Questions?</h3>
-                        <p style={{ color: "#94A3B8", fontSize: "1.05rem", marginBottom: "24px" }}>Our digital strategists in Udaipur are ready to assist you.</p>
-                        <Link href="/contact" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", borderRadius: "100px", padding: "16px 36px" }}>
-                            Contact Agency Direct <FaArrowRight />
-                        </Link>
-                    </div>
                 </div>
             </section>
+
+            <PremiumCTA />
         </>
     );
 }

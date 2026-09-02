@@ -20,23 +20,23 @@ const navLinks = [
 function MegaMenu() {
     return (
         <div className="mega-menu-wrapper">
-            <div className="mega-bubble" style={{ background: "rgba(15, 23, 42, 0.95)", border: "1px solid rgba(6, 182, 212, 0.3)" }}>
+            <div className="mega-bubble">
                 <div className="mega-grid">
                     {serviceCategories.map((cat) => (
                         <Link key={cat.slug} href={`/services/${cat.slug}`} className="mega-bubble-item">
                             <div className="bubble-icon">
-                                <img src={cat.image} alt={cat.title} style={{ borderRadius: "8px", objectFit: "cover" }} />
+                                <img src={cat.image} alt={cat.title} />
                             </div>
                             <div className="bubble-text">
-                                <h6 style={{ color: "#F8FAFC" }}>{cat.title}</h6>
-                                <span style={{ color: "#94A3B8" }}>{cat.shortDesc.split('.')[0]}</span>
+                                <h6>{cat.title}</h6>
+                                <span>{cat.shortDesc.split('.')[0]}</span>
                             </div>
                         </Link>
                     ))}
                 </div>
-                <div className="mega-footer" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-                    <Link href="/services" className="view-all-bubble" style={{ color: "#06B6D4" }}>
-                        Explore All Services &rarr;
+                <div className="mega-footer">
+                    <Link href="/services" className="view-all-bubble">
+                        View All Services <span>&rarr;</span>
                     </Link>
                 </div>
             </div>
@@ -62,22 +62,22 @@ export default function Navbar() {
     }, [mobileOpen]);
 
     return (
-        <header className="header-main" style={{ background: "rgba(11, 15, 25, 0.9)", backdropFilter: "blur(20px)", borderBottom: "1px solid rgba(6, 182, 212, 0.2)" }}>
+        <header className="header-main">
             {/* Top Bar */}
-            <div className="top-bar" style={{ background: "#070A10", borderBottom: "1px solid rgba(255, 255, 255, 0.05)" }}>
+            <div className="top-bar">
                 <div className="container">
                     <div className="top-bar-info">
                         <div className="top-bar-item">
-                            <FiMail style={{ color: "#06B6D4" }} />
-                            <a href="mailto:futurexdigitalmarketing@gmail.com" style={{ color: "#94A3B8" }}>futurexdigitalmarketing@gmail.com</a>
+                            <FiMail />
+                            <a href="mailto:futurexdigitalmarketing@gmail.com">futurexdigitalmarketing@gmail.com</a>
                         </div>
                         <div className="top-bar-item">
-                            <FiClock style={{ color: "#06B6D4" }} />
-                            <span style={{ color: "#94A3B8" }}>Mon - Sat: 10:00 AM - 6:00 PM</span>
+                            <FiClock />
+                            <span>Mon - Sat: 10:00 AM - 6:00 PM</span>
                         </div>
                     </div>
                     <div className="top-bar-social">
-                        <span style={{ color: "#94A3B8" }}>Follow Us:</span>
+                        <span>Follow Us On :</span>
                         <a href="https://www.instagram.com/futurexdigitalmarketing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
                         <a href="https://www.facebook.com/profile.php?id=61582411168285" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
                         <a href="https://www.linkedin.com/company/futurex-digital-marketing" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
@@ -93,10 +93,10 @@ export default function Navbar() {
                         <img
                             src="/logo.png"
                             alt="FutureX Digital Marketing Logo"
-                            style={{ width: '48px', height: '48px', objectFit: 'contain' }}
+                            style={{ width: '50px', height: '50px', objectFit: 'contain' }}
                         />
-                        <span style={{ fontSize: '1.4rem', fontWeight: 800, color: '#F8FAFC', letterSpacing: '-0.5px' }}>
-                            Future<span style={{ color: "#06B6D4" }}>X</span> <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#94A3B8', display: 'block', letterSpacing: '2px', textTransform: 'uppercase', marginTop: '-4px' }}>Digital Marketing</span>
+                        <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--navy)' }}>
+                            Future<span style={{ color: "var(--teal)" }}>X</span>
                         </span>
                     </Link>
                 </div>
@@ -109,7 +109,6 @@ export default function Navbar() {
                                 <Link
                                     href={link.href}
                                     className={pathname === link.href ? "active" : ""}
-                                    style={{ color: pathname === link.href ? "#06B6D4" : "#F8FAFC" }}
                                 >
                                     {link.label}
                                     {link.hasMega && <FaChevronDown className="nav-arrow" />}
@@ -120,15 +119,15 @@ export default function Navbar() {
                     </ul>
                 </div>
 
-                {/* Right Call Action */}
+                {/* Right Call/Search Section */}
                 <div className="header-call-section">
-                    <a href="tel:+917733977227" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-                        <div className="call-icon-circle" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", color: "#FFF" }}>
+                    <a href="tel:+917733977227">
+                        <div className="call-icon-circle">
                             <FiPhone />
                         </div>
                         <div className="call-text">
-                            <span style={{ fontSize: '0.75rem', color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '1px' }}>Free Consultation</span>
-                            <span style={{ fontSize: '0.95rem', fontWeight: 800, color: '#F8FAFC' }}>+91 77339 77227</span>
+                            <span>Free Consultation</span>
+                            <span>+91 77339 77227</span>
                         </div>
                     </a>
                 </div>
@@ -139,9 +138,9 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(!mobileOpen)}
                     aria-label="Toggle Navigation"
                 >
-                    <span style={{ background: "#F8FAFC" }} />
-                    <span style={{ background: "#F8FAFC" }} />
-                    <span style={{ background: "#F8FAFC" }} />
+                    <span />
+                    <span />
+                    <span />
                 </button>
             </div>
 
@@ -153,7 +152,7 @@ export default function Navbar() {
             />
 
             {/* Mobile Navigation */}
-            <div className={`mobile-nav ${mobileOpen ? "open" : ""}`} style={{ zIndex: 1050, background: "#0F172A", borderLeft: "1px solid rgba(6,182,212,0.3)" }}>
+            <div className={`mobile-nav ${mobileOpen ? "open" : ""}`} style={{ zIndex: 1050 }}>
                 {navLinks.map((link) => (
                     <div key={link.href} className="mobile-nav-item-wrapper">
                         {link.hasMega ? (
@@ -162,19 +161,19 @@ export default function Navbar() {
                                     href={link.href}
                                     className={`mobile-nav-link ${pathname === link.href || pathname.startsWith(link.href + '/') ? "active" : ""}`}
                                     onClick={(e) => { e.preventDefault(); setMobileMegaOpen(!mobileMegaOpen); }}
-                                    style={{ display: "flex", justifyContent: "space-between", cursor: "pointer", color: "#F8FAFC" }}
+                                    style={{ display: "flex", justifyContent: "space-between", cursor: "pointer" }}
                                 >
                                     <span>{link.label}</span>
                                     <FaChevronDown style={{ transform: mobileMegaOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "0.3s" }} />
                                 </a>
                                 <div className={`mobile-mega-menu ${mobileMegaOpen ? "open" : ""}`}>
                                     {serviceCategories.map(cat => (
-                                        <Link key={cat.slug} href={`/services/${cat.slug}`} className="mobile-mega-item" style={{ color: "#94A3B8" }}>
+                                        <Link key={cat.slug} href={`/services/${cat.slug}`} className="mobile-mega-item">
                                             {cat.title}
                                         </Link>
                                     ))}
-                                    <Link href="/services" className="mobile-mega-item view-all" style={{ color: "#06B6D4" }}>
-                                        Explore All Services &rarr;
+                                    <Link href="/services" className="mobile-mega-item view-all">
+                                        View All Services &rarr;
                                     </Link>
                                 </div>
                             </>
@@ -182,7 +181,6 @@ export default function Navbar() {
                             <Link
                                 href={link.href}
                                 className={`mobile-nav-link ${pathname === link.href ? "active" : ""}`}
-                                style={{ color: pathname === link.href ? "#06B6D4" : "#F8FAFC" }}
                             >
                                 {link.label}
                             </Link>

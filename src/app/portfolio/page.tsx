@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FaHome, FaChevronRight, FaArrowRight, FaChartLine, FaCheckCircle, FaLaptopCode, FaBullhorn } from "react-icons/fa";
+import PremiumCTA from "@/components/PremiumCTA";
+import { FaHome, FaChevronRight, FaArrowRight, FaCheckCircle } from "react-icons/fa";
 
 export const metadata: Metadata = {
     title: "Portfolio & Case Studies | FutureX Digital Marketing Udaipur",
@@ -47,54 +48,52 @@ export default function PortfolioPage() {
     return (
         <>
             {/* Page Header */}
-            <section className="page-header" style={{ padding: "120px 0 60px", background: "#0B0F19", borderBottom: "1px solid rgba(6, 182, 212, 0.2)" }}>
+            <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb" style={{ display: "flex", gap: "10px", alignItems: "center", color: "#94A3B8", fontSize: "0.9rem", marginBottom: "16px" }}>
-                        <Link href="/" style={{ color: "#06B6D4", textDecoration: "none" }}>
+                    <div className="breadcrumb">
+                        <Link href="/">
                             <FaHome />
                         </Link>
-                        <FaChevronRight style={{ fontSize: "0.75rem" }} />
+                        <FaChevronRight />
                         <span>Portfolio &amp; Case Studies</span>
                     </div>
-                    <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#F8FAFC", marginBottom: "16px" }}>
-                        Our Work &amp; Client Success Stories
-                    </h1>
-                    <p style={{ fontSize: "1.15rem", color: "#94A3B8", maxWidth: "750px", lineHeight: "1.8" }}>
-                        Concrete, empirical proof of how FutureX Digital Marketing helps businesses in Udaipur and globally scale traffic, leads, and revenue.
+                    <h1>Our Work &amp; Client Success Stories</h1>
+                    <p>
+                        Concrete proof of how FutureX Digital Marketing helps businesses in Udaipur and globally scale traffic, leads, and revenue.
                     </p>
                 </div>
             </section>
 
             {/* Case Studies Grid */}
-            <section className="section" style={{ padding: "100px 0", background: "#0B0F19" }}>
+            <section className="section bg-light">
                 <div className="container">
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "40px" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "30px" }}>
                         {caseStudies.map((item, idx) => (
-                            <div key={idx} style={{ background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.25)", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column" }}>
+                            <div key={idx} className="glass-card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                                 <div style={{ height: "240px", overflow: "hidden", position: "relative" }}>
                                     <img src={item.image} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                                    <div style={{ position: "absolute", top: "16px", right: "16px", background: "rgba(6, 182, 212, 0.9)", color: "#0B0F19", fontWeight: 800, padding: "6px 16px", borderRadius: "100px", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "1px" }}>
+                                    <div style={{ position: "absolute", top: "16px", right: "16px", background: "var(--navy)", color: "var(--white)", fontWeight: 800, padding: "6px 16px", borderRadius: "100px", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "1px" }}>
                                         {item.metrics}
                                     </div>
                                 </div>
                                 <div style={{ padding: "30px", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                                     <div>
-                                        <span style={{ color: "#6366F1", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px" }}>{item.category}</span>
-                                        <h3 style={{ color: "#F8FAFC", fontSize: "1.4rem", fontWeight: 800, margin: "10px 0 14px" }}>{item.title}</h3>
-                                        <p style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: "1.7", marginBottom: "20px" }}>{item.desc}</p>
+                                        <span style={{ color: "var(--teal)", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px" }}>{item.category}</span>
+                                        <h3 style={{ color: "var(--navy)", fontSize: "1.4rem", fontWeight: 800, margin: "10px 0 14px" }}>{item.title}</h3>
+                                        <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.7", marginBottom: "20px" }}>{item.desc}</p>
 
                                         <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px 0" }}>
                                             {item.deliverables.map((del, dIdx) => (
-                                                <li key={dIdx} style={{ display: "flex", alignItems: "center", gap: "10px", color: "#F8FAFC", fontSize: "0.85rem", marginBottom: "8px" }}>
-                                                    <FaCheckCircle style={{ color: "#06B6D4" }} />
+                                                <li key={dIdx} style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--text-primary)", fontSize: "0.85rem", marginBottom: "8px" }}>
+                                                    <FaCheckCircle style={{ color: "var(--teal)" }} />
                                                     <span>{del}</span>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
 
-                                    <Link href="/contact" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", borderRadius: "100px", textDecoration: "none", width: "100%", justifyContent: "center" }}>
-                                        Schedule Similar Growth Audit <FaArrowRight />
+                                    <Link href="/contact" className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
+                                        Schedule Growth Audit <FaArrowRight />
                                     </Link>
                                 </div>
                             </div>
@@ -102,6 +101,8 @@ export default function PortfolioPage() {
                     </div>
                 </div>
             </section>
+
+            <PremiumCTA />
         </>
     );
 }

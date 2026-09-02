@@ -2,72 +2,56 @@
 
 import Link from "next/link";
 import { serviceCategories } from "../data/services";
+import PremiumCTA from "@/components/PremiumCTA";
 import {
     FaArrowRight,
     FaHome,
-    FaPhoneAlt,
     FaChevronRight,
-    FaCheckCircle
 } from "react-icons/fa";
 
 export default function ServicesPage() {
     return (
         <>
             {/* ====== PAGE HEADER ====== */}
-            <section className="page-header" style={{ padding: "120px 0 60px", background: "#0B0F19", borderBottom: "1px solid rgba(6, 182, 212, 0.2)" }}>
+            <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb" style={{ display: "flex", gap: "10px", alignItems: "center", color: "#94A3B8", fontSize: "0.9rem", marginBottom: "16px" }}>
-                        <Link href="/" style={{ color: "#06B6D4", textDecoration: "none" }}>
+                    <div className="breadcrumb">
+                        <Link href="/">
                             <FaHome />
                         </Link>
-                        <FaChevronRight style={{ fontSize: "0.75rem" }} />
+                        <FaChevronRight />
                         <span>Services</span>
                     </div>
-                    <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#F8FAFC", marginBottom: "16px" }}>
-                        Our Digital Marketing Solutions
-                    </h1>
-                    <p style={{ fontSize: "1.15rem", color: "#94A3B8", maxWidth: "720px", lineHeight: "1.8" }}>
-                        From dominant Local SEO in Udaipur to custom Next.js web applications, high-ROAS paid ad campaigns, and AI lead automation.
+                    <h1>Our Digital Marketing Solutions</h1>
+                    <p>
+                        Explore our comprehensive range of SEO, web development, PPC advertising,
+                        social media growth, and AI automation solutions.
                     </p>
                 </div>
             </section>
 
-            {/* ====== SERVICES CATALOG ====== */}
-            <section className="section" style={{ padding: "100px 0", background: "#0B0F19" }}>
+            {/* ====== ALL CATEGORIES GRID ====== */}
+            <section className="section bg-light">
                 <div className="container">
                     <div style={{ textAlign: "center", marginBottom: 60 }}>
-                        <span className="section-label" style={{ color: "#06B6D4" }}>AGENCY CAPABILITIES</span>
-                        <h2 className="section-title" style={{ color: "#F8FAFC" }}>Full-Spectrum Digital Services</h2>
-                        <p className="section-subtitle" style={{ margin: "0 auto", color: "#94A3B8" }}>
-                            Select any service to explore detailed deliverables, technical workflows, and client FAQs.
+                        <span className="section-label">Service Catalog</span>
+                        <h2 className="section-title">All Categories</h2>
+                        <p className="section-subtitle" style={{ margin: "0 auto" }}>
+                            Select any service to view specific modules, deliverables, and performance guarantees.
                         </p>
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "30px" }}>
+                    <div className="services-master-grid-v2">
                         {serviceCategories.map((cat, i) => (
-                            <div key={i} style={{ background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.25)", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-                                <div style={{ height: "220px", overflow: "hidden", position: "relative" }}>
-                                    <img src={cat.image} alt={cat.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                            <div key={i} className="service-v2-card">
+                                <div className="s-v2-image">
+                                    <img src={cat.image} alt={cat.title} />
                                 </div>
-                                <div style={{ padding: "30px", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                                    <div>
-                                        <h3 style={{ color: "#F8FAFC", fontSize: "1.35rem", fontWeight: 700, marginBottom: "12px" }}>{cat.title}</h3>
-                                        <p style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "20px" }}>{cat.shortDesc}</p>
-
-                                        {cat.keyPoints && (
-                                            <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px 0" }}>
-                                                {cat.keyPoints.slice(0, 3).map((point, idx) => (
-                                                    <li key={idx} style={{ display: "flex", alignItems: "center", gap: "10px", color: "#F8FAFC", fontSize: "0.88rem", marginBottom: "8px" }}>
-                                                        <FaCheckCircle style={{ color: "#06B6D4", flexShrink: 0 }} />
-                                                        <span>{point}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </div>
-
-                                    <Link href={`/services/${cat.slug}`} className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", borderRadius: "100px", textDecoration: "none", width: "100%", justifyContent: "center" }}>
-                                        Explore Service Details <FaArrowRight />
+                                <div className="s-v2-content">
+                                    <h3>{cat.title}</h3>
+                                    <p>{cat.shortDesc}</p>
+                                    <Link href={`/services/${cat.slug}`} className="s-v2-btn">
+                                        Discover More <FaArrowRight />
                                     </Link>
                                 </div>
                             </div>
@@ -75,6 +59,9 @@ export default function ServicesPage() {
                     </div>
                 </div>
             </section>
+
+            {/* ====== CTA SECTION ====== */}
+            <PremiumCTA />
         </>
     );
 }
