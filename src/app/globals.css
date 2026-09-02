@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ========================
-   DESIGN TOKENS
+   DESIGN TOKENS — FUTUREX DIGITAL MARKETING
    ======================== */
 :root {
   /* Primary Palette */
@@ -27,13 +27,13 @@
   --text-light: #FFFFFF;
   --accent: #2279be;
   --accent-hover: #195d94;
-  --border: rgba(34, 121, 190, 0.15);
-  --border-light: rgba(200, 217, 230, 0.4);
+  --border: rgba(34, 121, 190, 0.18);
+  --border-light: rgba(34, 121, 190, 0.3);
 
   /* Glass */
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-bg-strong: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(200, 217, 230, 0.45);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-bg-strong: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(34, 121, 190, 0.25);
   --glass-shadow: 0 8px 32px rgba(29, 49, 82, 0.08);
   --glass-shadow-hover: 0 16px 48px rgba(29, 49, 82, 0.14);
 
