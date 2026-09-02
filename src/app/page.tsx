@@ -487,8 +487,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====== WHY CHOOSE US (Original Template Style) ====== */}
-      <section className="section section-navy section-boxed-bg">
+      {/* ====== WHY CHOOSE US ====== */}
+      <section className="section section-navy section-boxed-bg" style={{
+        backgroundImage: "linear-gradient(rgba(29, 49, 82, 0.90), rgba(18, 32, 54, 0.94)), url('/hero-2.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}>
         <div className="container">
           <AnimateOnScroll>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
