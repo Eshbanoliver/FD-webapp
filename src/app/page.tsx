@@ -119,12 +119,12 @@ const coreValues = [
 ];
 
 const whyChoose = [
-  { title: "Dominant Local SEO in Udaipur", desc: "Rank #1 on Google for high-intent search keywords in Udaipur and Rajasthan." },
-  { title: "High-ROAS Ad Campaigns", desc: "Data-backed Google & Meta ads optimized for low cost-per-lead." },
-  { title: "Sub-Second Next.js Web Performance", desc: "Lightning fast, mobile-first custom web applications engineered for high conversion." },
-  { title: "AI-Powered Automated Sales Funnels", desc: "Instant 24/7 WhatsApp and Chatbot lead capture that never misses an inquiry." },
-  { title: "Creative Branding & Visual Reels", desc: "High-aesthetic social media graphics, video reels, and brand positioning." },
-  { title: "Dedicated Agency Support", desc: "Direct access to digital strategy experts and fast turnaround times." },
+  { title: "Dominant Local SEO in Udaipur", desc: "Rank #1 on Google for high-intent search keywords in Udaipur and Rajasthan.", image: "/service-seo.png" },
+  { title: "High-ROAS Ad Campaigns", desc: "Data-backed Google & Meta ads optimized for low cost-per-lead.", image: "/service-ppc.png" },
+  { title: "Sub-Second Next.js Web Performance", desc: "Lightning fast, mobile-first custom web applications engineered for high conversion.", image: "/service-webdev.png" },
+  { title: "AI-Powered Automated Sales Funnels", desc: "Instant 24/7 WhatsApp and Chatbot lead capture that never misses an inquiry.", image: "/service-ai.png" },
+  { title: "Creative Branding & Visual Reels", desc: "High-aesthetic social media graphics, video reels, and brand positioning.", image: "/service-branding.png" },
+  { title: "Dedicated Agency Support", desc: "Direct access to digital strategy experts and fast turnaround times.", image: "/about-agency.png" },
 ];
 
 export default function HomePage() {
@@ -500,15 +500,18 @@ export default function HomePage() {
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll>
-            <div className="why-grid">
+            <div className="why-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
               {whyChoose.map((w, i) => (
-                <div key={i} className="glass-card why-item" style={{ background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.1)" }}>
-                  <div className="why-item-check">
-                    <FaCheckCircle />
+                <div key={i} className="glass-card why-item-card" style={{ background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.12)", padding: "0", overflow: "hidden", borderRadius: "20px" }}>
+                  <div style={{ height: "190px", overflow: "hidden", position: "relative" }}>
+                    <img src={w.image} alt={w.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s ease" }} />
+                    <div style={{ position: "absolute", top: "14px", right: "14px", background: "var(--teal)", color: "#fff", width: "36px", height: "36px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", boxShadow: "0 4px 12px rgba(0,0,0,0.3)" }}>
+                      <FaCheckCircle />
+                    </div>
                   </div>
-                  <div>
-                    <h4 style={{ color: "var(--white)" }}>{w.title}</h4>
-                    <p style={{ color: "rgba(255,255,255,0.6)" }}>{w.desc}</p>
+                  <div style={{ padding: "24px" }}>
+                    <h4 style={{ color: "var(--white)", fontSize: "1.2rem", fontWeight: 700, marginBottom: "10px" }}>{w.title}</h4>
+                    <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.92rem", lineHeight: "1.6", margin: 0 }}>{w.desc}</p>
                   </div>
                 </div>
               ))}
