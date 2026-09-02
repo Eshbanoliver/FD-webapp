@@ -19,7 +19,7 @@ export default function Footer() {
                                 <img
                                     src="/logo.png"
                                     alt="FutureX Digital Marketing Logo"
-                                    style={{ height: '52px', width: 'auto', objectFit: 'contain', background: '#fff', padding: '6px 14px', borderRadius: '10px' }}
+                                    style={{ height: '72px', width: 'auto', objectFit: 'contain', background: '#fff', padding: '8px 18px', borderRadius: '12px', display: 'inline-block' }}
                                 />
                             </div>
                             <p className="footer-desc-v3">
