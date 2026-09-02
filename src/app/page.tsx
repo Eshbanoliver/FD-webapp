@@ -79,7 +79,7 @@ function FAQItemV3({ q, a }: { q: string; a: string }) {
   );
 }
 
-const heroSlides = ["/hero-1.png", "/hero-2.png", "/hero-3.png"];
+const heroSlides = ["/hero-1.png", "/about-agency.png", "/hero-3.png"];
 
 const testimonials = [
   {
@@ -489,7 +489,7 @@ export default function HomePage() {
 
       {/* ====== WHY CHOOSE US ====== */}
       <section className="section section-navy section-boxed-bg" style={{
-        backgroundImage: "linear-gradient(rgba(29, 49, 82, 0.90), rgba(18, 32, 54, 0.94)), url('/hero-2.png')",
+        backgroundImage: "linear-gradient(rgba(29, 49, 82, 0.90), rgba(18, 32, 54, 0.94)), url('/hero-3.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed"

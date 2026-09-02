@@ -80,7 +80,7 @@ export const serviceCategories: ServiceCategory[] = [
         ],
         image: "/service-webdev.png",
         galleryImages: [
-            "/hero-2.png",
+            "/hero-3.png",
             "/portfolio-1.png",
             "/about-agency.png"
         ],
