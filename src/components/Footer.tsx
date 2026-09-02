@@ -63,11 +63,13 @@ export default function Footer() {
                                 </ul>
                                 <ul className="footer-link-list-v3">
                                     <li><Link href="/services/search-engine-optimization"><FaAngleDoubleRight /> SEO Services</Link></li>
-                                    <li><Link href="/services/web-development"><FaAngleDoubleRight /> Web Development</Link></li>
-                                    <li><Link href="/services/social-media-marketing"><FaAngleDoubleRight /> Social Media</Link></li>
-                                    <li><Link href="/services/performance-marketing"><FaAngleDoubleRight /> PPC Ads</Link></li>
-                                    <li><Link href="/services/brand-strategy-design"><FaAngleDoubleRight /> Brand Strategy</Link></li>
-                                    <li><Link href="/services/ai-automation-lead-gen"><FaAngleDoubleRight /> AI Automation</Link></li>
+                                    <li><Link href="/services/website-development"><FaAngleDoubleRight /> Web Development</Link></li>
+                                    <li><Link href="/services/webapp-development"><FaAngleDoubleRight /> Webapp Dev</Link></li>
+                                    <li><Link href="/services/social-media-management"><FaAngleDoubleRight /> Social Media</Link></li>
+                                    <li><Link href="/services/meta-ads"><FaAngleDoubleRight /> Meta Ads</Link></li>
+                                    <li><Link href="/services/google-ads"><FaAngleDoubleRight /> Google Ads</Link></li>
+                                    <li><Link href="/services/video-editing"><FaAngleDoubleRight /> Video Editing</Link></li>
+                                    <li><Link href="/services/logo-design"><FaAngleDoubleRight /> Logo Design</Link></li>
                                 </ul>
                             </div>
                         </div>

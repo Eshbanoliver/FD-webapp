@@ -39,188 +39,362 @@ export const serviceCategories: ServiceCategory[] = [
         ],
         faqs: [
             { question: "Why is Local SEO important for Udaipur businesses?", answer: "Local SEO ensures your business appears in Google Maps and local search packs whenever potential customers in Udaipur search for your services, driving high-intent phone calls and walk-ins." },
-            { question: "How long does it take to see SEO results?", answer: "Most clients start seeing noticeable improvements in keyword rankings and organic traffic within 3 to 6 months of active campaign optimization." },
-            { question: "Do you guarantee #1 ranking on Google?", answer: "While no honest agency can guarantee exact rank #1 due to search algorithm dynamics, we guarantee industry best-practice strategies that consistently rank our clients on Page 1." },
-            { question: "What is included in your technical SEO audit?", answer: "Our audit evaluates site speed, crawlability, indexation, mobile responsiveness, schema markup, broken links, and site security vulnerabilities." },
-            { question: "Do you offer e-commerce SEO?", answer: "Yes! We specialize in Shopify, WooCommerce, and custom Next.js e-commerce SEO to scale online store sales." }
+            { question: "How long does it take to see SEO results?", answer: "Most clients start seeing noticeable improvements in keyword rankings and organic traffic within 3 to 6 months of active campaign optimization." }
         ],
         image: "/service-seo.png",
-        galleryImages: [
-            "/hero-1.png",
-            "/portfolio-2.png",
-            "/service-ppc.png"
-        ],
+        galleryImages: ["/hero-1.png", "/portfolio-2.png", "/service-ppc.png"],
         products: [
             { name: "Local SEO & Google Business Profile", desc: "Dominate local maps, gain 5-star customer reviews, and rank for 'near me' local searches in Udaipur." },
             { name: "Technical SEO Audits", desc: "Comprehensive technical fixes, speed optimization, and schema markup integration for Google indexing." },
             { name: "On-Page SEO Optimization", desc: "Keyword-rich meta tags, heading structures, content optimization, and internal linking strategies." },
-            { name: "High-Authority Link Building", desc: "White-hat backlink outreach, press release distribution, and editorial guest posts for maximum domain authority." },
-            { name: "E-Commerce SEO", desc: "Product page optimization, schema rich snippets, category structure tuning, and conversion funnel optimization." },
-            { name: "Content Strategy & Blogging", desc: "SEO-driven articles and blog posts designed to capture buyer intent keywords and build industry authority." }
+            { name: "High-Authority Link Building", desc: "White-hat backlink outreach, press release distribution, and editorial guest posts for maximum domain authority." }
         ],
     },
     {
-        slug: "web-development",
-        title: "Web Development & E-Commerce",
-        shortDesc: "High-performance, modern Next.js and custom websites engineered for speed and conversion.",
-        longDesc: "Your website is your 24/7 digital storefront. FutureX Digital Marketing builds state-of-the-art web applications, corporate websites, and e-commerce platforms using cutting-edge frameworks like Next.js, React, and Tailwind CSS. We prioritize sub-second page load speeds, mobile responsiveness, stunning visual aesthetics, and conversion-focused UX to turn visitors into paying customers.",
+        slug: "website-development",
+        title: "Website Development",
+        shortDesc: "High-performance, mobile-first websites designed for fast loading and high conversion.",
+        longDesc: "We build sub-second, custom-designed corporate websites and e-commerce platforms engineered on Next.js, React, and modern web frameworks. Whether you need a corporate showcase or an online store, FutureX Digital Marketing delivers responsive, SEO-ready web design tailored to your brand.",
         keyPoints: [
-            "Custom Next.js & React App Architecture",
-            "Mobile-First Responsive UI/UX Design",
-            "Sub-Second Lightning Load Speeds",
-            "Integrated Lead Capture & Payment Gateways",
-            "SEO-Engineered Code Structure"
+            "Sub-Second Page Speed & Core Web Vitals 90+",
+            "100% Mobile Responsive & Modern UI/UX",
+            "SEO-Ready Architecture & Schema Integration",
+            "Secure Cloud Hosting & Free SSL Setup"
         ],
         faqs: [
-            { question: "Which technology stack do you use for web development?", answer: "We leverage modern web technologies including Next.js, React, TypeScript, Tailwind CSS, Node.js, and headless CMS frameworks for maximum performance." },
-            { question: "Will my website be mobile friendly?", answer: "Absolutely. Every website we build is 100% responsive and optimized for seamless viewing across mobile, tablet, and desktop devices." },
-            { question: "Can I manage and update content myself?", answer: "Yes! We integrate user-friendly admin panels and content management systems so your team can easily update text, products, and blogs." },
-            { question: "How long does a website development project take?", answer: "Standard corporate websites take 2 to 4 weeks, while complex e-commerce platforms or web apps take 4 to 8 weeks." },
-            { question: "Do you provide hosting and maintenance support?", answer: "Yes, we offer ongoing cloud hosting management, SSL security, backups, and technical maintenance." }
+            { question: "Which technology stack do you use?", answer: "We build modern websites using Next.js, React, TypeScript, Tailwind CSS, Node.js, and headless CMS frameworks." },
+            { question: "How long does website development take?", answer: "Standard business websites take 2 to 4 weeks depending on features and custom pages required." }
         ],
         image: "/service-webdev.png",
-        galleryImages: [
-            "/hero-3.png",
-            "/portfolio-1.png",
-            "/about-agency.png"
-        ],
+        galleryImages: ["/hero-3.png", "/portfolio-1.png", "/about-agency.png"],
         products: [
-            { name: "Custom Web Applications", desc: "Bespoke full-stack web applications built on Next.js, React, and Node.js tailored to your business model." },
-            { name: "Corporate & Business Websites", desc: "Sleek, modern multi-page company websites designed to establish trust and generate qualified inquiries." },
-            { name: "E-Commerce Stores (Shopify & Custom)", desc: "High-converting online shopping platforms with seamless cart checkout, payment gateways, and inventory sync." },
-            { name: "High-Converting Landing Pages", desc: "Targeted single-page funnels engineered specifically for high ROI ad campaigns and lead generation." },
-            { name: "Website Redesign & Speed Optimization", desc: "Transform outdated legacy websites into fast, modern 2026 digital experiences with 90+ PageSpeed scores." },
-            { name: "API Integration & Web Portals", desc: "Custom CRM, payment gateway, WhatsApp API, and third-party SaaS software integrations." }
+            { name: "Corporate & Business Websites", desc: "Sleek multi-page company websites designed to establish authority and capture incoming client leads." },
+            { name: "E-Commerce Web Stores", desc: "High-converting online shopping platforms with seamless payment gateways and inventory sync." },
+            { name: "High-Converting Landing Pages", desc: "Targeted single-page lead funnels optimized for Google & Meta paid ad campaigns." }
         ],
     },
     {
-        slug: "social-media-marketing",
-        title: "Social Media Marketing (SMM)",
-        shortDesc: "Engage target audiences, build brand equity, and drive viral engagement across Instagram, Facebook, & LinkedIn.",
-        longDesc: "Social media is the heart of modern brand awareness. At FutureX Digital Marketing, we curate dynamic social media strategies that combine aesthetic content creation, short-form video reels, influencer partnerships, and strategic community management. We help Udaipur and global brands build authentic connections and loyal customer followings.",
+        slug: "webapp-development",
+        title: "Webapp Development",
+        shortDesc: "Bespoke SaaS platforms, custom customer portals, and web application solutions.",
+        longDesc: "FutureX Digital Marketing specializes in full-stack web application development. We build scalable SaaS platforms, client portals, internal dashboard systems, and interactive web software utilizing Next.js, React, Node.js, and cloud database architectures.",
         keyPoints: [
-            "Custom Graphic & Video Content Production",
-            "Instagram Reels & Short-Form Video Strategy",
-            "Targeted Audience Growth & Engagement",
-            "Brand Voice & Aesthetic Consistency",
-            "Influencer & Brand Collaboration Campaigns"
+            "Scalable Full-Stack Architecture",
+            "Custom User Dashboards & Portals",
+            "REST & GraphQL API Integrations",
+            "Enterprise-Grade Security & Authentication"
         ],
         faqs: [
-            { question: "Which social media platforms do you manage?", answer: "We manage Instagram, Facebook, LinkedIn, YouTube, Twitter/X, and Pinterest depending on where your target audience hangs out." },
-            { question: "Do you create high-quality graphic posts and video reels?", answer: "Yes! Our in-house creative team designs custom graphics, motion visuals, and produces trending short-form video reels." },
-            { question: "How often will you post on our social channels?", answer: "Depending on your selected package, we post 3 to 6 times a week, including interactive stories and video reels." },
-            { question: "Can social media marketing generate direct leads for my business?", answer: "Definitely. Through targeted call-to-actions, direct messaging funnels, and landing page links, social media drives qualified leads." }
-        ],
-        image: "/service-social.png",
-        galleryImages: [
-            "/hero-3.png",
-            "/service-branding.png",
-            "/about-agency.png"
-        ],
-        products: [
-            { name: "Instagram & Facebook Management", desc: "End-to-end feed curation, visual branding, storytelling graphics, and daily profile management." },
-            { name: "Short-Form Video Reels & Shorts", desc: "Engaging vertical video production, trending audio curation, and cinematic editing designed for viral reach." },
-            { name: "LinkedIn B2B Growth Strategy", desc: "Executive personal branding, corporate thought leadership content, and targeted B2B networking." },
-            { name: "Social Media Strategy & Calendar", desc: "Data-driven monthly content calendars aligning with seasonal offers, business milestones, and trending topics." },
-            { name: "Community Management & DM Automation", desc: "Active response management for comments and direct messages paired with automated lead capture bots." },
-            { name: "Influencer Marketing Campaigns", desc: "Connecting your brand with regional Udaipur influencers and niche creators for authentic brand advocacy." }
-        ],
-    },
-    {
-        slug: "performance-marketing",
-        title: "Performance Marketing & PPC Ads",
-        shortDesc: "Maximize return on ad spend (ROAS) with precision-targeted Google Ads & Meta Ads campaigns.",
-        longDesc: "Stop guessing and start converting. FutureX Digital Marketing runs data-driven performance marketing campaigns on Google Ads, Meta (Facebook & Instagram) Ads, YouTube, and LinkedIn. Every rupee spent is tracked against clear conversion goals, cost-per-lead (CPL), and return on ad spend (ROAS).",
-        keyPoints: [
-            "Google Search, Shopping & Display Campaigns",
-            "Meta (Instagram & Facebook) High-ROAS Ad Funnels",
-            "Precision Audience Demographics & Behavioral Targeting",
-            "A/B Split Testing for Ad Creatives & Landing Pages",
-            "Real-Time Conversion Tracking & Attribution"
-        ],
-        faqs: [
-            { question: "What budget do I need for Google & Meta Ads?", answer: "We work with businesses of all sizes, starting from modest local ad budgets to enterprise multi-channel ad spend." },
-            { question: "How fast can paid advertising deliver results?", answer: "Paid ads deliver immediate traffic and leads within 24 to 48 hours of campaign launch." },
-            { question: "How do you measure ad performance?", answer: "We track Cost Per Click (CPC), Cost Per Lead (CPL), Conversion Rate, and Return On Ad Spend (ROAS) in real time." },
-            { question: "Do you design the ad copy and creatives?", answer: "Yes! We write compelling ad copy and design high-converting visual ad banners and video ads." }
-        ],
-        image: "/service-ppc.png",
-        galleryImages: [
-            "/hero-1.png",
-            "/portfolio-2.png",
-            "/service-seo.png"
-        ],
-        products: [
-            { name: "Google Search Ads (PPC)", desc: "Capture high-intent buyers searching for your specific products and services on Google." },
-            { name: "Meta Lead Generation Ads", desc: "High-converting Instagram and Facebook ad campaigns that generate pre-qualified lead forms directly inside the app." },
-            { name: "Remarketing & Retargeting", desc: "Re-engage past website visitors with tailored offers across the web to increase conversion rates." },
-            { name: "Google Shopping & Performance Max", desc: "E-commerce catalog advertising that showcases your products directly in Google search shopping feeds." },
-            { name: "YouTube Video Advertising", desc: "High-impact video ad placements targeting specific demographics and interested audiences." },
-            { name: "Ad Creative & Copywriting", desc: "Persuasive headline writing, visual ad design, and video scriptwriting engineered for maximum CTR." }
-        ],
-    },
-    {
-        slug: "brand-strategy-design",
-        title: "Brand Strategy & Visual Identity",
-        shortDesc: "Establish a memorable, premium brand identity with custom logo design, color systems, and corporate branding.",
-        longDesc: "A strong brand builds instant trust and commands premium pricing. FutureX Digital Marketing crafts comprehensive brand identities that resonate with your target market. From logo design and typography guidelines to marketing collateral and digital media kits, we ensure your brand stands out in the crowded market.",
-        keyPoints: [
-            "Memorable Logo & Visual Emblem Design",
-            "Comprehensive Brand Style Guidelines",
-            "Typography & Harmonic Color Palette Systems",
-            "Corporate Stationery & Digital Media Kits",
-            "Rebranding & Market Positioning Strategy"
-        ],
-        faqs: [
-            { question: "What deliverables are included in a brand identity package?", answer: "You receive primary and secondary logo files, brand style guide (PDF), vector source files, font pairings, color codes, and social media branding templates." },
-            { question: "Can you help rebrand an existing business in Udaipur?", answer: "Yes! We specialize in modernizing legacy brand identities to help businesses appeal to contemporary audiences." },
-            { question: "How long does the logo and brand design process take?", answer: "Typically 1 to 3 weeks, including initial concept exploration, client feedback revisions, and final asset delivery." }
-        ],
-        image: "/service-branding.png",
-        galleryImages: [
-            "/portfolio-1.png",
-            "/service-social.png",
-            "/about-agency.png"
-        ],
-        products: [
-            { name: "Custom Logo Design", desc: "Unique, timeless logo mark and typographic logotype crafted specifically for your business identity." },
-            { name: "Brand Style Guide & Manual", desc: "Complete documentation detailing official logo usage, clear space, brand colors (HEX/CMYK/RGB), and typography." },
-            { name: "Corporate Stationery Package", desc: "Business card designs, letterheads, email signatures, presentation decks, and invoice templates." },
-            { name: "Packaging & Label Design", desc: "Eye-catching product packaging, retail labels, and unboxing design concepts." },
-            { name: "Marketing Collateral & Brochures", desc: "Print and digital trifold brochures, product catalogs, company profile PDFs, and banner designs." },
-            { name: "Social Media Branding Templates", desc: "Custom editable Canva/Photoshop story and post templates for seamless brand consistency." }
-        ],
-    },
-    {
-        slug: "ai-automation-lead-gen",
-        title: "AI Automation & Lead Generation",
-        shortDesc: "Automate sales funnels, customer inquiries, and lead qualification using smart AI workflows.",
-        longDesc: "Scale your revenue without increasing headcount. FutureX Digital Marketing integrates cutting-edge AI chatbots, automated WhatsApp lead nurturing, CRM workflows, and email automation. We turn passive website visitors into appointment bookings and sales opportunities automatically.",
-        keyPoints: [
-            "AI-Powered Chatbots & Conversational Funnels",
-            "Automated WhatsApp Lead Instant Messaging",
-            "CRM & Email Nurture Sequence Integration",
-            "Automated Lead Scoring & Routing",
-            "Seamless Sales Funnel Optimization"
-        ],
-        faqs: [
-            { question: "How does AI automation help my business grow?", answer: "AI automation ensures zero missed customer inquiries, instant 24/7 responses, automated appointment scheduling, and automated lead follow-ups." },
-            { question: "Can AI automation connect with WhatsApp?", answer: "Yes! We set up official WhatsApp Business API workflows that send instant lead confirmations, catalog links, and follow-ups." },
-            { question: "Is technical knowledge required to manage AI tools?", answer: "No. We build intuitive, fully automated workflows and train your team on how to track incoming leads." }
+            { question: "What is the difference between a website and a webapp?", answer: "A website focuses on content presentation and lead generation, while a webapp provides dynamic interactive functionality, user accounts, workflows, and database processing." }
         ],
         image: "/service-ai.png",
-        galleryImages: [
-            "/hero-1.png",
-            "/service-webdev.png",
-            "/portfolio-2.png"
-        ],
+        galleryImages: ["/service-webdev.png", "/portfolio-1.png"],
         products: [
-            { name: "AI Chatbot Integration", desc: "Custom AI assistant embedded on your website to answer visitor queries and capture lead contact details 24/7." },
-            { name: "WhatsApp Business API Automation", desc: "Automated instant broadcast messages, quick reply flows, and appointment confirmation triggers via WhatsApp." },
-            { name: "CRM Setup & Pipeline Management", desc: "Streamlined sales funnel setup in HubSpot, Zoho, or custom dashboards for tracking lead progress." },
-            { name: "Email Marketing & Drip Campaigns", desc: "Automated welcome series, abandoned cart recovery emails, and monthly newsletter triggers." },
-            { name: "Lead Qualification Workflows", desc: "Smart filtering mechanisms that qualify high-value prospects before handing them to your sales team." },
-            { name: "Analytics & Custom Reporting Dashboards", desc: "Unified analytics dashboard pulling real-time metrics from Google Analytics, Meta Ads, and sales CRM." }
+            { name: "Custom SaaS Web Platforms", desc: "Cloud-native web applications built for subscription revenue models and multi-tenant architectures." },
+            { name: "Client & Admin Dashboards", desc: "Interactive management portals for real-time analytics, user roles, and business workflows." },
+            { name: "API & Microservices Engineering", desc: "Seamless third-party software, payment gateway, and CRM API integration." }
         ],
     },
+    {
+        slug: "social-media-management",
+        title: "Social Media Management",
+        shortDesc: "Grow brand awareness, audience engagement, and follower loyalty across major social networks.",
+        longDesc: "Transform your social media presence with strategic content creation, visual reels, story planning, and community management. We manage your Instagram, Facebook, LinkedIn, and YouTube channels to build brand authority and convert followers into paying customers.",
+        keyPoints: [
+            "Strategic Content Calendar & Post Scheduling",
+            "High-Engagement Reels & Video Short Content",
+            "Community Interaction & DM Lead Handling",
+            "Monthly Analytics & Audience Growth Insights"
+        ],
+        faqs: [
+            { question: "Which social media platforms do you manage?", answer: "We manage Instagram, Facebook, LinkedIn, YouTube Shorts, and Google Business updates." }
+        ],
+        image: "/service-social.png",
+        galleryImages: ["/service-branding.png", "/portfolio-2.png"],
+        products: [
+            { name: "Instagram & Facebook Management", desc: "End-to-end post creation, graphic design, caption copywriting, hashtag strategy, and scheduling." },
+            { name: "Short-Form Reel Production", desc: "Trending video reels and short clips edited to drive organic reach and viral audience engagement." },
+            { name: "Executive LinkedIn Branding", desc: "B2B thought leadership content and executive brand positioning for corporate leaders." }
+        ],
+    },
+    {
+        slug: "meta-ads",
+        title: "Meta Ads",
+        shortDesc: "Target prospective buyers on Facebook and Instagram with high-converting paid ad campaigns.",
+        longDesc: "Scale your sales funnel rapidly with precision Meta Ads. We create laser-targeted ad audiences, persuasive ad creatives, high-converting lead forms, and dynamic retargeting campaigns on Facebook and Instagram to maximize your Return On Ad Spend (ROAS).",
+        keyPoints: [
+            "Hyper-Targeted Custom & Lookalike Audiences",
+            "High-Converting Ad Copy & Creative Design",
+            "Instant Lead Form & WhatsApp Ad Funnels",
+            "Continuous A/B Testing & ROAS Optimization"
+        ],
+        faqs: [
+            { question: "How quickly do Meta Ads generate inquiries?", answer: "Meta lead form and traffic campaigns start delivering qualified customer inquiries within 24 to 48 hours of launch." }
+        ],
+        image: "/service-ppc.png",
+        galleryImages: ["/service-social.png", "/portfolio-1.png"],
+        products: [
+            { name: "Meta Lead Generation Campaigns", desc: "Instant form ads built to collect verified name, phone, and email inquiries directly inside Facebook and Instagram." },
+            { name: "Meta Retargeting Funnels", desc: "Re-engage website visitors and past leads with special offers to maximize campaign conversions." },
+            { name: "WhatsApp Direct Ad Funnels", desc: "Send prospective clients directly into a WhatsApp chat with your sales team in one tap." }
+        ],
+    },
+    {
+        slug: "google-ads",
+        title: "Google Ads",
+        shortDesc: "Capture high-intent buyers searching on Google with profitable Search, Display, and Shopping ads.",
+        longDesc: "Position your business in front of active buyers the exact moment they search on Google. We build, manage, and optimize profitable Google Search, Performance Max, Display, and Shopping campaigns that lower your cost-per-lead and scale ROI.",
+        keyPoints: [
+            "High-Intent Buyer Keyword Bidding",
+            "Negative Keyword Exclusion & Budget Protection",
+            "Ad Extension & Copy Optimization",
+            "Conversion Tracking & Conversion Rate Tuning"
+        ],
+        faqs: [
+            { question: "What is the recommended Google Ads budget?", answer: "We tailor Google Ads campaigns starting from modest regional daily budgets up to enterprise ad spend based on your target CPL." }
+        ],
+        image: "/service-seo.png",
+        galleryImages: ["/service-ppc.png", "/portfolio-2.png"],
+        products: [
+            { name: "Google Search Ads", desc: "Rank #1 at the top of Google search results for active buyer keywords in your industry." },
+            { name: "Google Performance Max (PMax)", desc: "AI-driven multi-channel ad campaigns running across Search, YouTube, Gmail, and Maps." },
+            { name: "Google Shopping & Remarketing Ads", desc: "Product grid ads for e-commerce stores paired with Display banner retargeting." }
+        ],
+    },
+    {
+        slug: "pay-per-click",
+        title: "Pay-Per-Click (PPC)",
+        shortDesc: "Data-driven performance marketing across paid search, social, and display networks.",
+        longDesc: "FutureX Digital Marketing offers end-to-end Pay-Per-Click management. We engineer multi-channel PPC strategies designed to capture leads, boost online purchases, and deliver predictable revenue return for every advertising rupee spent.",
+        keyPoints: [
+            "Multi-Channel PPC Strategy & Execution",
+            "Conversion Funnel & Landing Page CRO",
+            "Real-Time ROI & CPL Performance Tracking",
+            "Dedicated Ad Account Specialist"
+        ],
+        faqs: [
+            { question: "How do you track PPC campaign performance?", answer: "We set up end-to-end conversion tracking for phone calls, lead form fills, WhatsApp taps, and e-commerce sales." }
+        ],
+        image: "/service-ppc.png",
+        galleryImages: ["/service-seo.png", "/hero-1.png"],
+        products: [
+            { name: "Multi-Channel PPC Strategy", desc: "Unified paid ad allocation combining Google Search, Meta Ads, and Remarketing." },
+            { name: "PPC Landing Page Optimization", desc: "High-converting landing page design tailored specifically to match ad intent." }
+        ],
+    },
+    {
+        slug: "video-editing",
+        title: "Video Editing",
+        shortDesc: "Professional video editing for Instagram Reels, YouTube videos, corporate clips, and ad promos.",
+        longDesc: "Captivate your audience with high-impact video editing. We transform raw video footage into polished, engaging video reels, YouTube videos, promotional ads, and corporate brand videos with sound design, captions, and motion graphics.",
+        keyPoints: [
+            "Trending Reels & Shorts Motion Editing",
+            "Dynamic Subtitles & Kinetic Typography",
+            "Color Grading, Transitions & Sound Design",
+            "Corporate Promo & Product Ad Editing"
+        ],
+        faqs: [
+            { question: "What video formats do you deliver?", answer: "We deliver 9:16 vertical reels for Instagram/TikTok/Shorts and 16:9 widescreen videos for YouTube and websites." }
+        ],
+        image: "/service-branding.png",
+        galleryImages: ["/service-social.png", "/portfolio-1.png"],
+        products: [
+            { name: "Instagram Reels & Shorts Editing", desc: "Fast-paced, hook-driven vertical video editing designed for viral social reach." },
+            { name: "YouTube Video Editing", desc: "Long-form YouTube video post-production with intros, lower thirds, and B-roll overlays." },
+            { name: "Commercial & Video Ad Editing", desc: "High-converting promotional video ads engineered for Meta, YouTube, and website landing pages." }
+        ],
+    },
+    {
+        slug: "graphic-design",
+        title: "Graphic Design",
+        shortDesc: "Eye-catching visual design for digital banners, social graphics, marketing collaterals, and print.",
+        longDesc: "Elevate your visual identity with professional graphic design. Our creative team designs striking social media graphics, digital ad banners, brochures, flyers, posters, and brand collaterals that capture customer attention.",
+        keyPoints: [
+            "Custom Social Media Banner & Post Designs",
+            "Digital Advertising Creative Banners",
+            "Print Marketing Collaterals (Flyers, Posters)",
+            "High-Resolution Print-Ready Source Files"
+        ],
+        faqs: [
+            { question: "Do you provide source files?", answer: "Yes, we deliver print-ready PDFs, high-res PNG/JPGs, and editable source files (AI, PSD, Figma)." }
+        ],
+        image: "/service-branding.png",
+        galleryImages: ["/portfolio-2.png", "/about-agency.png"],
+        products: [
+            { name: "Social Media Post Design", desc: "Custom-designed Instagram and Facebook carousel grids and promotional post graphics." },
+            { name: "Marketing Collateral Design", desc: "Brochures, flyers, roll-up banners, and corporate presentation decks." },
+            { name: "Ad Banner Creative Design", desc: "High-converting ad banners designed for Google Display and Meta Ad campaigns." }
+        ],
+    },
+    {
+        slug: "logo-design",
+        title: "Logo Design",
+        shortDesc: "Memorable, modern logo design and complete visual brand identity packages.",
+        longDesc: "Your logo is the cornerstone of your brand identity. We craft unique, timeless logo designs and brand identity packages that reflect your company values, resonate with target clients, and set you apart from competitors.",
+        keyPoints: [
+            "Multiple Original Logo Concept Options",
+            "Full Vector Source Files (AI, SVG, EPS, PNG)",
+            "Brand Color Palette & Typography Guidelines",
+            "Monochrome & Transparent Logo Variants"
+        ],
+        faqs: [
+            { question: "How many logo concepts do I receive?", answer: "Depending on your package, we provide 3 to 5 distinct initial concepts with unlimited revisions on your chosen concept." }
+        ],
+        image: "/logo.png",
+        galleryImages: ["/service-branding.png", "/about-agency.png"],
+        products: [
+            { name: "Custom Logo Design Package", desc: "Original logo concept development with full vector files, icon variations, and brand color swatches." },
+            { name: "Complete Brand Identity Suite", desc: "Logo design paired with letterhead, business cards, social media kits, and brand guidelines." }
+        ],
+    },
+    {
+        slug: "business-card-design",
+        title: "Business Card Design",
+        shortDesc: "Professional, elegant business card designs that leave a lasting first impression.",
+        longDesc: "Make every networking opportunity count with custom-designed business cards. We craft sleek, modern business card layouts with print specifications, spot UV accents, foil options, and QR code integration.",
+        keyPoints: [
+            "Single & Double-Sided Custom Card Layouts",
+            "Print-Ready CMYK 300 DPI Vector Files",
+            "Interactive QR Code Integration",
+            "Modern Minimalist & Luxury Finishes"
+        ],
+        faqs: [
+            { question: "Can you include a QR code linking to my website or vCard?", answer: "Yes! We integrate custom QR codes linking directly to your website, WhatsApp, digital vCard, or Google map." }
+        ],
+        image: "/service-branding.png",
+        galleryImages: ["/logo.png", "/portfolio-1.png"],
+        products: [
+            { name: "Premium Executive Business Cards", desc: "Elegant double-sided business card design tailored to corporate executives and business owners." },
+            { name: "Digital vCard & QR Code Cards", desc: "Modern business cards featuring instant smartphone QR scanning for contact saving." }
+        ],
+    },
+    {
+        slug: "menu-design",
+        title: "Menu Design",
+        shortDesc: "Attractive, appetite-stimulating menu designs for restaurants, cafes, hotels, and food brands.",
+        longDesc: "Stimulate orders and elevate dining experiences with custom menu design. We design mouth-watering food menus, cafe board displays, digital TV menu screens, and QR digital menus for restaurants, hotels, and food outlets in Udaipur and beyond.",
+        keyPoints: [
+            "Appetizing Visual Layout & Menu Engineering",
+            "Print-Ready High Resolution & Lamination Specs",
+            "Digital QR Code Menu Integration",
+            "TV Screen & Digital Menu Display Files"
+        ],
+        faqs: [
+            { question: "Do you design digital QR menus for restaurants?", answer: "Yes! We design print menus as well as mobile-friendly digital QR menus that customers scan at their table." }
+        ],
+        image: "/service-branding.png",
+        galleryImages: ["/portfolio-2.png", "/about-agency.png"],
+        products: [
+            { name: "Restaurant & Cafe Print Menus", desc: "Multi-page, tri-fold, and single-sheet food menu designs built with appetite-appealing typography and photos." },
+            { name: "Digital QR Code Restaurant Menus", desc: "Sleek mobile menu layouts allowing guests to browse food items on their smartphones." },
+            { name: "Digital TV Screen Menu Boards", desc: "Widescreen 16:9 digital display menu animations for counter ordering screens." }
+        ],
+    },
+    {
+        slug: "content-writing",
+        title: "Content Writing",
+        shortDesc: "SEO-optimized website content, persuasive ad copy, blog articles, and sales copy.",
+        longDesc: "Words that engage readers and convert visitors into buyers. Our content writing team delivers SEO-driven blog posts, persuasive website sales copy, company profiles, ad scripts, and social media captions designed to rank on search engines and boost sales.",
+        keyPoints: [
+            "100% Original, Plagiarism-Free Copywriting",
+            "SEO Keyword Integration for Google Search",
+            "Persuasive Sales Copy & Brand Voice",
+            "Blog Articles, Web Pages & Ad Scripts"
+        ],
+        faqs: [
+            { question: "Is your written content optimized for SEO?", answer: "Yes! All website copy and blog articles are researched and written with target buyer keywords to help rank on Google." }
+        ],
+        image: "/service-seo.png",
+        galleryImages: ["/service-webdev.png", "/portfolio-1.png"],
+        products: [
+            { name: "Website Copywriting", desc: "Compelling landing page, home page, about us, and service page content crafted to convert leads." },
+            { name: "SEO Blog Article Writing", desc: "Regular, keyword-optimized blog articles written to drive organic search traffic to your website." },
+            { name: "Ad Copy & Scriptwriting", desc: "Persuasive headline copy and short script writing for Meta, Google Ads, and video reels." }
+        ],
+    },
+    {
+        slug: "business-plan",
+        title: "Business Plan",
+        shortDesc: "Comprehensive business plans, financial projections, and investor pitch deck documentation.",
+        longDesc: "Turn your vision into a structured, executable business plan. We craft detailed business plans covering executive summaries, market research, competitor analysis, marketing strategies, and financial projections tailored for investors, bank loans, and strategic growth.",
+        keyPoints: [
+            "Structured Executive Summary & Company Profile",
+            "In-Depth Market Research & Industry Analysis",
+            "Digital Marketing & Sales Expansion Strategy",
+            "Financial Modeling & Revenue Projections"
+        ],
+        faqs: [
+            { question: "Who is the business plan designed for?", answer: "Our business plans are crafted for startups, local business expansions, investor pitches, bank loan applications, and strategic alignment." }
+        ],
+        image: "/about-agency.png",
+        galleryImages: ["/hero-1.png", "/portfolio-2.png"],
+        products: [
+            { name: "Investor & Bank Loan Business Plan", desc: "Comprehensive business documentation detailing operational models, financial forecasts, and growth roadmaps." },
+            { name: "Digital Strategy & Market Entry Plan", desc: "Focused marketing expansion plan tailored to capturing market share in Rajasthan and online markets." }
+        ],
+    },
+    {
+        slug: "instagram-facebook-ads",
+        title: "Instagram and Facebook Ads",
+        shortDesc: "High-ROI paid social advertising campaigns engineered for sales and qualified lead growth.",
+        longDesc: "Reach prospective customers on Instagram and Facebook with targeted social advertising. We build custom ad creatives, carousel ads, story ads, lead form funnels, and dynamic retargeting campaigns optimized to lower CPL and scale sales.",
+        keyPoints: [
+            "Instagram Reel & Story Ad Campaigns",
+            "Facebook In-Feed & Marketplace Ads",
+            "Custom Audience & Interest Targeting",
+            "Daily Ad Budget Optimization & Scaling"
+        ],
+        faqs: [
+            { question: "Can I run ads on both Instagram and Facebook simultaneously?", answer: "Yes! Meta Ads Manager allows synchronized ad deployment across Instagram, Facebook, Stories, and Reels." }
+        ],
+        image: "/service-ppc.png",
+        galleryImages: ["/service-social.png", "/portfolio-1.png"],
+        products: [
+            { name: "Instagram Story & Reel Ads", desc: "Mobile-first vertical video ad campaigns designed to capture immediate attention and swipe-ups." },
+            { name: "Facebook Lead Form Ads", desc: "Seamless lead generation forms that collect verified user details directly inside Facebook." }
+        ],
+    },
+    {
+        slug: "email-marketing",
+        title: "Email Marketing",
+        shortDesc: "Automated email sequences, promotional newsletters, and lead nurturing campaigns.",
+        longDesc: "Nurture customer relationships and generate recurring sales with strategic email marketing. We design beautiful HTML email templates, write engaging newsletter copy, and set up automated drip sequences, cart abandonment triggers, and welcome series.",
+        keyPoints: [
+            "Custom Responsive Email Template Design",
+            "Automated Drip Sequences & Customer Onboarding",
+            "High Deliverability & Inbox Placement",
+            "Subscriber List Segmentation & Analytics"
+        ],
+        faqs: [
+            { question: "Which email platforms do you work with?", answer: "We build and manage campaigns on Mailchimp, Klaviyo, HubSpot, Brevo, and custom SMTP servers." }
+        ],
+        image: "/service-ai.png",
+        galleryImages: ["/service-seo.png", "/portfolio-2.png"],
+        products: [
+            { name: "Automated Lead Nurturing Workflows", desc: "Set-and-forget email sequences that guide prospect leads from initial inquiry to closed sale." },
+            { name: "E-Commerce Abandoned Cart Emails", desc: "Automated recovery email triggers that bring shoppers back to complete their purchases." },
+            { name: "Promotional Newsletter Campaigns", desc: "Monthly and weekly email newsletters sharing special offers, new products, and company news." }
+        ],
+    },
+    {
+        slug: "digital-marketing",
+        title: "Digital Marketing",
+        shortDesc: "360-degree full-funnel digital marketing services driving total business growth.",
+        longDesc: "FutureX Digital Marketing is your complete 360-degree growth agency. We combine Search Engine Optimization (SEO), web app development, Meta/Google paid ads, social media branding, content strategy, and AI lead automation into one unified performance package.",
+        keyPoints: [
+            "Unified 360-Degree Growth Strategy",
+            "Multi-Channel Lead & Revenue Scaling",
+            "Dedicated Account Manager & Weekly Updates",
+            "Complete End-to-End Campaign Execution"
+        ],
+        faqs: [
+            { question: "Why hire FutureX as a 360-degree digital marketing partner?", answer: "Instead of managing multiple separate freelancers, FutureX provides a dedicated full-service team handling SEO, web dev, graphics, ads, and copywriting under one roof." }
+        ],
+        image: "/about-agency.png",
+        galleryImages: ["/hero-1.png", "/hero-3.png", "/portfolio-1.png"],
+        products: [
+            { name: "360-Degree Growth Retainer", desc: "Complete digital marketing takeover including SEO, paid ads, web management, graphics, and social content." },
+            { name: "Performance Marketing & Funnel Build", desc: "High-speed conversion funnel design paired with aggressive multi-channel ad scaling." }
+        ],
+    }
 ];
