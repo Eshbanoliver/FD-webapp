@@ -5,12 +5,12 @@
    ======================== */
 :root {
   /* Primary Palette */
-  --navy: #2F4156;
-  --navy-light: #3d5570;
-  --navy-dark: #1e2d3d;
-  --teal: #567C8D;
-  --teal-light: #6a95a8;
-  --teal-dark: #456472;
+  --navy: #1d3152;
+  --navy-light: #2c4772;
+  --navy-dark: #122036;
+  --teal: #2279be;
+  --teal-light: #3d92d8;
+  --teal-dark: #195d94;
   --cherry-red: #D1174B;
   --beige: #F5EFEB;
   --beige-dark: #e8ddd6;
@@ -20,22 +20,22 @@
 
   /* Semantic */
   --background: #FAFBFD;
-  --foreground: #2F4156;
-  --text-primary: #2F4156;
-  --text-secondary: #567C8D;
-  --text-muted: #8a9baa;
+  --foreground: #1d3152;
+  --text-primary: #1d3152;
+  --text-secondary: #2279be;
+  --text-muted: #6b8fb0;
   --text-light: #FFFFFF;
-  --accent: #567C8D;
-  --accent-hover: #456472;
-  --border: rgba(86, 124, 141, 0.15);
+  --accent: #2279be;
+  --accent-hover: #195d94;
+  --border: rgba(34, 121, 190, 0.15);
   --border-light: rgba(200, 217, 230, 0.4);
 
   /* Glass */
   --glass-bg: rgba(255, 255, 255, 0.65);
   --glass-bg-strong: rgba(255, 255, 255, 0.85);
   --glass-border: rgba(200, 217, 230, 0.45);
-  --glass-shadow: 0 8px 32px rgba(47, 65, 86, 0.08);
-  --glass-shadow-hover: 0 16px 48px rgba(47, 65, 86, 0.14);
+  --glass-shadow: 0 8px 32px rgba(29, 49, 82, 0.08);
+  --glass-shadow-hover: 0 16px 48px rgba(29, 49, 82, 0.14);
 
   /* Spacing */
   --section-padding: 100px 0;

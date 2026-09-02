@@ -45,7 +45,7 @@ export default function PremiumCTA({ isSubPage = false }: { isSubPage?: boolean 
                 width: 'calc(100% - 40px)',
                 maxWidth: '1050px',
                 padding: '110px 24px',
-                background: 'radial-gradient(circle at center, #2F4156 0%, #1e2d3d 100%)',
+                background: 'radial-gradient(circle at center, #1d3152 0%, #122036 100%)',
                 position: 'relative',
                 overflow: 'hidden',
                 color: '#fff',
@@ -55,7 +55,7 @@ export default function PremiumCTA({ isSubPage = false }: { isSubPage?: boolean 
             }}>
             {/* Decorative atmospheric elements */}
             <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(209, 23, 75, 0.12) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
-            <div style={{ position: 'absolute', bottom: '-10%', left: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(86, 124, 141, 0.15) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
+            <div style={{ position: 'absolute', bottom: '-10%', left: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(34, 121, 190, 0.15) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
 
             {/* Floating Icons */}
             <div style={{ position: 'absolute', top: '12%', left: '8%', opacity: 0.03, fontSize: '8rem', transform: 'rotate(-15deg)', pointerEvents: 'none' }}><FaRocket /></div>
@@ -66,7 +66,7 @@ export default function PremiumCTA({ isSubPage = false }: { isSubPage?: boolean 
                     <AnimateOnScroll>
                         <h2 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '35px' }}>
                             <span style={{
-                                color: '#6a95a8',
+                                color: '#3d92d8',
                                 fontSize: '0.85rem',
                                 textTransform: 'uppercase',
                                 letterSpacing: '4px',
@@ -90,7 +90,7 @@ export default function PremiumCTA({ isSubPage = false }: { isSubPage?: boolean 
                                         padding: '18px 40px',
                                         borderRadius: '100px',
                                         background: '#fff',
-                                        color: '#2F4156',
+                                        color: '#1d3152',
                                         fontWeight: 800,
                                         fontSize: '1rem',
                                         display: 'flex',
@@ -106,7 +106,7 @@ export default function PremiumCTA({ isSubPage = false }: { isSubPage?: boolean 
                                     padding: '18px 40px',
                                     borderRadius: '100px',
                                     background: '#fff',
-                                    color: '#2F4156',
+                                    color: '#1d3152',
                                     fontWeight: 800,
                                     fontSize: '1rem',
                                     display: 'flex',
