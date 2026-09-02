@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     "Social Media Marketing Udaipur"
   ],
   authors: [{ name: "Akshay Jain" }],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "FutureX Digital Marketing - Leading Digital Marketing Agency in Udaipur",
     description: "Growth-driven digital agency in Udaipur specializing in Search Engine Optimization, Web Development, Meta & Google Ads, and AI Automation.",

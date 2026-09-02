@@ -89,15 +89,12 @@ export default function Navbar() {
             <div className="header-wrapper">
                 {/* Logo Section */}
                 <div className="header-logo-section">
-                    <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+                    <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
                         <img
                             src="/logo.png"
                             alt="FutureX Digital Marketing Logo"
-                            style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+                            style={{ height: '48px', width: 'auto', objectFit: 'contain', maxWidth: '210px' }}
                         />
-                        <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--navy)' }}>
-                            Future<span style={{ color: "var(--teal)" }}>X</span>
-                        </span>
                     </Link>
                 </div>
 

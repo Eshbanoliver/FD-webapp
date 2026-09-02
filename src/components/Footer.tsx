@@ -15,13 +15,12 @@ export default function Footer() {
                     <div className="footer-grid-v3">
                         {/* Column 1: Brand & Contact */}
                         <div className="footer-brand-v3">
-                            <div className="footer-logo-v3">
+                            <div className="footer-logo-v3" style={{ marginBottom: '16px' }}>
                                 <img
                                     src="/logo.png"
                                     alt="FutureX Digital Marketing Logo"
-                                    style={{ width: '50px', height: '50px', objectFit: 'contain', marginBottom: '10px' }}
+                                    style={{ height: '52px', width: 'auto', objectFit: 'contain', background: '#fff', padding: '6px 14px', borderRadius: '10px' }}
                                 />
-                                <span style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--white)' }}>FutureX Digital</span>
                             </div>
                             <p className="footer-desc-v3">
                                 Udaipur’s premier growth agency. Specializing in Search Engine Optimization (SEO), high-converting web development, performance marketing, and AI lead automation since 2020.
