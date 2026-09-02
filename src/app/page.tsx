@@ -61,19 +61,24 @@ function AnimateOnScroll({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-/* ------- FAQ Item V3 ------- */
-function FAQItemV3({ q, a }: { q: string; a: string }) {
+/* ------- Animated Accordion Item ------- */
+function FAQItemV3({ q, a, num }: { q: string; a: string; num: number }) {
   const [open, setOpen] = useState(false);
   return (
     <div className={`faq-item-v3 ${open ? "open" : ""}`}>
-      <button className="faq-question-v3" onClick={() => setOpen(!open)}>
-        {q}
-        <span className="faq-icon-v3">
-          {open ? <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>-</span> : <FaChevronDown />}
-        </span>
+      <button className="faq-question-v3" onClick={() => setOpen(!open)} aria-expanded={open}>
+        <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+          <span className="faq-num-badge">0{num}</span>
+          <span>{q}</span>
+        </div>
+        <div className="faq-icon-v3">
+          <FaChevronDown />
+        </div>
       </button>
-      <div className="faq-answer-v3">
-        <div className="faq-answer-content-v3">{a}</div>
+      <div className="faq-answer-wrapper">
+        <div className="faq-answer-inner">
+          <div className="faq-answer-content-v3">{a}</div>
+        </div>
       </div>
     </div>
   );
@@ -574,7 +579,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====== FAQ (Original Template Style) ====== */}
+      {/* ====== FAQ SECTION (ANIMATED V3) ====== */}
       <section className="faq-section-v3">
         <div className="container">
           <div className="faq-grid-v3">
@@ -584,16 +589,23 @@ export default function HomePage() {
                 <h2 className="faq-title-v3">Frequently Asked Questions</h2>
                 <p className="faq-desc-v3">
                   Find answers to common questions about our SEO campaigns, Next.js web applications,
-                  and performance advertising solutions.
+                  performance advertising, and AI lead automation solutions in Udaipur.
                 </p>
                 <div className="faq-accent-line"></div>
+                <div style={{ marginTop: '30px', padding: '24px', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: '20px', boxShadow: '0 10px 30px rgba(29,49,82,0.05)' }}>
+                  <h4 style={{ color: 'var(--navy)', fontSize: '1.1rem', fontWeight: 800, marginBottom: '8px' }}>Have more questions?</h4>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '16px' }}>Chat directly with our strategy team in Udaipur.</p>
+                  <Link href="https://wa.me/917733977227?text=Hi%20FutureX%2C%20I%20have%20a%20question%20about%20your%20services" target="_blank" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', fontSize: '0.85rem' }}>
+                    Ask on WhatsApp <FaArrowRight />
+                  </Link>
+                </div>
               </AnimateOnScroll>
             </div>
 
             <div className="faq-accordion-v3">
               <AnimateOnScroll>
                 {faqs.map((f, i) => (
-                  <FAQItemV3 key={i} q={f.q} a={f.a} />
+                  <FAQItemV3 key={i} num={i + 1} q={f.q} a={f.a} />
                 ))}
               </AnimateOnScroll>
             </div>

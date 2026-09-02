@@ -39,18 +39,23 @@ const faqCategories = [
     }
 ];
 
-function FAQAccordionItem({ q, a }: { q: string; a: string }) {
+function FAQAccordionItem({ q, a, num }: { q: string; a: string; num: number }) {
     const [open, setOpen] = useState(false);
     return (
-        <div className={`faq-item-v3 ${open ? "open" : ""}`} style={{ marginBottom: "16px" }}>
-            <button className="faq-question-v3" onClick={() => setOpen(!open)}>
-                {q}
-                <span className="faq-icon-v3">
-                    {open ? <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>-</span> : <FaChevronDown />}
-                </span>
+        <div className={`faq-item-v3 ${open ? "open" : ""}`}>
+            <button className="faq-question-v3" onClick={() => setOpen(!open)} aria-expanded={open}>
+                <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+                    <span className="faq-num-badge">{num < 10 ? `0${num}` : num}</span>
+                    <span>{q}</span>
+                </div>
+                <div className="faq-icon-v3">
+                    <FaChevronDown />
+                </div>
             </button>
-            <div className="faq-answer-v3">
-                <div className="faq-answer-content-v3">{a}</div>
+            <div className="faq-answer-wrapper">
+                <div className="faq-answer-inner">
+                    <div className="faq-answer-content-v3">{a}</div>
+                </div>
             </div>
         </div>
     );
@@ -85,7 +90,7 @@ export default function FAQPage() {
                                 {cat.category}
                             </h2>
                             {cat.items.map((item, itemIdx) => (
-                                <FAQAccordionItem key={itemIdx} q={item.q} a={item.a} />
+                                <FAQAccordionItem key={itemIdx} num={itemIdx + 1} q={item.q} a={item.a} />
                             ))}
                         </div>
                     ))}
