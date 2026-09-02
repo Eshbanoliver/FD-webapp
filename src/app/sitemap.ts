@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { serviceCategories } from './data/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://nalwayasanitary.com';
+    const baseUrl = 'https://futurexdigitalmarketing.com';
 
     const servicesUrls = serviceCategories.map((category) => ({
         url: `${baseUrl}/services/${category.slug}`,
@@ -31,7 +31,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/testimonials`,
+            url: `${baseUrl}/portfolio`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/faq`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,

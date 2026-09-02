@@ -5,21 +5,51 @@ import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 
 export const metadata: Metadata = {
-  title: "Nalwaya Fitting Suppliers | Trusted Sanitary & Plumbing Fittings in Udaipur",
+  metadataBase: new URL('https://futurexdigitalmarketing.com'),
+  title: {
+    default: "FutureX Digital Marketing | Digital Marketing Agency in Udaipur",
+    template: "%s | FutureX Digital Marketing"
+  },
   description:
-    "Nalwaya Fitting Suppliers – Your trusted source for genuine sanitary fittings, plumbing solutions, and spare parts in Udaipur, Rajasthan. Premium brands, wholesale pricing, expert service.",
+    "FutureX Digital Marketing is Udaipur's premier digital marketing agency specializing in local SEO, Next.js web development, performance marketing, PPC ads, and AI lead automation.",
   keywords: [
-    "sanitary fittings Udaipur",
-    "plumbing fittings supplier",
-    "Nalwaya Fitting Suppliers",
-    "bathroom fittings Udaipur",
-    "spare parts sanitary",
-    "plumbing solutions Rajasthan",
+    "Digital Marketing in Udaipur",
+    "Digital Marketing Agency in Udaipur",
+    "SEO Services in Udaipur",
+    "Web Development in Udaipur",
+    "IT Company in Udaipur",
+    "Software Company in Udaipur",
+    "FutureX Digital Marketing",
+    "PPC Ads Agency Udaipur",
+    "Social Media Marketing Udaipur"
   ],
+  authors: [{ name: "Akshay Jain" }],
+  openGraph: {
+    title: "FutureX Digital Marketing - Leading Digital Marketing Agency in Udaipur",
+    description: "Growth-driven digital agency in Udaipur specializing in Search Engine Optimization, Web Development, Meta & Google Ads, and AI Automation.",
+    url: "https://www.futurexdigitalmarketing.com",
+    siteName: "FutureX Digital Marketing",
+    images: [
+      {
+        url: "/hero-1.png",
+        width: 1200,
+        height: 630,
+        alt: "FutureX Digital Marketing Agency Udaipur"
+      }
+    ],
+    locale: "en_IN",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FutureX Digital Marketing Agency Udaipur",
+    description: "Scale your revenue with Udaipur's trusted SEO, web development & digital marketing agency.",
+    images: ["/hero-1.png"]
+  }
 };
 
 export const viewport: Viewport = {
-  themeColor: "#567c8d",
+  themeColor: "#0B0F19",
 };
 
 export default function RootLayout({
@@ -27,6 +57,51 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://futurexdigitalmarketing.com/#organization",
+    "name": "FutureX Digital Marketing",
+    "image": "https://futurexdigitalmarketing.com/logo.png",
+    "url": "https://futurexdigitalmarketing.com",
+    "telephone": "+917733977227",
+    "email": "futurexdigitalmarketing@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5th Floor, Office No. 526, Arvana Mall, Hathipole",
+      "addressLocality": "Udaipur",
+      "addressRegion": "Rajasthan",
+      "postalCode": "313001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "24.5854",
+      "longitude": "73.7125"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Udaipur"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Akshay Jain"
+    },
+    "foundingDate": "2020",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -35,6 +110,10 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>
@@ -46,4 +125,3 @@ export default function RootLayout({
     </html>
   );
 }
-

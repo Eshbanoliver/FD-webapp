@@ -5,14 +5,17 @@ import { useState, useRef, useEffect } from "react";
 import {
     FaMapMarkerAlt,
     FaPhoneAlt,
+    FaEnvelope,
     FaInstagram,
+    FaFacebookF,
+    FaLinkedinIn,
     FaClock,
     FaPaperPlane,
     FaChevronRight,
     FaHome
 } from "react-icons/fa";
 
-/* -------  Scroll-in animation hook  ------- */
+/* ------- Scroll-in animation hook ------- */
 function useAnimateOnScroll() {
     const ref = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -47,26 +50,25 @@ function AnimateOnScroll({ children, className = "" }: { children: React.ReactNo
 const contactInfo = [
     {
         icon: <FaMapMarkerAlt />,
-        title: "Our Address",
-        content: "Meera Nagar, B-Block, 60 Feet Road, Udaipur – 313001, Rajasthan",
+        title: "Our Headquarters",
+        content: "5th Floor, Office No. 526, Arvana Mall, Hathipole, Udaipur, Rajasthan 313001",
     },
     {
         icon: <FaPhoneAlt />,
-        title: "Phone Number",
-        content: "+91 99831 74974",
-        href: "tel:+919983174974",
+        title: "Direct Agency Line",
+        content: "+91 77339 77227",
+        href: "tel:+917733977227",
     },
     {
-        icon: <FaInstagram />,
-        title: "Instagram",
-        content: "@nalwayafitting2005",
-        href: "https://www.instagram.com/nalwayafitting2005",
-        external: true,
+        icon: <FaEnvelope />,
+        title: "Email Strategy Team",
+        content: "futurexdigitalmarketing@gmail.com",
+        href: "mailto:futurexdigitalmarketing@gmail.com",
     },
     {
         icon: <FaClock />,
-        title: "Business Hours",
-        content: "Mon – Sat: 9:00 AM – 8:00 PM",
+        title: "Working Hours",
+        content: "Mon – Sat: 10:00 AM – 6:00 PM",
     },
 ];
 
@@ -75,6 +77,7 @@ export default function ContactPage() {
         name: "",
         phone: "",
         email: "",
+        service: "Search Engine Optimization (SEO)",
         message: "",
     });
     const [submitted, setSubmitted] = useState(false);
@@ -82,69 +85,62 @@ export default function ContactPage() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 4000);
-        setFormData({ name: "", phone: "", email: "", message: "" });
+        setTimeout(() => setSubmitted(false), 5000);
+        setFormData({ name: "", phone: "", email: "", service: "Search Engine Optimization (SEO)", message: "" });
     };
 
     return (
-        <div className="contact-page-wrapper">
+        <div className="contact-page-wrapper" style={{ background: "#0B0F19", color: "#F8FAFC" }}>
             {/* ====== PAGE HEADER ====== */}
-            <section className="page-header">
+            <section className="page-header" style={{ padding: "120px 0 60px", background: "#0B0F19", borderBottom: "1px solid rgba(6, 182, 212, 0.2)" }}>
                 <div className="container">
-                    <div className="breadcrumb">
-                        <Link href="/">
+                    <div className="breadcrumb" style={{ display: "flex", gap: "10px", alignItems: "center", color: "#94A3B8", fontSize: "0.9rem", marginBottom: "16px" }}>
+                        <Link href="/" style={{ color: "#06B6D4", textDecoration: "none" }}>
                             <FaHome />
                         </Link>
-                        <FaChevronRight />
-                        <span>Contact</span>
+                        <FaChevronRight style={{ fontSize: "0.75rem" }} />
+                        <span>Contact Us</span>
                     </div>
-                    <h1>Get In Touch</h1>
-                    <p>
-                        Have a question about our products or need a professional plumbing consultation?
-                        Our team is here to provide the expert guidance you need.
+                    <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#F8FAFC", marginBottom: "16px" }}>
+                        Get In Touch With FutureX
+                    </h1>
+                    <p style={{ fontSize: "1.15rem", color: "#94A3B8", maxWidth: "750px", lineHeight: "1.8" }}>
+                        Ready to dominate search engine results and scale your business revenue? Visit our office in Arvana Mall, Udaipur or submit a consultation request below.
                     </p>
                 </div>
             </section>
 
-            {/* ====== CONTACT SECTION V2 ====== */}
-            <section className="contact-page-v2">
-                <div className="contact-blobs">
-                    <div className="contact-blob blob-1"></div>
-                    <div className="contact-blob blob-2"></div>
-                </div>
-
+            {/* ====== CONTACT SECTION ====== */}
+            <section className="contact-page-v2" style={{ padding: "100px 0" }}>
                 <div className="container">
-                    <div className="contact-grid-v2">
+                    <div className="contact-grid-v2" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "50px" }}>
                         {/* Left Side: Info */}
                         <div className="contact-info-v2">
                             <AnimateOnScroll>
-                                <span className="section-label-v2">Contact Us</span>
-                                <h2 className="section-title-v2" style={{ color: 'var(--navy)', marginTop: '10px' }}>
-                                    Let&apos;s Build Your Project <span>Together</span>
+                                <span className="section-label-v2" style={{ color: "#06B6D4", textTransform: "uppercase", letterSpacing: "2px", fontWeight: 700 }}>LET'S CONNECT</span>
+                                <h2 className="section-title-v2" style={{ color: '#F8FAFC', fontSize: "2.3rem", fontWeight: 800, marginTop: '10px', marginBottom: '20px' }}>
+                                    Start Your Digital Growth Journey Today
                                 </h2>
-                                <p style={{ color: '#64748b', fontSize: '1.1rem', lineHeight: 1.7, marginTop: '20px' }}>
-                                    Whether you&apos;re a homeowner looking for the perfect fittings or a contractor
-                                    needing wholesale supplies, visit our showroom or reach out via the
-                                    channels below.
+                                <p style={{ color: '#94A3B8', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '30px' }}>
+                                    Schedule a consultation with founder Akshay Jain and our digital strategists at our flagship office in Hathipole, Udaipur.
                                 </p>
                             </AnimateOnScroll>
 
-                            <div className="info-cards-v2">
+                            <div className="info-cards-v2" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                                 {contactInfo.map((c, i) => (
                                     <AnimateOnScroll key={i}>
-                                        <div className="info-card-v2">
-                                            <div className="info-icon-v2">{c.icon}</div>
+                                        <div className="info-card-v2" style={{ background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.2)", borderRadius: "18px", padding: "24px", display: "flex", gap: "20px", alignItems: "center" }}>
+                                            <div className="info-icon-v2" style={{ width: "50px", height: "50px", borderRadius: "14px", background: "rgba(6, 182, 212, 0.15)", color: "#06B6D4", fontSize: "1.4rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                                                {c.icon}
+                                            </div>
                                             <div>
-                                                <h4>{c.title}</h4>
+                                                <h4 style={{ color: "#F8FAFC", fontSize: "1.1rem", fontWeight: 700, margin: "0 0 4px 0" }}>{c.title}</h4>
                                                 {c.href ? (
-                                                    <a
-                                                        href={c.href}
-                                                        {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                                                    >
+                                                    <a href={c.href} style={{ color: "#06B6D4", fontWeight: 600, textDecoration: "none", fontSize: "0.95rem" }}>
                                                         {c.content}
                                                     </a>
                                                 ) : (
-                                                    <p>{c.content}</p>
+                                                    <p style={{ color: "#94A3B8", margin: 0, fontSize: "0.95rem" }}>{c.content}</p>
                                                 )}
                                             </div>
                                         </div>
@@ -156,70 +152,93 @@ export default function ContactPage() {
                         {/* Right Side: Form */}
                         <div className="contact-form-v2">
                             <AnimateOnScroll>
-                                <div className="form-container-v2">
-                                    <h3 className="form-title-v2">Send Message</h3>
-                                    <p style={{ color: '#94a3b8', marginBottom: '35px' }}>
-                                        Complete the form and we&apos;ll get back to you within 24 hours.
+                                <div className="form-container-v2" style={{ background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.3)", borderRadius: "24px", padding: "40px" }}>
+                                    <h3 className="form-title-v2" style={{ color: "#F8FAFC", fontSize: "1.8rem", fontWeight: 800, marginBottom: "10px" }}>Schedule Strategy Call</h3>
+                                    <p style={{ color: '#94A3B8', marginBottom: '30px', fontSize: "0.95rem" }}>
+                                        Complete the form below and our agency strategy team will reach out within 2 hours.
                                     </p>
 
                                     {submitted && (
                                         <div style={{
                                             padding: "16px 24px",
-                                            background: "rgba(40, 167, 69, 0.1)",
-                                            borderLeft: "4px solid #28a745",
-                                            borderRadius: "8px",
-                                            color: "#1e4620",
+                                            background: "rgba(16, 185, 129, 0.15)",
+                                            borderLeft: "4px solid #10B981",
+                                            borderRadius: "12px",
+                                            color: "#10B981",
                                             fontWeight: 700,
                                             marginBottom: '25px',
                                         }}>
-                                            ✓ Message sent! We&apos;ll contact you soon.
+                                            ✓ Thank you! Your growth inquiry has been received. Our team will contact you shortly.
                                         </div>
                                     )}
 
-                                    <form onSubmit={handleSubmit}>
+                                    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                                         <div className="form-group-v2">
-                                            <label>Full Name</label>
+                                            <label style={{ display: "block", color: "#F8FAFC", fontWeight: 600, marginBottom: "8px", fontSize: "0.9rem" }}>Full Name *</label>
                                             <input
                                                 type="text"
-                                                placeholder="Enter your name"
+                                                placeholder="Enter your full name"
                                                 required
                                                 value={formData.name}
                                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                style={{ width: "100%", padding: "16px 20px", borderRadius: "12px", background: "#0B0F19", border: "1px solid rgba(255,255,255,0.15)", color: "#F8FAFC", fontSize: "0.95rem" }}
                                             />
                                         </div>
-                                        <div className="form-row-v2">
+
+                                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px" }}>
                                             <div className="form-group-v2">
-                                                <label>Phone</label>
+                                                <label style={{ display: "block", color: "#F8FAFC", fontWeight: 600, marginBottom: "8px", fontSize: "0.9rem" }}>Phone Number *</label>
                                                 <input
                                                     type="tel"
-                                                    placeholder="+91"
+                                                    placeholder="+91 77339 77227"
                                                     required
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                    style={{ width: "100%", padding: "16px 20px", borderRadius: "12px", background: "#0B0F19", border: "1px solid rgba(255,255,255,0.15)", color: "#F8FAFC", fontSize: "0.95rem" }}
                                                 />
                                             </div>
                                             <div className="form-group-v2">
-                                                <label>Email</label>
+                                                <label style={{ display: "block", color: "#F8FAFC", fontWeight: 600, marginBottom: "8px", fontSize: "0.9rem" }}>Email Address</label>
                                                 <input
                                                     type="email"
-                                                    placeholder="your@email.com"
+                                                    placeholder="name@business.com"
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                    style={{ width: "100%", padding: "16px 20px", borderRadius: "12px", background: "#0B0F19", border: "1px solid rgba(255,255,255,0.15)", color: "#F8FAFC", fontSize: "0.95rem" }}
                                                 />
                                             </div>
                                         </div>
+
                                         <div className="form-group-v2">
-                                            <label>How can we help?</label>
+                                            <label style={{ display: "block", color: "#F8FAFC", fontWeight: 600, marginBottom: "8px", fontSize: "0.9rem" }}>Service Required</label>
+                                            <select
+                                                value={formData.service}
+                                                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                                                style={{ width: "100%", padding: "16px 20px", borderRadius: "12px", background: "#0B0F19", border: "1px solid rgba(255,255,255,0.15)", color: "#F8FAFC", fontSize: "0.95rem" }}
+                                            >
+                                                <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
+                                                <option value="Web Development & E-Commerce">Web Development &amp; E-Commerce</option>
+                                                <option value="Social Media Marketing (SMM)">Social Media Marketing (SMM)</option>
+                                                <option value="Performance Marketing & PPC">Performance Marketing &amp; PPC Ads</option>
+                                                <option value="Brand Strategy & Visual Identity">Brand Strategy &amp; Visual Identity</option>
+                                                <option value="AI Automation & Lead Gen">AI Automation &amp; Lead Gen</option>
+                                            </select>
+                                        </div>
+
+                                        <div className="form-group-v2">
+                                            <label style={{ display: "block", color: "#F8FAFC", fontWeight: 600, marginBottom: "8px", fontSize: "0.9rem" }}>Project Details &amp; Business Goals</label>
                                             <textarea
                                                 rows={4}
-                                                placeholder="Briefly describe your requirements..."
+                                                placeholder="Tell us about your business, current traffic, and growth targets..."
                                                 required
                                                 value={formData.message}
                                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                style={{ width: "100%", padding: "16px 20px", borderRadius: "12px", background: "#0B0F19", border: "1px solid rgba(255,255,255,0.15)", color: "#F8FAFC", fontSize: "0.95rem" }}
                                             />
                                         </div>
-                                        <button type="submit" className="btn-submit-v2">
-                                            <span>Submit Inquiry</span>
+
+                                        <button type="submit" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", padding: "18px 36px", borderRadius: "100px", fontWeight: 800, color: "#FFF", width: "100%", justifyContent: "center" }}>
+                                            <span>Send Consultation Request</span>
                                             <FaPaperPlane />
                                         </button>
                                     </form>
@@ -230,20 +249,24 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* ====== MAP SECTION ====== */}
+            {/* ====== MAP SECTION (ARVANA MALL UDAIPUR) ====== */}
             <section className="map-section-v2" style={{ padding: '0 0 100px' }}>
                 <div className="container">
                     <AnimateOnScroll>
+                        <div style={{ textAlign: "center", marginBottom: "30px" }}>
+                            <h3 style={{ color: "#F8FAFC", fontSize: "1.8rem", fontWeight: 800 }}>Visit Our Flagship Office</h3>
+                            <p style={{ color: "#94A3B8" }}>5th Floor, Office No. 526, Arvana Mall, Hathipole, Udaipur, Rajasthan 313001</p>
+                        </div>
                         <div style={{
-                            borderRadius: '40px',
+                            borderRadius: '30px',
                             overflow: 'hidden',
-                            boxShadow: '0 30px 60px rgba(0,0,0,0.1)',
-                            border: '10px solid #fff'
+                            boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
+                            border: '1px solid rgba(6, 182, 212, 0.3)'
                         }}>
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.1697000317904!2d73.7182591750974!3d24.61783535492373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e57716944efd%3A0xec8203555331d8db!2sNALWAYA%20FITTING%20SUPPLIERS!5e0!3m2!1sen!2sin!4v1772705807995!5m2!1sen!2sin"
+                                src="https://maps.google.com/maps?q=Arvana%20Mall,%20Hathipole,%20Udaipur,%20Rajasthan%20313001&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
-                                height="550"
+                                height="450"
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"

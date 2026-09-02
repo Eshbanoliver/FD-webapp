@@ -1,135 +1,103 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FaStar, FaQuoteLeft } from "react-icons/fa";
-import PremiumCTA from "@/components/PremiumCTA";
+import { FaHome, FaChevronRight, FaStar, FaArrowRight } from "react-icons/fa";
 
 export const metadata: Metadata = {
-    title: "Testimonials | Nalwaya Fitting Suppliers – Udaipur",
+    title: "Client Reviews & Testimonials | FutureX Digital Marketing",
     description:
-        "Read what our customers say about Nalwaya Fitting Suppliers – Udaipur's most trusted sanitary fittings and plumbing solutions provider.",
+        "Read verified client reviews and feedback for FutureX Digital Marketing - Udaipur's trusted SEO, web development, and performance advertising agency.",
 };
 
-const testimonials = [
+const reviews = [
     {
-        text: "Excellent place to buy genuine sanitary fittings in Udaipur. Very helpful staff and great pricing. They helped me choose the perfect fittings for my bathroom renovation project.",
-        name: "Rajesh Sharma",
-        role: "Homeowner",
-        initials: "RS",
+        quote: "FutureX Digital Marketing completely transformed our online presence in Udaipur. Our organic Google leads quadrupled in just 4 months!",
+        author: "Vikramaditya Singh",
+        role: "CEO, Hospitality Group Udaipur",
         rating: 5,
+        service: "Local SEO & Google Business Profile"
     },
     {
-        text: "Best plumbing fittings supplier in Udaipur. They have almost every spare part available. I've been buying from them for over 5 years and they never disappoint.",
-        name: "Amit Patel",
-        role: "Contractor",
-        initials: "AP",
+        quote: "The web development team delivered a blazing fast Next.js website that doubled our online booking conversions within weeks.",
+        author: "Pooja Mehta",
+        role: "Founder, Luxury Lifestyle Brand",
         rating: 5,
+        service: "Next.js Web Development"
     },
     {
-        text: "Highly recommended for sanitary fittings and plumbing solutions. Their product quality is outstanding and the team provides excellent guidance.",
-        name: "Suresh Kumar",
-        role: "Interior Designer",
-        initials: "SK",
+        quote: "Their Meta and Google Ads campaigns consistently deliver a 4.5x ROAS for our e-commerce store. Truly the best digital agency in Rajasthan.",
+        author: "Siddharth Jain",
+        role: "Marketing Director",
         rating: 5,
+        service: "Performance PPC Advertising"
     },
     {
-        text: "We've been sourcing all our plumbing materials from Nalwaya for our hotel projects. Their wholesale pricing and reliability make them our go-to supplier.",
-        name: "Priya Mehra",
-        role: "Hotel Developer",
-        initials: "PM",
+        quote: "The AI WhatsApp lead automation setup has saved us dozens of hours weekly. Inquiries get answered in seconds even outside business hours.",
+        author: "Dr. Ananya Sharma",
+        role: "Healthcare Clinic Founder",
         rating: 5,
+        service: "AI Lead Automation & WhatsApp API"
     },
     {
-        text: "The quality of Jaquar fittings I purchased from here was exceptional. Their store has a wide range and the staff is very knowledgeable about every product.",
-        name: "Vikram Singh",
-        role: "Architect",
-        initials: "VS",
+        quote: "Outstanding creative brand strategy! They elevated our visual identity and designed short-form video reels that gained 1.2 million organic views.",
+        author: "Manish Trivedi",
+        role: "Real Estate Developer",
         rating: 5,
-    },
-    {
-        text: "Outstanding service! They not only supplied the materials but also recommended skilled plumbers for the installation. Truly a one-stop solution for plumbing needs.",
-        name: "Deepak Joshi",
-        role: "Property Manager",
-        initials: "DJ",
-        rating: 5,
-    },
-    {
-        text: "I was impressed by their collection of kitchen sinks and bathroom accessories. The pricing is very competitive for genuine branded products.",
-        name: "Neha Gupta",
-        role: "Homeowner",
-        initials: "NG",
-        rating: 5,
-    },
-    {
-        text: "For our swimming pool project, they provided all the necessary equipment and fittings. Excellent product knowledge and prompt delivery.",
-        name: "Ravi Agarwal",
-        role: "Resort Owner",
-        initials: "RA",
-        rating: 4,
-    },
-    {
-        text: "Reliable supplier for Plasto water tanks. They handled our bulk order for a housing project with great efficiency and on-time delivery.",
-        name: "Kapil Verma",
-        role: "Builder",
-        initials: "KV",
-        rating: 5,
-    },
+        service: "Social Media & Brand Identity"
+    }
 ];
 
 export default function TestimonialsPage() {
     return (
         <>
             {/* Page Header */}
-            <section className="page-header">
+            <section className="page-header" style={{ padding: "120px 0 60px", background: "#0B0F19", borderBottom: "1px solid rgba(6, 182, 212, 0.2)" }}>
                 <div className="container">
-                    <div className="breadcrumb">
-                        <Link href="/">Home</Link>
-                        <span>/</span>
-                        <span>Testimonials</span>
+                    <div className="breadcrumb" style={{ display: "flex", gap: "10px", alignItems: "center", color: "#94A3B8", fontSize: "0.9rem", marginBottom: "16px" }}>
+                        <Link href="/" style={{ color: "#06B6D4", textDecoration: "none" }}>
+                            <FaHome />
+                        </Link>
+                        <FaChevronRight style={{ fontSize: "0.75rem" }} />
+                        <span>Client Reviews</span>
                     </div>
-                    <h1>Customer Testimonials</h1>
-                    <p>
-                        Hear from our valued customers about their experience with Nalwaya Fitting Suppliers.
+                    <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#F8FAFC", marginBottom: "16px" }}>
+                        Client Reviews &amp; Testimonials
+                    </h1>
+                    <p style={{ fontSize: "1.15rem", color: "#94A3B8", maxWidth: "750px", lineHeight: "1.8" }}>
+                        See what business owners and marketing executives say about working with FutureX Digital Marketing.
                     </p>
                 </div>
             </section>
 
-            {/* Testimonials Grid */}
-            <section className="section">
+            {/* Reviews Grid */}
+            <section className="section" style={{ padding: "100px 0", background: "#0B0F19" }}>
                 <div className="container">
-                    <div style={{ textAlign: "center", marginBottom: 48 }}>
-                        <span className="section-label">Reviews</span>
-                        <h2 className="section-title">
-                            Trusted by Homeowners, Contractors &amp; Businesses
-                        </h2>
-                        <p className="section-subtitle" style={{ margin: "0 auto" }}>
-                            Our customers consistently rate us among the top sanitary and plumbing suppliers in Udaipur.
-                        </p>
-                    </div>
-                    <div className="testimonials-modern-grid">
-                        {testimonials.map((t, i) => (
-                            <div key={i} className={`testimonial-card-v3 outline-variant-${(i % 3) + 1}`}>
-                                <div className="testimonial-giant-quote">&ldquo;</div>
-                                <div className="testimonial-stars-v3">
-                                    {[...Array(5)].map((_, j) => (
-                                        <FaStar key={j} />
-                                    ))}
-                                </div>
-                                <p className="testimonial-text-v3">{t.text}</p>
-                                <div className="testimonial-author-v3">
-                                    <div className="testimonial-avatar-v3">{t.initials}</div>
-                                    <div className="testimonial-info-v3">
-                                        <h4>{t.name}</h4>
-                                        <span>{t.role}</span>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "30px" }}>
+                        {reviews.map((r, idx) => (
+                            <div key={idx} style={{ background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.2)", borderRadius: "24px", padding: "32px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                                <div>
+                                    <div style={{ display: "flex", color: "#F59E0B", gap: "4px", marginBottom: "16px" }}>
+                                        {[...Array(r.rating)].map((_, i) => (
+                                            <FaStar key={i} />
+                                        ))}
                                     </div>
+                                    <p style={{ color: "#F8FAFC", fontSize: "1.05rem", lineHeight: "1.7", fontStyle: "italic", marginBottom: "24px" }}>&ldquo;{r.quote}&rdquo;</p>
+                                </div>
+                                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: "20px" }}>
+                                    <h4 style={{ color: "#F8FAFC", fontSize: "1.1rem", fontWeight: 700, margin: "0 0 4px 0" }}>{r.author}</h4>
+                                    <span style={{ color: "#06B6D4", fontSize: "0.85rem", display: "block", fontWeight: 600 }}>{r.role}</span>
+                                    <span style={{ color: "#94A3B8", fontSize: "0.8rem", display: "block", marginTop: "4px" }}>Service: {r.service}</span>
                                 </div>
                             </div>
                         ))}
                     </div>
+
+                    <div style={{ textAlign: "center", marginTop: "60px" }}>
+                        <Link href="/contact" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", borderRadius: "100px", padding: "16px 36px" }}>
+                            Become Our Next Success Story <FaArrowRight />
+                        </Link>
+                    </div>
                 </div>
             </section>
-
-            {/* CTA */}
-            <PremiumCTA />
         </>
     );
 }

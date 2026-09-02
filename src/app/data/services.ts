@@ -1,5 +1,5 @@
 /* ==============================
-   SERVICE CATEGORIES & PRODUCTS
+   FUTUREX DIGITAL MARKETING — SERVICES & SOLUTIONS DATA
    ============================== */
 
 export interface Product {
@@ -26,218 +26,201 @@ export interface ServiceCategory {
 
 export const serviceCategories: ServiceCategory[] = [
     {
-        slug: "pipes-and-tanks",
-        title: "Pipes & Tanks",
-        shortDesc: "PVC, CPVC, UPVC, PPR pipes and water storage tanks.",
-        longDesc: "At Nalwaya Fitting Suppliers, we offer a specialized range of high-performance piping and storage solutions. Our selection includes everything from extreme-durability CPVC for hot water systems to heavy-duty underground storage tanks. We are authorized dealers for top brands, ensuring that every pipe and tank you purchase meets or exceeds national quality standards for safe and efficient water management.",
+        slug: "search-engine-optimization",
+        title: "Search Engine Optimization (SEO)",
+        shortDesc: "Dominate Google search results in Udaipur and globally with data-driven SEO strategies.",
+        longDesc: "At FutureX Digital Marketing, we engineer high-converting SEO strategies designed to place your business at the top of Google search results. Our comprehensive search engine optimization covers hyper-targeted local SEO in Udaipur, technical audits, keyword research, link authority building, and content optimization that generates qualified, recurring organic leads for your business.",
         keyPoints: [
-            "UV Resistant Water Storage",
-            "Lead-Free Piping Systems",
-            "High Pressure Endurance",
-            "Bacterial Growth Prevention",
-            "Seamless Joint Technology"
+            "Hyper-Targeted Local SEO for Udaipur & Rajasthan",
+            "Technical SEO & Core Web Vitals Optimization",
+            "High-Authority Backlink Acquisition",
+            "Data-Driven Keyword & Intent Targeting",
+            "Transparent Monthly Analytics & ROI Reporting"
         ],
         faqs: [
-            { question: "Which pipe is best for hot water?", answer: "CPVC (Chlorinated Polyvinyl Chloride) is specifically designed to handle high temperatures and is the industry standard for hot water supply." },
-            { question: "What sizes of tanks are available?", answer: "We stock tanks ranging from 500 liters to 5000 liters in both overhead and underground variants." },
-            { question: "Are these pipes UV protected?", answer: "Yes, our exterior-grade pipes and all our water tanks feature advanced UV stabilization to prevent brittleness in sunlight." },
-            { question: "What is the life expectancy?", answer: "Our premium piping systems are designed to last over 50 years under standard operating conditions." },
-            { question: "Do you deliver to site?", answer: "Yes, we provide site-delivery services across Udaipur and surrounding regions for bulk orders." }
+            { question: "Why is Local SEO important for Udaipur businesses?", answer: "Local SEO ensures your business appears in Google Maps and local search packs whenever potential customers in Udaipur search for your services, driving high-intent phone calls and walk-ins." },
+            { question: "How long does it take to see SEO results?", answer: "Most clients start seeing noticeable improvements in keyword rankings and organic traffic within 3 to 6 months of active campaign optimization." },
+            { question: "Do you guarantee #1 ranking on Google?", answer: "While no honest agency can guarantee exact rank #1 due to search algorithm dynamics, we guarantee industry best-practice strategies that consistently rank our clients on Page 1." },
+            { question: "What is included in your technical SEO audit?", answer: "Our audit evaluates site speed, crawlability, indexation, mobile responsiveness, schema markup, broken links, and site security vulnerabilities." },
+            { question: "Do you offer e-commerce SEO?", answer: "Yes! We specialize in Shopify, WooCommerce, and custom Next.js e-commerce SEO to scale online store sales." }
         ],
-        image: "/cat-pipes-tanks.png",
+        image: "/service-seo.png",
         galleryImages: [
-            "/gallery-pipes-1.png",
-            "/gallery-pipes-2.png",
-            "/gallery-pipes-3.png"
+            "/hero-1.png",
+            "/portfolio-2.png",
+            "/service-ppc.png"
         ],
         products: [
-            { name: "PVC Pipes", desc: "Rigid PVC pipes for cold water plumbing, drainage, and irrigation systems." },
-            { name: "CPVC Pipes", desc: "Chlorinated PVC pipes suitable for hot and cold water supply lines." },
-            { name: "UPVC Pipes", desc: "Unplasticized PVC pipes for soil, waste, and rainwater drainage." },
-            { name: "PPR Pipes", desc: "Polypropylene random copolymer pipes for hot/cold water systems." },
-            { name: "GI Pipes", desc: "Galvanized iron pipes for water supply and structural applications." },
-            { name: "Water Tanks (Overhead)", desc: "Plastic and FRP overhead water storage tanks in various capacities." },
-            { name: "Underground Tanks", desc: "Durable underground tanks for rainwater harvesting and storage." },
-            { name: "Plasto Water Tanks", desc: "Authorized dealer for Plasto brand premium water tanks." },
+            { name: "Local SEO & Google Business Profile", desc: "Dominate local maps, gain 5-star customer reviews, and rank for 'near me' local searches in Udaipur." },
+            { name: "Technical SEO Audits", desc: "Comprehensive technical fixes, speed optimization, and schema markup integration for Google indexing." },
+            { name: "On-Page SEO Optimization", desc: "Keyword-rich meta tags, heading structures, content optimization, and internal linking strategies." },
+            { name: "High-Authority Link Building", desc: "White-hat backlink outreach, press release distribution, and editorial guest posts for maximum domain authority." },
+            { name: "E-Commerce SEO", desc: "Product page optimization, schema rich snippets, category structure tuning, and conversion funnel optimization." },
+            { name: "Content Strategy & Blogging", desc: "SEO-driven articles and blog posts designed to capture buyer intent keywords and build industry authority." }
         ],
     },
     {
-        slug: "adhesives",
-        title: "Adhesives",
-        shortDesc: "Solvent cements, sealants, and plumbing adhesives.",
-        image: "/cat-adhesives.png",
+        slug: "web-development",
+        title: "Web Development & E-Commerce",
+        shortDesc: "High-performance, modern Next.js and custom websites engineered for speed and conversion.",
+        longDesc: "Your website is your 24/7 digital storefront. FutureX Digital Marketing builds state-of-the-art web applications, corporate websites, and e-commerce platforms using cutting-edge frameworks like Next.js, React, and Tailwind CSS. We prioritize sub-second page load speeds, mobile responsiveness, stunning visual aesthetics, and conversion-focused UX to turn visitors into paying customers.",
+        keyPoints: [
+            "Custom Next.js & React App Architecture",
+            "Mobile-First Responsive UI/UX Design",
+            "Sub-Second Lightning Load Speeds",
+            "Integrated Lead Capture & Payment Gateways",
+            "SEO-Engineered Code Structure"
+        ],
+        faqs: [
+            { question: "Which technology stack do you use for web development?", answer: "We leverage modern web technologies including Next.js, React, TypeScript, Tailwind CSS, Node.js, and headless CMS frameworks for maximum performance." },
+            { question: "Will my website be mobile friendly?", answer: "Absolutely. Every website we build is 100% responsive and optimized for seamless viewing across mobile, tablet, and desktop devices." },
+            { question: "Can I manage and update content myself?", answer: "Yes! We integrate user-friendly admin panels and content management systems so your team can easily update text, products, and blogs." },
+            { question: "How long does a website development project take?", answer: "Standard corporate websites take 2 to 4 weeks, while complex e-commerce platforms or web apps take 4 to 8 weeks." },
+            { question: "Do you provide hosting and maintenance support?", answer: "Yes, we offer ongoing cloud hosting management, SSL security, backups, and technical maintenance." }
+        ],
+        image: "/service-webdev.png",
+        galleryImages: [
+            "/hero-2.png",
+            "/portfolio-1.png",
+            "/about-agency.png"
+        ],
         products: [
-            { name: "CPVC Solvent Cement", desc: "High-strength cement for joining CPVC pipes and fittings." },
-            { name: "PVC Solvent Cement", desc: "Fast-setting adhesive for PVC pipe joints and connections." },
-            { name: "Plumbing Adhesive", desc: "Multi-purpose plumbing adhesive for various pipe materials." },
-            { name: "Pipe Thread Sealant", desc: "PTFE-based thread sealant for leak-proof pipe connections." },
-            { name: "Silicone Sealant", desc: "Waterproof silicone sealant for bathroom and kitchen joints." },
-            { name: "Epoxy Adhesive", desc: "Two-component epoxy for heavy-duty bonding and repairs." },
+            { name: "Custom Web Applications", desc: "Bespoke full-stack web applications built on Next.js, React, and Node.js tailored to your business model." },
+            { name: "Corporate & Business Websites", desc: "Sleek, modern multi-page company websites designed to establish trust and generate qualified inquiries." },
+            { name: "E-Commerce Stores (Shopify & Custom)", desc: "High-converting online shopping platforms with seamless cart checkout, payment gateways, and inventory sync." },
+            { name: "High-Converting Landing Pages", desc: "Targeted single-page funnels engineered specifically for high ROI ad campaigns and lead generation." },
+            { name: "Website Redesign & Speed Optimization", desc: "Transform outdated legacy websites into fast, modern 2026 digital experiences with 90+ PageSpeed scores." },
+            { name: "API Integration & Web Portals", desc: "Custom CRM, payment gateway, WhatsApp API, and third-party SaaS software integrations." }
         ],
     },
     {
-        slug: "bathware-sanitaryware",
-        title: "Bathware & Sanitaryware",
-        shortDesc: "Health faucets, jet sprays, CP fittings, brass, drainers.",
-        image: "/cat-bathware.png",
+        slug: "social-media-marketing",
+        title: "Social Media Marketing (SMM)",
+        shortDesc: "Engage target audiences, build brand equity, and drive viral engagement across Instagram, Facebook, & LinkedIn.",
+        longDesc: "Social media is the heart of modern brand awareness. At FutureX Digital Marketing, we curate dynamic social media strategies that combine aesthetic content creation, short-form video reels, influencer partnerships, and strategic community management. We help Udaipur and global brands build authentic connections and loyal customer followings.",
+        keyPoints: [
+            "Custom Graphic & Video Content Production",
+            "Instagram Reels & Short-Form Video Strategy",
+            "Targeted Audience Growth & Engagement",
+            "Brand Voice & Aesthetic Consistency",
+            "Influencer & Brand Collaboration Campaigns"
+        ],
+        faqs: [
+            { question: "Which social media platforms do you manage?", answer: "We manage Instagram, Facebook, LinkedIn, YouTube, Twitter/X, and Pinterest depending on where your target audience hangs out." },
+            { question: "Do you create high-quality graphic posts and video reels?", answer: "Yes! Our in-house creative team designs custom graphics, motion visuals, and produces trending short-form video reels." },
+            { question: "How often will you post on our social channels?", answer: "Depending on your selected package, we post 3 to 6 times a week, including interactive stories and video reels." },
+            { question: "Can social media marketing generate direct leads for my business?", answer: "Definitely. Through targeted call-to-actions, direct messaging funnels, and landing page links, social media drives qualified leads." }
+        ],
+        image: "/service-social.png",
+        galleryImages: [
+            "/hero-3.png",
+            "/service-branding.png",
+            "/about-agency.png"
+        ],
         products: [
-            { name: "Health Faucet", desc: "Handheld bidet spray for personal hygiene with wall mount." },
-            { name: "Jet Spray", desc: "High-pressure jet spray for bathroom cleaning applications." },
-            { name: "C.P. Extension Nipple", desc: "Chrome-plated extension nipples for tap and faucet connections." },
-            { name: "C.P. Waste Coupling", desc: "Chrome-plated waste coupling for basin and sink drainage." },
-            { name: "C.P. Nozzle & Hose Nipple", desc: "Chrome-plated nozzles and hose connectors for water fixtures." },
-            { name: "Connection Pipe & Shower Tube", desc: "Flexible connection pipes and shower tubes in various lengths." },
-            { name: "Brass Fitting", desc: "Premium brass fittings for durable plumbing connections." },
-            { name: "SS Drainers", desc: "Stainless steel floor drainers for bathroom and balcony drainage." },
-            { name: "Cockroach Trap", desc: "Anti-cockroach floor drain traps with one-way valve mechanism." },
-            { name: "Urinal Accessories", desc: "Complete urinal fittings including spreaders, waste pipes, and valves." },
-            { name: "Flanges", desc: "Wall and floor flanges in CP, brass, and PVC materials." },
-            { name: "Aerators", desc: "Water-saving faucet aerators for controlled flow and splash reduction." },
-            { name: "Flushing Mechanism", desc: "Complete flush valve kits and dual-flush mechanisms." },
-            { name: "Seat Covers", desc: "Toilet seat covers in soft-close and standard hinge variants." },
-            { name: "Cisterns (Plastic/Concealed)", desc: "Flush cisterns in external plastic and concealed wall-mount types." },
+            { name: "Instagram & Facebook Management", desc: "End-to-end feed curation, visual branding, storytelling graphics, and daily profile management." },
+            { name: "Short-Form Video Reels & Shorts", desc: "Engaging vertical video production, trending audio curation, and cinematic editing designed for viral reach." },
+            { name: "LinkedIn B2B Growth Strategy", desc: "Executive personal branding, corporate thought leadership content, and targeted B2B networking." },
+            { name: "Social Media Strategy & Calendar", desc: "Data-driven monthly content calendars aligning with seasonal offers, business milestones, and trending topics." },
+            { name: "Community Management & DM Automation", desc: "Active response management for comments and direct messages paired with automated lead capture bots." },
+            { name: "Influencer Marketing Campaigns", desc: "Connecting your brand with regional Udaipur influencers and niche creators for authentic brand advocacy." }
         ],
     },
     {
-        slug: "paints",
-        title: "Paints",
-        shortDesc: "Interior, exterior, wood, and metal paints with primers.",
-        image: "/cat-paints.png",
+        slug: "performance-marketing",
+        title: "Performance Marketing & PPC Ads",
+        shortDesc: "Maximize return on ad spend (ROAS) with precision-targeted Google Ads & Meta Ads campaigns.",
+        longDesc: "Stop guessing and start converting. FutureX Digital Marketing runs data-driven performance marketing campaigns on Google Ads, Meta (Facebook & Instagram) Ads, YouTube, and LinkedIn. Every rupee spent is tracked against clear conversion goals, cost-per-lead (CPL), and return on ad spend (ROAS).",
+        keyPoints: [
+            "Google Search, Shopping & Display Campaigns",
+            "Meta (Instagram & Facebook) High-ROAS Ad Funnels",
+            "Precision Audience Demographics & Behavioral Targeting",
+            "A/B Split Testing for Ad Creatives & Landing Pages",
+            "Real-Time Conversion Tracking & Attribution"
+        ],
+        faqs: [
+            { question: "What budget do I need for Google & Meta Ads?", answer: "We work with businesses of all sizes, starting from modest local ad budgets to enterprise multi-channel ad spend." },
+            { question: "How fast can paid advertising deliver results?", answer: "Paid ads deliver immediate traffic and leads within 24 to 48 hours of campaign launch." },
+            { question: "How do you measure ad performance?", answer: "We track Cost Per Click (CPC), Cost Per Lead (CPL), Conversion Rate, and Return On Ad Spend (ROAS) in real time." },
+            { question: "Do you design the ad copy and creatives?", answer: "Yes! We write compelling ad copy and design high-converting visual ad banners and video ads." }
+        ],
+        image: "/service-ppc.png",
+        galleryImages: [
+            "/hero-1.png",
+            "/portfolio-2.png",
+            "/service-seo.png"
+        ],
         products: [
-            { name: "Interior Wall Paint", desc: "Premium emulsion paints for smooth interior wall finishes." },
-            { name: "Exterior Wall Paint", desc: "Weather-resistant exterior paints for long-lasting protection." },
-            { name: "Wood Paint & Finish", desc: "Wood stains, varnishes, and enamel paints for furniture and doors." },
-            { name: "Metal Paint", desc: "Anti-rust and anti-corrosion paints for metal surfaces." },
-            { name: "Primer", desc: "Wall and metal primers for better paint adhesion and coverage." },
-            { name: "Waterproof Paint", desc: "Specialized waterproofing coatings for damp-prone surfaces." },
+            { name: "Google Search Ads (PPC)", desc: "Capture high-intent buyers searching for your specific products and services on Google." },
+            { name: "Meta Lead Generation Ads", desc: "High-converting Instagram and Facebook ad campaigns that generate pre-qualified lead forms directly inside the app." },
+            { name: "Remarketing & Retargeting", desc: "Re-engage past website visitors with tailored offers across the web to increase conversion rates." },
+            { name: "Google Shopping & Performance Max", desc: "E-commerce catalog advertising that showcases your products directly in Google search shopping feeds." },
+            { name: "YouTube Video Advertising", desc: "High-impact video ad placements targeting specific demographics and interested audiences." },
+            { name: "Ad Creative & Copywriting", desc: "Persuasive headline writing, visual ad design, and video scriptwriting engineered for maximum CTR." }
         ],
     },
     {
-        slug: "construction-chemicals",
-        title: "Construction Chemicals",
-        shortDesc: "Waterproofing, tile adhesive, putty, grout, and admixtures.",
-        image: "/cat-construction.png",
+        slug: "brand-strategy-design",
+        title: "Brand Strategy & Visual Identity",
+        shortDesc: "Establish a memorable, premium brand identity with custom logo design, color systems, and corporate branding.",
+        longDesc: "A strong brand builds instant trust and commands premium pricing. FutureX Digital Marketing crafts comprehensive brand identities that resonate with your target market. From logo design and typography guidelines to marketing collateral and digital media kits, we ensure your brand stands out in the crowded market.",
+        keyPoints: [
+            "Memorable Logo & Visual Emblem Design",
+            "Comprehensive Brand Style Guidelines",
+            "Typography & Harmonic Color Palette Systems",
+            "Corporate Stationery & Digital Media Kits",
+            "Rebranding & Market Positioning Strategy"
+        ],
+        faqs: [
+            { question: "What deliverables are included in a brand identity package?", answer: "You receive primary and secondary logo files, brand style guide (PDF), vector source files, font pairings, color codes, and social media branding templates." },
+            { question: "Can you help rebrand an existing business in Udaipur?", answer: "Yes! We specialize in modernizing legacy brand identities to help businesses appeal to contemporary audiences." },
+            { question: "How long does the logo and brand design process take?", answer: "Typically 1 to 3 weeks, including initial concept exploration, client feedback revisions, and final asset delivery." }
+        ],
+        image: "/service-branding.png",
+        galleryImages: [
+            "/portfolio-1.png",
+            "/service-social.png",
+            "/about-agency.png"
+        ],
         products: [
-            { name: "Waterproofing Compound", desc: "Integral and surface waterproofing compounds for concrete and masonry." },
-            { name: "Tile Adhesive", desc: "Cement-based tile adhesives for wall and floor tile fixing." },
-            { name: "Wall Putty", desc: "Smooth finish wall putty for interior and exterior surfaces." },
-            { name: "Grout", desc: "Non-shrink grout and tile joint grout in various colors." },
-            { name: "Concrete Admixture", desc: "Plasticizers and retarders for improving concrete workability." },
-            { name: "Anti-Corrosion Coating", desc: "Protective coatings for reinforcement bars and metal embedments." },
+            { name: "Custom Logo Design", desc: "Unique, timeless logo mark and typographic logotype crafted specifically for your business identity." },
+            { name: "Brand Style Guide & Manual", desc: "Complete documentation detailing official logo usage, clear space, brand colors (HEX/CMYK/RGB), and typography." },
+            { name: "Corporate Stationery Package", desc: "Business card designs, letterheads, email signatures, presentation decks, and invoice templates." },
+            { name: "Packaging & Label Design", desc: "Eye-catching product packaging, retail labels, and unboxing design concepts." },
+            { name: "Marketing Collateral & Brochures", desc: "Print and digital trifold brochures, product catalogs, company profile PDFs, and banner designs." },
+            { name: "Social Media Branding Templates", desc: "Custom editable Canva/Photoshop story and post templates for seamless brand consistency." }
         ],
     },
     {
-        slug: "pipe-fittings",
-        title: "Pipe Fittings",
-        shortDesc: "Elbows, tees, couplings, reducers, unions, flanges in SS, Brass, PVC.",
-        image: "/cat-pipe-fittings.png",
-        products: [
-            { name: "90° Elbows (SS, Brass, PVC)", desc: "Right-angle elbows in stainless steel, brass, and PVC materials." },
-            { name: "45° Elbows (SS, Brass, PVC)", desc: "45-degree elbows for gradual change of pipe direction." },
-            { name: "Equal Tees", desc: "Three-way pipe connectors with equal outlet sizes." },
-            { name: "Reducing Tees", desc: "Branch tees with reduced outlet for flow distribution." },
-            { name: "Couplings", desc: "Straight pipe connectors for joining two pipes of same diameter." },
-            { name: "Concentric Reducers", desc: "Centered reducers for smooth transition between pipe sizes." },
-            { name: "Eccentric Reducers", desc: "Off-center reducers maintaining flat bottom for horizontal runs." },
-            { name: "Unions", desc: "Detachable pipe joints for easy maintenance and disconnection." },
-            { name: "Caps & Plugs", desc: "End caps and threaded plugs for sealing pipe ends." },
-            { name: "Close / Short / Long Nipples", desc: "Threaded nipples in various lengths for pipe connections." },
-            { name: "Slip-on Flanges", desc: "Welded flanges that slip over pipe end for bolted connections." },
-            { name: "Weld Neck Flanges", desc: "Butt-weld flanges for high-pressure piping systems." },
-            { name: "Blind Flanges", desc: "Solid disc flanges for blanking off pipeline ends." },
+        slug: "ai-automation-lead-gen",
+        title: "AI Automation & Lead Generation",
+        shortDesc: "Automate sales funnels, customer inquiries, and lead qualification using smart AI workflows.",
+        longDesc: "Scale your revenue without increasing headcount. FutureX Digital Marketing integrates cutting-edge AI chatbots, automated WhatsApp lead nurturing, CRM workflows, and email automation. We turn passive website visitors into appointment bookings and sales opportunities automatically.",
+        keyPoints: [
+            "AI-Powered Chatbots & Conversational Funnels",
+            "Automated WhatsApp Lead Instant Messaging",
+            "CRM & Email Nurture Sequence Integration",
+            "Automated Lead Scoring & Routing",
+            "Seamless Sales Funnel Optimization"
         ],
-    },
-    {
-        slug: "hose-clamps",
-        title: "Hose Clamps",
-        shortDesc: "Worm drive, spring, T-bolt, and wire hose clamps.",
-        image: "/service-parts.png",
-        products: [
-            { name: "Worm Drive Clamps", desc: "Adjustable band clamps with screw mechanism for hose connections." },
-            { name: "Spring Clamps", desc: "Self-adjusting spring-loaded clamps for constant tension." },
-            { name: "T-Bolt Clamps", desc: "Heavy-duty T-bolt clamps for high-pressure hose applications." },
-            { name: "Wire Clamps", desc: "Double-wire spring clamps for quick-release hose connections." },
+        faqs: [
+            { question: "How does AI automation help my business grow?", answer: "AI automation ensures zero missed customer inquiries, instant 24/7 responses, automated appointment scheduling, and automated lead follow-ups." },
+            { question: "Can AI automation connect with WhatsApp?", answer: "Yes! We set up official WhatsApp Business API workflows that send instant lead confirmations, catalog links, and follow-ups." },
+            { question: "Is technical knowledge required to manage AI tools?", answer: "No. We build intuitive, fully automated workflows and train your team on how to track incoming leads." }
         ],
-    },
-    {
-        slug: "fasteners",
-        title: "Fasteners",
-        shortDesc: "Bolts, nuts, screws, washers, anchors, rivets, rods.",
-        image: "/hero-2.png",
-        products: [
-            { name: "Hex Bolts", desc: "Standard hexagonal head bolts in various sizes and grades." },
-            { name: "Hex Nuts", desc: "Standard hex nuts for bolted joint assemblies." },
-            { name: "Lock Nuts", desc: "Self-locking nuts for vibration-resistant connections." },
-            { name: "Wing Nuts", desc: "Hand-tightenable wing nuts for tool-free assembly." },
-            { name: "Cap Nuts", desc: "Dome-shaped acorn nuts for decorative and protective finishes." },
-            { name: "Wood Screws", desc: "Self-tapping screws designed for wood-to-wood fastening." },
-            { name: "Machine Screws", desc: "Precision screws for metal and machine component assembly." },
-            { name: "Self-Tapping Screws", desc: "Thread-forming screws for metal sheet and thin material fastening." },
-            { name: "Flat Washers", desc: "Plain flat washers for load distribution under bolt heads." },
-            { name: "Spring Washers", desc: "Split ring washers to prevent loosening from vibration." },
-            { name: "Lock Washers", desc: "External and internal tooth washers for secure locking." },
-            { name: "Expansion Anchors", desc: "Heavy-duty anchors for concrete and masonry applications." },
-            { name: "Sleeve Anchors", desc: "Medium-duty anchors for solid and hollow base materials." },
-            { name: "Wedge Anchors", desc: "High-strength anchors for critical structural connections." },
-            { name: "Rivets", desc: "Solid and blind rivets for permanent sheet metal fastening." },
-            { name: "Threaded Rods", desc: "Fully threaded rods for suspension, bracing and anchoring." },
-            { name: "Studs", desc: "Double-ended threaded studs for flange and equipment mounting." },
+        image: "/service-ai.png",
+        galleryImages: [
+            "/hero-1.png",
+            "/service-webdev.png",
+            "/portfolio-2.png"
         ],
-    },
-    {
-        slug: "design-series",
-        title: "Design Series",
-        shortDesc: "Aria, Florentine, FLT, Opal Prime, Ornamix, Panta, Prime.",
-        image: "/about-1.png",
         products: [
-            { name: "Aria Series", desc: "Contemporary design faucets and mixers with sleek curves and chrome finish." },
-            { name: "Florentine Series", desc: "Italian-inspired premium bathroom fittings with ornate detailing." },
-            { name: "FLT Series", desc: "Flat-design minimalist faucets for modern bathroom aesthetics." },
-            { name: "Opal Prime Series", desc: "Luxury line featuring opal-inspired textures and premium finishes." },
-            { name: "Ornamix Series", desc: "Decorative mixer taps with artistic ornamental handles." },
-            { name: "Panta Series", desc: "Five-way multifunction shower systems and diverter sets." },
-            { name: "Prime Series", desc: "Best-selling value range with durable construction and classic design." },
-        ],
-    },
-    {
-        slug: "industrial-valves",
-        title: "Industrial Valves",
-        shortDesc: "Gate, ball, globe, check, butterfly, needle, fire hydrant valves.",
-        image: "/service-plumbing.png",
-        products: [
-            { name: "Gate / Sluice Valve", desc: "Full-bore gate valves for on/off isolation in pipelines." },
-            { name: "Ball Valve", desc: "Quarter-turn ball valves for quick shut-off and flow control." },
-            { name: "Globe Valve", desc: "Linear-motion valves for precise throttling and flow regulation." },
-            { name: "Check Valve (NRV)", desc: "Non-return valves to prevent backflow in piping systems." },
-            { name: "Butterfly Valve", desc: "Lightweight quarter-turn valves for large diameter pipelines." },
-            { name: "Pressure Reducing Valve", desc: "PRVs for maintaining downstream pressure in water systems." },
-            { name: "Needle Valve", desc: "Fine-adjustment valves for precise low-flow control." },
-            { name: "Steam Traps", desc: "Automatic devices for draining condensate from steam systems." },
-            { name: "Strainers", desc: "Y-type and basket strainers for debris filtration in pipelines." },
-            { name: "Double Regulating Balancing Valve", desc: "Commissioning valves for HVAC hydronic balancing." },
-            { name: "Fire Hydrant Valve", desc: "Fire-fighting valves conforming to IS standards for buildings." },
-            { name: "Transformer Valve", desc: "Specialized valves for oil-filled transformer applications." },
-        ],
-    },
-    {
-        slug: "hardware-accessories",
-        title: "Hardware Accessories",
-        shortDesc: "Brackets, hinges, handles, locks, wire mesh, hand tools.",
-        image: "/hero-1.png",
-        products: [
-            { name: "L-Brackets", desc: "Right-angle L-brackets for shelving and structural support." },
-            { name: "Corner Brackets", desc: "Corner reinforcement brackets for furniture and frames." },
-            { name: "Shelf Brackets", desc: "Decorative and heavy-duty shelf mounting brackets." },
-            { name: "Hinges", desc: "Door, cabinet, and gate hinges in various styles and materials." },
-            { name: "Handles & Knobs", desc: "Door handles, cabinet pulls, and decorative knobs." },
-            { name: "Locks & Latches", desc: "Padlocks, mortise locks, and door latches for security." },
-            { name: "Chains & Cables", desc: "Galvanized chains and steel cables for various applications." },
-            { name: "Wire Mesh (Galvanized)", desc: "Hot-dip galvanized wire mesh for fencing and protection." },
-            { name: "Chicken Wire Mesh", desc: "Hexagonal wire netting for poultry, garden, and craft use." },
-            { name: "Welded Wire Mesh", desc: "Heavy-duty welded mesh panels for construction and security." },
-            { name: "Adhesives & Sealants", desc: "General-purpose adhesives and industrial sealants." },
-            { name: "Hand Tools", desc: "Pliers, hammers, wrenches, screwdrivers, and more." },
-            { name: "Measuring Instruments", desc: "Tape measures, spirit levels, and marking tools." },
+            { name: "AI Chatbot Integration", desc: "Custom AI assistant embedded on your website to answer visitor queries and capture lead contact details 24/7." },
+            { name: "WhatsApp Business API Automation", desc: "Automated instant broadcast messages, quick reply flows, and appointment confirmation triggers via WhatsApp." },
+            { name: "CRM Setup & Pipeline Management", desc: "Streamlined sales funnel setup in HubSpot, Zoho, or custom dashboards for tracking lead progress." },
+            { name: "Email Marketing & Drip Campaigns", desc: "Automated welcome series, abandoned cart recovery emails, and monthly newsletter triggers." },
+            { name: "Lead Qualification Workflows", desc: "Smart filtering mechanisms that qualify high-value prospects before handing them to your sales team." },
+            { name: "Analytics & Custom Reporting Dashboards", desc: "Unified analytics dashboard pulling real-time metrics from Google Analytics, Meta Ads, and sales CRM." }
         ],
     },
 ];

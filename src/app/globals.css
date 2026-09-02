@@ -1,41 +1,41 @@
 @import "tailwindcss";
 
 /* ========================
-   DESIGN TOKENS
+   DESIGN TOKENS — FUTUREX DIGITAL MARKETING
    ======================== */
 :root {
   /* Primary Palette */
-  --navy: #2F4156;
-  --navy-light: #3d5570;
-  --navy-dark: #1e2d3d;
-  --teal: #567C8D;
-  --teal-light: #6a95a8;
-  --teal-dark: #456472;
-  --cherry-red: #D1174B;
-  --beige: #F5EFEB;
-  --beige-dark: #e8ddd6;
-  --sky-blue: #C8D9E6;
-  --sky-blue-light: #dbe8f0;
+  --navy: #0B0F19;
+  --navy-light: #151D2A;
+  --navy-dark: #070A10;
+  --teal: #06B6D4;
+  --teal-light: #38BDF8;
+  --teal-dark: #0891B2;
+  --cherry-red: #6366F1;
+  --beige: #0F172A;
+  --beige-dark: #1E293B;
+  --sky-blue: #38BDF8;
+  --sky-blue-light: #0F172A;
   --white: #FFFFFF;
 
   /* Semantic */
-  --background: #FAFBFD;
-  --foreground: #2F4156;
-  --text-primary: #2F4156;
-  --text-secondary: #567C8D;
-  --text-muted: #8a9baa;
+  --background: #0B0F19;
+  --foreground: #F8FAFC;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
   --text-light: #FFFFFF;
-  --accent: #567C8D;
-  --accent-hover: #456472;
-  --border: rgba(86, 124, 141, 0.15);
-  --border-light: rgba(200, 217, 230, 0.4);
+  --accent: #06B6D4;
+  --accent-hover: #38BDF8;
+  --border: rgba(6, 182, 212, 0.2);
+  --border-light: rgba(99, 102, 241, 0.25);
 
   /* Glass */
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-bg-strong: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(200, 217, 230, 0.45);
-  --glass-shadow: 0 8px 32px rgba(47, 65, 86, 0.08);
-  --glass-shadow-hover: 0 16px 48px rgba(47, 65, 86, 0.14);
+  --glass-bg: rgba(15, 23, 42, 0.75);
+  --glass-bg-strong: rgba(11, 15, 25, 0.9);
+  --glass-border: rgba(6, 182, 212, 0.25);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-shadow-hover: 0 16px 48px rgba(6, 182, 212, 0.25);
 
   /* Spacing */
   --section-padding: 100px 0;

@@ -10,30 +10,25 @@ import {
   FaStar,
   FaAward,
   FaUsers,
-  FaBoxes,
-  FaTags,
+  FaChartLine,
+  FaRocket,
   FaShieldAlt,
   FaSmile,
   FaHandshake,
-  FaCubes,
-  FaTools,
+  FaLaptopCode,
   FaBullseye,
   FaEye,
-  FaWrench,
-  FaThumbsUp,
-  FaBalanceScale,
-  FaTint,
-  FaBath,
-  FaIndustry,
-  FaCog,
-  FaTrophy,
+  FaSearch,
+  FaShareAlt,
+  FaBullhorn,
+  FaRobot,
+  FaPalette,
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";
-import { MdPlumbing, MdKitchen } from "react-icons/md";
 import { serviceCategories } from "./data/services";
 
-/* -------  Scroll-in animation hook  ------- */
+/* ------- Scroll-in animation hook ------- */
 function useAnimateOnScroll() {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -65,134 +60,168 @@ function AnimateOnScroll({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-/* -------  FAQ Item V3  ------- */
+/* ------- FAQ Item ------- */
 function FAQItemV3({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`faq-item-v3 ${open ? "open" : ""}`}>
-      <button className="faq-question-v3" onClick={() => setOpen(!open)}>
+    <div className={`faq-item-v3 ${open ? "open" : ""}`} style={{ background: "rgba(15, 23, 42, 0.7)", border: "1px solid rgba(6, 182, 212, 0.2)", borderRadius: "12px", marginBottom: "12px" }}>
+      <button className="faq-question-v3" onClick={() => setOpen(!open)} style={{ color: "#F8FAFC", padding: "20px" }}>
         {q}
-        <span className="faq-icon-v3">
+        <span className="faq-icon-v3" style={{ color: "#06B6D4" }}>
           {open ? <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>-</span> : <FaChevronDown />}
         </span>
       </button>
       <div className="faq-answer-v3">
-        <div className="faq-answer-content-v3">{a}</div>
+        <div className="faq-answer-content-v3" style={{ color: "#94A3B8", padding: "0 20px 20px" }}>{a}</div>
       </div>
     </div>
   );
 }
 
+const heroSlides = [
+  {
+    image: "/hero-1.png",
+    badge: "Udaipur's #1 Digital Marketing Agency",
+    title: "Scale Your Revenue With Future-Ready Digital Marketing",
+    subtitle: "We combine high-ranking SEO, precision PPC campaigns, Next.js web applications, and AI sales automation to grow businesses in Udaipur and globally.",
+    cta: "Get Started Now",
+  },
+  {
+    image: "/hero-2.png",
+    badge: "Data-Driven Growth Engine",
+    title: "Convert Visitors Into Recurring Customers",
+    subtitle: "High-speed custom websites and performance ad funnels built for maximum return on ad spend (ROAS) and brand authority.",
+    cta: "Explore Our Services",
+  },
+  {
+    image: "/hero-3.png",
+    badge: "AI-Powered Marketing Solutions",
+    title: "Dominate Google & Social Media Channels",
+    subtitle: "Rank on Page 1 of Google search in Udaipur, engage target audiences on Instagram & LinkedIn, and capture leads 24/7.",
+    cta: "Get Free Consultation",
+  },
+];
 
 const testimonials = [
   {
-    text: "Excellent place to buy genuine sanitary fittings in Udaipur. Very helpful staff and great pricing.",
-    name: "Rajesh Sharma",
-    role: "Homeowner",
-    initials: "RS",
+    text: "FutureX Digital Marketing completely transformed our online presence in Udaipur. Our organic Google leads quadrupled in just 4 months!",
+    name: "Vikramaditya Singh",
+    role: "CEO, Hospitality Group Udaipur",
+    initials: "VS",
   },
   {
-    text: "Best plumbing fittings supplier in Udaipur. They have almost every spare part available.",
-    name: "Amit Patel",
-    role: "Contractor",
-    initials: "AP",
+    text: "The web development team delivered a blazing fast Next.js website that doubled our online booking conversions within weeks.",
+    name: "Pooja Mehta",
+    role: "Founder, Luxury Lifestyle Brand",
+    initials: "PM",
   },
   {
-    text: "Highly recommended for sanitary fittings and plumbing solutions. Their product quality is outstanding.",
-    name: "Suresh Kumar",
-    role: "Interior Designer",
-    initials: "SK",
+    text: "Their Meta and Google Ads campaigns consistently deliver a 4.5x ROAS for our e-commerce store. Truly the best digital agency in Rajasthan.",
+    name: "Siddharth Jain",
+    role: "Marketing Director",
+    initials: "SJ",
   },
 ];
 
 const faqs = [
-  { q: "Do you provide genuine spare parts for sanitary fittings?", a: "Yes, we supply only genuine and original spare parts from trusted brands. Every product comes with brand authenticity and quality assurance." },
-  { q: "Which brands do you supply?", a: "We supply products from globally trusted brands including Jaquar, Hindware, Cera, Kohler, Zoloto, Plasto, Ashirvad, and many more premium brands." },
-  { q: "Do you provide plumbing installation services?", a: "Yes, we offer professional plumbing and sanitary installation services for residential, commercial, and hospitality projects." },
-  { q: "Do you supply products for hotels and commercial projects?", a: "Absolutely! We specialize in large-scale supply of sanitary fittings and plumbing solutions for hotels, resorts, and commercial establishments across Rajasthan." },
-  { q: "Where is your store located in Udaipur?", a: "Our store is located at Meera Nagar, B-Block, 60 Feet Road, Near PIMS Hospital, Udaipur – 313001, Rajasthan, India." },
+  { q: "What makes FutureX Digital Marketing the best agency in Udaipur?", a: "We combine 5+ years of local market experience in Udaipur with cutting-edge 2026 digital strategies including Next.js web apps, AI automation, and hyper-targeted local SEO." },
+  { q: "How long does it take to see results from Digital Marketing & SEO?", a: "PPC ads and web redesigns yield instant leads within 24-48 hours. Organic SEO campaigns deliver substantial rank and traffic increases within 3 to 6 months." },
+  { q: "Do you offer customized digital marketing packages?", a: "Yes! Every business has unique goals. We tailor custom strategies according to your target audience, industry, and growth trajectory." },
+  { q: "Where is your office located in Udaipur?", a: "Our agency office is located on the 5th Floor, Office No. 526, Arvana Mall, Hathipole, Udaipur, Rajasthan 313001." },
 ];
 
 const coreValues = [
-  { icon: <FaShieldAlt />, title: "Quality Assurance", desc: "Only genuine products from trusted brands." },
-  { icon: <FaSmile />, title: "Customer Satisfaction", desc: "Your satisfaction is our topmost priority." },
-  { icon: <FaBalanceScale />, title: "Honest Pricing", desc: "Transparent and competitive wholesale pricing." },
-  { icon: <FaCubes />, title: "Reliable Products", desc: "Durable fittings built to last for years." },
-  { icon: <FaTools />, title: "Professional Service", desc: "Expert support from experienced professionals." },
-  { icon: <FaHandshake />, title: "Long-Term Trust", desc: "Building lasting relationships since 2005." },
+  { icon: <FaChartLine />, title: "ROI-First Strategy", desc: "Every campaign is tracked against tangible sales, qualified leads, and return on ad spend." },
+  { icon: <FaRocket />, title: "Cutting-Edge Tech", desc: "We leverage Next.js, AI automation, and high-tech analytics to outperform competitors." },
+  { icon: <FaHandshake />, title: "100% Transparency", desc: "Real-time client analytics dashboards and honest monthly performance reporting." },
+  { icon: <FaSmile />, title: "Client Growth Focus", desc: "Your business expansion and long-term brand equity are our primary metrics of success." },
+  { icon: <FaShieldAlt />, title: "Local Market Mastery", desc: "Deep expertise in Udaipur & Rajasthan market dynamics paired with global execution standards." },
+  { icon: <FaLaptopCode />, title: "Full-Funnel Execution", desc: "From brand design to ad traffic and CRM automated follow-ups, we manage the entire funnel." },
 ];
 
 const whyChoose = [
-  { title: "Trusted Sanitary Fittings Supplier", desc: "Over 20 years of proven trust in Udaipur." },
-  { title: "Genuine Spare Parts from Leading Brands", desc: "100% authentic products with brand warranty." },
-  { title: "Wholesale Pricing", desc: "Best prices for bulk and retail purchases." },
-  { title: "Wide Product Range", desc: "50+ categories covering all plumbing needs." },
-  { title: "Reliable Plumbing Expertise", desc: "Skilled professionals for every project." },
-  { title: "Preferred Supplier for Homes, Hotels & Projects", desc: "Trusted by top hotels and builders in Rajasthan." },
+  { title: "Dominant Local SEO in Udaipur", desc: "Rank #1 on Google for high-intent search keywords in Udaipur and Rajasthan." },
+  { title: "High-ROAS Ad Campaigns", desc: "Data-backed Google & Meta ads optimized for low cost-per-lead." },
+  { title: "Sub-Second Next.js Web Performance", desc: "Lightning fast, mobile-first custom web applications engineered for high conversion." },
+  { title: "AI-Powered Automated Sales Funnels", desc: "Instant 24/7 WhatsApp and Chatbot lead capture that never misses an inquiry." },
+  { title: "Creative Branding & Visual Reels", desc: "High-aesthetic social media graphics, video reels, and brand positioning." },
+  { title: "Dedicated Agency Support", desc: "Direct access to digital strategy experts and fast turnaround times." },
 ];
 
-/* -------  COMPONENT  ------- */
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = ["/hero-1.png", "/hero-2.png", "/hero-3.png"];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 6000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <>
-      {/* ====== MODERN HERO SLIDER ====== */}
-      <section className="hero-modern">
+      {/* ====== HERO SLIDER ====== */}
+      <section className="hero-modern" style={{ background: "#0B0F19", position: "relative", minHeight: "85vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div className="hero-modern-bg">
-          {slides.map((slide, index) => (
+          {heroSlides.map((slide, index) => (
             <img
               key={index}
-              src={slide}
-              alt={`Slide ${index + 1}`}
+              src={slide.image}
+              alt={`FutureX Slide ${index + 1}`}
               style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
-                opacity: currentSlide === index ? 1 : 0,
-                transition: 'opacity 1s ease-in-out'
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                opacity: currentSlide === index ? 0.35 : 0,
+                transition: 'opacity 1s ease-in-out',
+                filter: 'brightness(0.7)'
               }}
             />
           ))}
         </div>
-        <div className="container">
+        
+        {/* Glow overlay */}
+        <div style={{ position: "absolute", top: "10%", left: "5%", width: "400px", height: "400px", background: "radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 70%)", borderRadius: "50%", pointerEvents: "none" }}></div>
+        <div style={{ position: "absolute", bottom: "10%", right: "5%", width: "450px", height: "450px", background: "radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, transparent 70%)", borderRadius: "50%", pointerEvents: "none" }}></div>
+
+        <div className="container" style={{ position: "relative", zIndex: 10, padding: "120px 24px 80px" }}>
           <AnimateOnScroll>
-            <div className="hero-badge-modern">
-              <FaTools /> Trusted Hardware &amp; Fitting Supplier
+            <div className="hero-badge-modern" style={{ background: "rgba(6, 182, 212, 0.15)", border: "1px solid rgba(6, 182, 212, 0.4)", color: "#06B6D4", display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 20px", borderRadius: "100px", fontWeight: 700, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>
+              <FaRocket /> {heroSlides[currentSlide].badge}
             </div>
-            <h1 className="hero-title-modern">
-              Premium <span>Sanitary &amp; Plumbing</span> Solutions
+            <h1 className="hero-title-modern" style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.2rem)", fontWeight: 800, color: "#F8FAFC", lineHeight: 1.15, maxWidth: "900px", marginBottom: "24px" }}>
+              {heroSlides[currentSlide].title.split("Digital Marketing")[0]}
+              <span style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                Digital Marketing
+              </span>
+              {heroSlides[currentSlide].title.split("Digital Marketing")[1]}
             </h1>
-            <p className="hero-subtitle-modern">
-              Your trusted partner for genuine fittings, wholesale pricing, and expert plumbing services in Udaipur since 2005.
+            <p className="hero-subtitle-modern" style={{ fontSize: "1.2rem", color: "#94A3B8", maxWidth: "750px", lineHeight: 1.8, marginBottom: "40px" }}>
+              {heroSlides[currentSlide].subtitle}
             </p>
-            <div className="hero-actions-modern">
-              <Link href="/services" className="btn btn-primary">
-                Explore Products <FaArrowRight />
+            <div className="hero-actions-modern" style={{ display: "flex", gap: "20px", flexWrap: "wrap", alignItems: "center" }}>
+              <Link href="/contact" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", padding: "18px 38px", borderRadius: "100px", fontWeight: 800, color: "#FFF" }}>
+                {heroSlides[currentSlide].cta} <FaArrowRight />
               </Link>
-              <div className="btn-play">
-                <FaPhoneAlt />
-              </div>
+              <Link href="tel:+917733977227" className="btn btn-secondary" style={{ border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", padding: "18px 36px", borderRadius: "100px", fontWeight: 800, color: "#F8FAFC", backdropFilter: "blur(10px)" }}>
+                <FaPhoneAlt style={{ color: "#06B6D4" }} /> +91 77339 77227
+              </Link>
             </div>
-            {/* Slider Dots */}
-            <div className="slider-dots" style={{ display: 'flex', gap: '10px', marginTop: '40px' }}>
-              {slides.map((_, index) => (
+
+            {/* Slider Navigation Dots */}
+            <div className="slider-dots" style={{ display: 'flex', gap: '12px', marginTop: '50px' }}>
+              {heroSlides.map((_, index) => (
                 <div
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   style={{
-                    width: '12px',
+                    width: currentSlide === index ? '36px' : '12px',
                     height: '12px',
-                    borderRadius: '50%',
-                    background: currentSlide === index ? 'var(--teal-light)' : 'rgba(255,255,255,0.3)',
+                    borderRadius: '100px',
+                    background: currentSlide === index ? '#06B6D4' : 'rgba(255,255,255,0.2)',
                     cursor: 'pointer',
                     transition: 'all 0.3s ease'
                   }}
@@ -203,142 +232,104 @@ export default function HomePage() {
         </div>
       </section>
 
-
       {/* ====== FEATURES OVERLAP ====== */}
-      <section className="features-overlap">
+      <section className="features-overlap" style={{ marginTop: "-40px", position: "relative", zIndex: 20 }}>
         <div className="container">
           <AnimateOnScroll>
-            <div className="features-grid-modern">
-              <div className="feature-card-modern">
-                <div className="feature-icon-modern">
-                  <FaBath />
+            <div className="features-grid-modern" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "20px" }}>
+              <div className="feature-card-modern" style={{ background: "rgba(15, 23, 42, 0.9)", border: "1px solid rgba(6, 182, 212, 0.3)", borderRadius: "20px", padding: "30px", backdropFilter: "blur(20px)" }}>
+                <div className="feature-icon-modern" style={{ width: "55px", height: "55px", background: "rgba(6, 182, 212, 0.15)", borderRadius: "14px", display: "flex", alignItems: "center", justifyContent: "center", color: "#06B6D4", fontSize: "1.5rem", marginBottom: "20px" }}>
+                  <FaSearch />
                 </div>
-                <h3>Sanitary Fittings</h3>
-                <p>Premium bathroom and sanitary fittings from top global brands.</p>
+                <h3 style={{ color: "#F8FAFC", fontSize: "1.2rem", fontWeight: 700, marginBottom: "10px" }}>Local SEO in Udaipur</h3>
+                <p style={{ color: "#94A3B8", fontSize: "0.95rem" }}>Rank #1 on Google maps &amp; search for buyers in Udaipur &amp; Rajasthan.</p>
               </div>
-              <div className="feature-card-modern">
-                <div className="feature-icon-modern">
-                  <MdPlumbing />
+
+              <div className="feature-card-modern" style={{ background: "rgba(15, 23, 42, 0.9)", border: "1px solid rgba(99, 102, 241, 0.3)", borderRadius: "20px", padding: "30px", backdropFilter: "blur(20px)" }}>
+                <div className="feature-icon-modern" style={{ width: "55px", height: "55px", background: "rgba(99, 102, 241, 0.15)", borderRadius: "14px", display: "flex", alignItems: "center", justifyContent: "center", color: "#6366F1", fontSize: "1.5rem", marginBottom: "20px" }}>
+                  <FaLaptopCode />
                 </div>
-                <h3>Plumbing Solutions</h3>
-                <p>Expert plumbing installation and maintenance for all projects.</p>
+                <h3 style={{ color: "#F8FAFC", fontSize: "1.2rem", fontWeight: 700, marginBottom: "10px" }}>Next.js Web Apps</h3>
+                <p style={{ color: "#94A3B8", fontSize: "0.95rem" }}>Sub-second speed corporate platforms and high-converting online stores.</p>
               </div>
-              <div className="feature-card-modern">
-                <div className="feature-icon-modern">
-                  <FaTools />
+
+              <div className="feature-card-modern" style={{ background: "rgba(15, 23, 42, 0.9)", border: "1px solid rgba(6, 182, 212, 0.3)", borderRadius: "20px", padding: "30px", backdropFilter: "blur(20px)" }}>
+                <div className="feature-icon-modern" style={{ width: "55px", height: "55px", background: "rgba(6, 182, 212, 0.15)", borderRadius: "14px", display: "flex", alignItems: "center", justifyContent: "center", color: "#06B6D4", fontSize: "1.5rem", marginBottom: "20px" }}>
+                  <FaBullhorn />
                 </div>
-                <h3>Genuine Spares</h3>
-                <p>100% authentic spare parts for all your plumbing needs.</p>
+                <h3 style={{ color: "#F8FAFC", fontSize: "1.2rem", fontWeight: 700, marginBottom: "10px" }}>High-ROAS Paid Ads</h3>
+                <p style={{ color: "#94A3B8", fontSize: "0.95rem" }}>Precision Google &amp; Meta ad funnels engineered for maximum ROI.</p>
               </div>
-              <div className="feature-card-modern">
-                <div className="feature-icon-modern">
-                  <FaSmile />
+
+              <div className="feature-card-modern" style={{ background: "rgba(15, 23, 42, 0.9)", border: "1px solid rgba(99, 102, 241, 0.3)", borderRadius: "20px", padding: "30px", backdropFilter: "blur(20px)" }}>
+                <div className="feature-icon-modern" style={{ width: "55px", height: "55px", background: "rgba(99, 102, 241, 0.15)", borderRadius: "14px", display: "flex", alignItems: "center", justifyContent: "center", color: "#6366F1", fontSize: "1.5rem", marginBottom: "20px" }}>
+                  <FaRobot />
                 </div>
-                <h3>Reliable Service</h3>
-                <p>Trusted by thousands of happy customers in Rajasthan.</p>
+                <h3 style={{ color: "#F8FAFC", fontSize: "1.2rem", fontWeight: 700, marginBottom: "10px" }}>AI Lead Automation</h3>
+                <p style={{ color: "#94A3B8", fontSize: "0.95rem" }}>Instant WhatsApp &amp; Chatbot workflows capturing leads 24/7.</p>
               </div>
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-
-      {/* ====== MODERN ABOUT US ====== */}
-      <section className="about-modern-section">
-        <div className="container" style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h2 className="section-title">About Us</h2>
-          <div style={{ width: '60px', height: '3px', background: 'var(--teal)', margin: '0 auto' }}></div>
-        </div>
-
+      {/* ====== ABOUT AGENCY ====== */}
+      <section className="about-modern-section" style={{ padding: "100px 0", background: "#0B0F19" }}>
         <div className="container">
-          {/* Row 1 */}
           <AnimateOnScroll>
-            <div className="about-row">
-              <div className="about-card-modern blue">
-                <div className="about-card-image">
-                  <img src="/about-1.png" alt="Sanitary Solutions" />
-                </div>
-                <div className="about-card-text">
-                  <h3>Your Trusted Partner for Sanitary & Plumbing</h3>
-                  <p>
-                    Nalwaya Fitting Suppliers lead the industry in providing high-quality bathroom
-                    and sanitary fittings for residential and hospitality projects across Rajasthan.
-                  </p>
-                </div>
-              </div>
-              <div className="about-cta-modern">
-                <p>Explore detailed information about our premium product range and history.</p>
-                <Link href="/about" className="btn-modern-outline">View More</Link>
-              </div>
+            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+              <span className="section-label" style={{ color: "#06B6D4" }}>ABOUT FUTUREX</span>
+              <h2 className="section-title" style={{ color: "#F8FAFC" }}>Udaipur’s Premier Digital Growth Agency</h2>
+              <div style={{ width: '60px', height: '3px', background: 'linear-gradient(90deg, #06B6D4, #6366F1)', margin: '0 auto' }}></div>
             </div>
           </AnimateOnScroll>
 
-          {/* Row 2 */}
           <AnimateOnScroll>
-            <div className="about-row reverse">
-              <div className="about-card-modern dark">
-                <div className="about-card-text">
-                  <h3>Wholesale Supplier of Premium Hardware</h3>
-                  <p>
-                    Specializing in genuine spare parts and high-durability plumbing components.
-                    We bridge the gap between global brands and your local construction needs.
-                  </p>
-                </div>
-                <div className="about-card-image">
-                  <img src="/about-2.png" alt="Hardware Fittings" />
-                </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "40px", alignItems: "center" }}>
+              <div style={{ borderRadius: "24px", overflow: "hidden", border: "1px solid rgba(6, 182, 212, 0.3)", boxShadow: "0 20px 50px rgba(0,0,0,0.5)" }}>
+                <img src="/about-agency.png" alt="FutureX Agency Studio" style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
-              <div className="about-cta-modern">
-                <p>Check out our competitive wholesale pricing and bulk supply options.</p>
-                <Link href="/contact" className="btn-modern-outline">Get Price</Link>
+
+              <div>
+                <h3 style={{ color: "#F8FAFC", fontSize: "2rem", fontWeight: 800, lineHeight: 1.25, marginBottom: "20px" }}>
+                  We Help Businesses Scale Revenue Through Performance Marketing
+                </h3>
+                <p style={{ color: "#94A3B8", fontSize: "1.05rem", lineHeight: 1.8, marginBottom: "20px" }}>
+                  Founded in 2020 by Akshay Jain, FutureX Digital Marketing has established itself as Rajasthan’s trusted digital growth partner. Operating from our flagship office in Arvana Mall, Udaipur, we have empowered over 150+ brands across hospitality, e-commerce, real estate, healthcare, and professional services.
+                </p>
+                <p style={{ color: "#94A3B8", fontSize: "1.05rem", lineHeight: 1.8, marginBottom: "30px" }}>
+                  We bridge the gap between creative visual storytelling and hardcore analytical performance. Whether you need to dominate local search results in Udaipur or scale international ad campaigns, FutureX delivers measurable ROI.
+                </p>
+                <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+                  <Link href="/about" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", borderRadius: "100px" }}>
+                    Learn Our Story <FaArrowRight />
+                  </Link>
+                  <Link href="/portfolio" className="btn btn-secondary" style={{ border: "1px solid rgba(255,255,255,0.2)", color: "#F8FAFC", borderRadius: "100px" }}>
+                    View Case Studies
+                  </Link>
+                </div>
               </div>
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-
-      {/* ====== FANCY METRICS (Reference Design) ====== */}
-      <section className="metrics-section-v2">
+      {/* ====== METRICS & ACHIEVEMENTS ====== */}
+      <section className="metrics-section-v2" style={{ padding: "80px 0", background: "#0F172A", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="container">
           <AnimateOnScroll>
-            <div className="metrics-row-v2">
+            <div className="metrics-row-v2" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
               {[
-                {
-                  icon: <FaAward />,
-                  value: "20+",
-                  title: "Experience",
-                  desc: "Two decades of proven excellence and trusted service in the Udaipur market.",
-                  color: "card-blue"
-                },
-                {
-                  icon: <FaUsers />,
-                  value: "1000+",
-                  title: "Customers",
-                  desc: "Vast network of happy homeowners and professional contractors across Rajasthan.",
-                  color: "card-yellow"
-                },
-                {
-                  icon: <FaBoxes />,
-                  value: "50+",
-                  title: "Categories",
-                  desc: "Comprehensive range of sanitary and plumbing parts available under one roof.",
-                  color: "card-teal"
-                },
-                {
-                  icon: <FaTags />,
-                  value: "10+",
-                  title: "Brands",
-                  desc: "Authorized supplier for globally recognized premium brands like Jaquar and Cera.",
-                  color: "card-red"
-                },
+                { icon: <FaAward />, value: "5+ Years", title: "Industry Leadership", desc: "Proven track record driving growth for businesses in Udaipur since 2020." },
+                { icon: <FaUsers />, value: "150+", title: "Clients Served", desc: "Successful growth partnerships across e-commerce, real estate, and hotels." },
+                { icon: <FaStar />, value: "4.8 / 5", title: "Client Rating", desc: "Top-rated digital marketing agency based on verified client reviews." },
+                { icon: <FaChartLine />, value: "350%", title: "Average Organic ROI", desc: "Consistent keyword ranking gains and lead generation increases." },
               ].map((m, i) => (
-                <div key={i} className={`metric-card-v2 ${m.color}`}>
-                  <div className="metric-icon-v2">{m.icon}</div>
-                  <h3>{m.value}</h3>
-                  <div className="metric-title">{m.title}</div>
-                  <p className="metric-desc">{m.desc}</p>
-                  <Link href="/services" className="read-more-accent">Read More</Link>
+                <div key={i} style={{ background: "rgba(11, 15, 25, 0.7)", border: "1px solid rgba(6, 182, 212, 0.2)", borderRadius: "20px", padding: "30px", textAlign: "center" }}>
+                  <div style={{ fontSize: "2rem", color: "#06B6D4", marginBottom: "12px" }}>{m.icon}</div>
+                  <h3 style={{ fontSize: "2.5rem", fontWeight: 800, color: "#F8FAFC", marginBottom: "6px" }}>{m.value}</h3>
+                  <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#6366F1", marginBottom: "10px" }}>{m.title}</div>
+                  <p style={{ fontSize: "0.9rem", color: "#94A3B8", lineHeight: "1.6" }}>{m.desc}</p>
                 </div>
               ))}
             </div>
@@ -346,23 +337,23 @@ export default function HomePage() {
         </div>
       </section>
 
-
-      {/* ====== SERVICES SECTION V2 ====== */}
-      <section className="services-v2-container" id="services">
+      {/* ====== SERVICES DIRECTORY CAROUSEL / GRID ====== */}
+      <section className="services-v2-container" style={{ padding: "100px 0", background: "#0B0F19" }} id="services">
         <div className="container">
           <AnimateOnScroll>
-            <div className="services-v2-header">
+            <div className="services-v2-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "50px", flexWrap: "wrap", gap: "20px" }}>
               <div className="services-v2-title-area">
-                <span className="section-label-v2">OUR SERVICE</span>
-                <h2 className="section-title-v2">Our Excellent Service</h2>
+                <span className="section-label-v2" style={{ color: "#06B6D4", textTransform: "uppercase", letterSpacing: "2px", fontWeight: 700 }}>OUR CORE SERVICES</span>
+                <h2 className="section-title-v2" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#F8FAFC" }}>Comprehensive Digital Marketing Solutions</h2>
               </div>
-              <div className="services-v2-nav">
+              <div className="services-v2-nav" style={{ display: "flex", gap: "10px" }}>
                 <button
                   className="nav-btn"
                   onClick={() => {
                     const grid = document.getElementById('services-grid-v2');
-                    if (grid) grid.scrollBy({ left: -344, behavior: 'smooth' });
+                    if (grid) grid.scrollBy({ left: -340, behavior: 'smooth' });
                   }}
+                  style={{ width: "45px", height: "45px", borderRadius: "50%", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.2)", color: "#FFF", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
                   aria-label="Previous"
                 >
                   <FaChevronLeft />
@@ -371,8 +362,9 @@ export default function HomePage() {
                   className="nav-btn"
                   onClick={() => {
                     const grid = document.getElementById('services-grid-v2');
-                    if (grid) grid.scrollBy({ left: 344, behavior: 'smooth' });
+                    if (grid) grid.scrollBy({ left: 340, behavior: 'smooth' });
                   }}
+                  style={{ width: "45px", height: "45px", borderRadius: "50%", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.2)", color: "#FFF", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
                   aria-label="Next"
                 >
                   <FaChevronRight />
@@ -381,128 +373,59 @@ export default function HomePage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="services-v2-grid" id="services-grid-v2">
-            <div className="services-v2-track">
-              {[...serviceCategories, ...serviceCategories].map((cat, i) => {
-                // Map slugs to appropriate icons
-                let Icon = FaCubes;
-                if (cat.slug.includes('pipe')) Icon = FaWrench;
-                if (cat.slug.includes('bath') || cat.slug.includes('sanitary')) Icon = FaBath;
-                if (cat.slug.includes('paint')) Icon = FaTint;
-                if (cat.slug.includes('valve')) Icon = FaIndustry;
-                if (cat.slug.includes('fastener') || cat.slug.includes('clamp')) Icon = FaCog;
-
-                return (
-                  <Link href={`/services/${cat.slug}`} key={i} className="service-card-v2">
-                    <div className="service-card-v2-image">
-                      <img src={cat.image} alt={cat.title} />
-                      <div className="service-card-v2-icon">
-                        <Icon />
-                      </div>
+          <div className="services-v2-grid" id="services-grid-v2" style={{ overflowX: "auto", paddingBottom: "20px", scrollbarWidth: "none" }}>
+            <div className="services-v2-track" style={{ display: "flex", gap: "24px", minWidth: "max-content" }}>
+              {serviceCategories.map((cat, i) => (
+                <Link href={`/services/${cat.slug}`} key={i} className="service-card-v2" style={{ width: "340px", background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.25)", borderRadius: "24px", overflow: "hidden", textDecoration: "none", display: "flex", flexDirection: "column" }}>
+                  <div className="service-card-v2-image" style={{ height: "200px", overflow: "hidden", position: "relative" }}>
+                    <img src={cat.image} alt={cat.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  </div>
+                  <div className="service-card-v2-content" style={{ padding: "24px", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                    <div>
+                      <h3 style={{ color: "#F8FAFC", fontSize: "1.25rem", fontWeight: 700, marginBottom: "10px" }}>{cat.title}</h3>
+                      <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: "1.6", marginBottom: "20px" }}>{cat.shortDesc}</p>
                     </div>
-                    <div className="service-card-v2-content">
-                      <h3>{cat.title}</h3>
-                      <p>{cat.shortDesc}</p>
-                      <div className="service-card-btn-wrapper">
-                        <span className="service-card-btn">
-                          Discover more <FaArrowRight />
-                        </span>
-                      </div>
+                    <div className="service-card-btn-wrapper" style={{ marginTop: "auto" }}>
+                      <span className="service-card-btn" style={{ color: "#06B6D4", fontWeight: 700, fontSize: "0.9rem", display: "flex", alignItems: "center", gap: "8px" }}>
+                        Explore Service &rarr;
+                      </span>
                     </div>
-                  </Link>
-                );
-              })}
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
 
           <AnimateOnScroll>
             <div style={{ textAlign: "center", marginTop: 40 }}>
-              <Link href="/services" className="btn btn-primary" style={{ background: 'var(--teal)', borderColor: 'var(--teal)' }}>
-                View All Services <FaArrowRight />
+              <Link href="/services" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", borderRadius: "100px", padding: "16px 36px" }}>
+                View All Services &amp; Packages <FaArrowRight />
               </Link>
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-      {/* ====== MISSION & VISION (CREATIVE) ====== */}
-      <section className="mv-section-creative">
-        <div className="mv-bg-decorative">
-          <div className="mv-circle circle-1"></div>
-          <div className="mv-circle circle-2"></div>
-        </div>
-
-        <div className="container">
-          <AnimateOnScroll>
-            <div className="mv-grid-creative">
-              <div className="mv-text-content">
-                <span className="mv-badge">Strategic Path</span>
-                <h2 className="mv-main-title">
-                  Defining Our <span>Core Purpose</span>
-                </h2>
-                <p className="mv-main-desc">
-                  We are committed to excellence in every fitting we supply, driven by a clear mission
-                  and a bold vision for the future of sanitary solutions in Rajasthan.
-                </p>
-                <Link href="/about" className="btn btn-primary">
-                  Learn Our Story <FaArrowRight />
-                </Link>
-              </div>
-
-              <div className="mv-cards-creative-stack">
-                <div className="card-v3 mission">
-                  <div className="card-v3-number">01</div>
-                  <div className="card-v3-gradient"></div>
-                  <div className="card-v3-icon">
-                    <FaBullseye />
-                  </div>
-                  <h3>Our Mission</h3>
-                  <p>
-                    Our mission is to provide genuine sanitary fittings and plumbing solutions that deliver durability,
-                    reliability, and value to our customers while maintaining the highest standards of quality and service.
-                  </p>
-                </div>
-
-                <div className="card-v3 vision">
-                  <div className="card-v3-number">02</div>
-                  <div className="card-v3-gradient"></div>
-                  <div className="card-v3-icon">
-                    <FaEye />
-                  </div>
-                  <h3>Our Vision</h3>
-                  <p>
-                    Our vision is to become one of the most trusted sanitary fittings and plumbing suppliers in Rajasthan,
-                    known for premium brands, expert solutions, and long-term customer relationships.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
-      {/* ====== CORE VALUES ====== */}
-      <section className="section">
+      {/* ====== CORE VALUES & PRINCIPLES ====== */}
+      <section className="section" style={{ padding: "100px 0", background: "#0F172A" }}>
         <div className="container">
           <AnimateOnScroll>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
-              <span className="section-label">Our Principles</span>
-              <h2 className="section-title">Core Values</h2>
-              <p className="section-subtitle" style={{ margin: "0 auto" }}>
-                The principles that guide everything we do at Nalwaya Fitting Suppliers.
+              <span className="section-label" style={{ color: "#06B6D4" }}>OUR PRINCIPLES</span>
+              <h2 className="section-title" style={{ color: "#F8FAFC" }}>Core Agency Values</h2>
+              <p className="section-subtitle" style={{ margin: "0 auto", color: "#94A3B8" }}>
+                The core pillars that drive FutureX Digital Marketing's client partnerships.
               </p>
             </div>
           </AnimateOnScroll>
+
           <AnimateOnScroll>
-            <div className="premium-values-grid">
+            <div className="premium-values-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
               {coreValues.map((v, i) => (
-                <div key={i} className="premium-value-card-v2">
-                  <div className="value-icon-v3">{v.icon}</div>
-                  <h4>{v.title}</h4>
-                  <p>{v.desc}</p>
-                  <Link href="/about" className="value-cta-v2">
-                    Learn More <FaArrowRight />
-                  </Link>
+                <div key={i} className="premium-value-card-v2" style={{ background: "#0B0F19", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "20px", padding: "30px" }}>
+                  <div className="value-icon-v3" style={{ fontSize: "1.8rem", color: "#06B6D4", marginBottom: "16px" }}>{v.icon}</div>
+                  <h4 style={{ color: "#F8FAFC", fontSize: "1.2rem", fontWeight: 700, marginBottom: "10px" }}>{v.title}</h4>
+                  <p style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: "1.6" }}>{v.desc}</p>
                 </div>
               ))}
             </div>
@@ -510,28 +433,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====== WHY CHOOSE US ====== */}
-      <section className="section section-navy section-boxed-bg">
+      {/* ====== WHY CHOOSE FUTUREX ====== */}
+      <section className="section section-navy" style={{ padding: "100px 0", background: "linear-gradient(135deg, #0B0F19 0%, #151D2A 100%)" }}>
         <div className="container">
           <AnimateOnScroll>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
-              <span className="section-label">Our Advantages</span>
-              <h2 className="section-title">Why Choose Us</h2>
-              <p className="section-subtitle" style={{ margin: "0 auto" }}>
-                Discover what sets Nalwaya Fitting Suppliers apart from the rest.
+              <span className="section-label" style={{ color: "#06B6D4" }}>AGENCY ADVANTAGES</span>
+              <h2 className="section-title" style={{ color: "#F8FAFC" }}>Why Choose FutureX Digital Marketing?</h2>
+              <p className="section-subtitle" style={{ margin: "0 auto", color: "#94A3B8" }}>
+                Discover how our strategic focus in Udaipur delivers unmatched competitive advantages.
               </p>
             </div>
           </AnimateOnScroll>
+
           <AnimateOnScroll>
-            <div className="why-grid">
+            <div className="why-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
               {whyChoose.map((w, i) => (
-                <div key={i} className="glass-card why-item" style={{ background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.1)" }}>
-                  <div className="why-item-check">
+                <div key={i} className="glass-card why-item" style={{ background: "rgba(15, 23, 42, 0.7)", border: "1px solid rgba(6, 182, 212, 0.2)", padding: "24px", borderRadius: "18px", display: "flex", gap: "16px", alignItems: "flex-start" }}>
+                  <div className="why-item-check" style={{ color: "#06B6D4", fontSize: "1.3rem", marginTop: "2px" }}>
                     <FaCheckCircle />
                   </div>
                   <div>
-                    <h4 style={{ color: "var(--white)" }}>{w.title}</h4>
-                    <p style={{ color: "rgba(255,255,255,0.6)" }}>{w.desc}</p>
+                    <h4 style={{ color: "#F8FAFC", fontSize: "1.1rem", fontWeight: 700, marginBottom: "6px" }}>{w.title}</h4>
+                    <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: "1.6" }}>{w.desc}</p>
                   </div>
                 </div>
               ))}
@@ -540,68 +464,104 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====== TESTIMONIALS (INFINITE SCROLL) ====== */}
-      <section className="testimonial-section-creative">
-        <div className="testimonial-bg-blob"></div>
+      {/* ====== PORTFOLIO CASE STUDIES PREVIEW ====== */}
+      <section className="section" style={{ padding: "100px 0", background: "#0B0F19" }}>
         <div className="container">
           <AnimateOnScroll>
-            <div style={{ textAlign: "center", marginBottom: 60 }}>
-              <span className="mv-badge">What People Say</span>
-              <h2 className="mv-main-title">Customer <span>Reviews</span></h2>
-              <p className="mv-main-desc" style={{ margin: "0 auto", maxWidth: 600 }}>
-                Hear from our satisfied clients who trust us for their plumbing and sanitary needs across Rajasthan.
+            <div style={{ textAlign: "center", marginBottom: "60px" }}>
+              <span className="section-label" style={{ color: "#06B6D4" }}>PROVEN RESULTS</span>
+              <h2 className="section-title" style={{ color: "#F8FAFC" }}>Featured Case Studies &amp; Success Stories</h2>
+              <p className="section-subtitle" style={{ margin: "0 auto", color: "#94A3B8" }}>
+                Real growth results delivered for clients in Udaipur, Rajasthan, and beyond.
               </p>
             </div>
           </AnimateOnScroll>
-        </div>
 
-        <div className="testimonial-marquee-container" id="homepage-testimonials-marquee">
-          <div className="testimonial-marquee-track">
-            {[...testimonials, ...testimonials, ...testimonials].map((t, i) => (
-              <div key={i} className={`testimonial-card-v3 outline-variant-${(i % 3) + 1}`}>
-                <div className="testimonial-giant-quote">&ldquo;</div>
-                <div className="testimonial-stars-v3">
-                  {[...Array(5)].map((_, j) => (
-                    <FaStar key={j} />
-                  ))}
-                </div>
-                <p className="testimonial-text-v3">{t.text}</p>
-                <div className="testimonial-author-v3">
-                  <div className="testimonial-avatar-v3">{t.initials}</div>
-                  <div className="testimonial-info-v3">
-                    <h4>{t.name}</h4>
-                    <span>{t.role}</span>
-                  </div>
+          <AnimateOnScroll>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "30px" }}>
+              <div style={{ background: "#0F172A", border: "1px solid rgba(6, 182, 212, 0.25)", borderRadius: "24px", overflow: "hidden" }}>
+                <img src="/portfolio-1.png" alt="E-Commerce Redesign Case Study" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                <div style={{ padding: "30px" }}>
+                  <span style={{ color: "#06B6D4", fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.5px" }}>Web Development &amp; E-Commerce</span>
+                  <h3 style={{ color: "#F8FAFC", fontSize: "1.35rem", fontWeight: 700, margin: "10px 0" }}>Luxury Retail Store 2.5x Sales Scale</h3>
+                  <p style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "20px" }}>
+                    Redesigned a legacy online store into a Next.js web application with 0.8s load speed, yielding a 140% boost in mobile conversions.
+                  </p>
+                  <Link href="/portfolio" style={{ color: "#06B6D4", fontWeight: 700, textDecoration: "none" }}>Read Case Study &rarr;</Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
 
-        <div className="container">
-          <AnimateOnScroll>
-            <div style={{ textAlign: "center", marginTop: 60 }}>
-              <Link href="/testimonials" className="btn btn-primary" style={{ padding: '20px 40px', borderRadius: '100px' }}>
-                View All Success Stories <FaArrowRight />
-              </Link>
+              <div style={{ background: "#0F172A", border: "1px solid rgba(99, 102, 241, 0.25)", borderRadius: "24px", overflow: "hidden" }}>
+                <img src="/portfolio-2.png" alt="Local SEO Udaipur Case Study" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                <div style={{ padding: "30px" }}>
+                  <span style={{ color: "#6366F1", fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.5px" }}>Local SEO in Udaipur</span>
+                  <h3 style={{ color: "#F8FAFC", fontSize: "1.35rem", fontWeight: 700, margin: "10px 0" }}>Udaipur Hospitality Chain #1 Google Rank</h3>
+                  <p style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "20px" }}>
+                    Executed hyper-local SEO and Google Map Optimization, bringing over 450+ direct inbound reservation calls monthly.
+                  </p>
+                  <Link href="/portfolio" style={{ color: "#6366F1", fontWeight: 700, textDecoration: "none" }}>Read Case Study &rarr;</Link>
+                </div>
+              </div>
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-      {/* ====== FAQ (V3 MODERN) ====== */}
-      <section className="faq-section-v3">
+      {/* ====== TESTIMONIALS ====== */}
+      <section className="testimonial-section-creative" style={{ padding: "100px 0", background: "#0F172A" }}>
         <div className="container">
-          <div className="faq-grid-v3">
+          <AnimateOnScroll>
+            <div style={{ textAlign: "center", marginBottom: 60 }}>
+              <span className="mv-badge" style={{ color: "#06B6D4", textTransform: "uppercase", letterSpacing: "2px", fontWeight: 700 }}>CLIENT TESTIMONIALS</span>
+              <h2 className="mv-main-title" style={{ color: "#F8FAFC", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800 }}>What Our Clients Say</h2>
+              <p className="mv-main-desc" style={{ margin: "0 auto", maxWidth: 600, color: "#94A3B8" }}>
+                Trusted by business owners, founders, and marketing leaders across Udaipur and Rajasthan.
+              </p>
+            </div>
+          </AnimateOnScroll>
+        </div>
+
+        <div className="container">
+          <AnimateOnScroll>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
+              {testimonials.map((t, i) => (
+                <div key={i} style={{ background: "#0B0F19", border: "1px solid rgba(6, 182, 212, 0.2)", borderRadius: "20px", padding: "30px" }}>
+                  <div style={{ display: "flex", color: "#F59E0B", gap: "4px", marginBottom: "16px" }}>
+                    {[...Array(5)].map((_, j) => (
+                      <FaStar key={j} />
+                    ))}
+                  </div>
+                  <p style={{ color: "#F8FAFC", fontSize: "0.95rem", lineHeight: "1.7", fontStyle: "italic", marginBottom: "20px" }}>&ldquo;{t.text}&rdquo;</p>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                    <div style={{ width: "42px", height: "42px", borderRadius: "50%", background: "linear-gradient(135deg, #06B6D4, #6366F1)", color: "#FFF", fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      {t.initials}
+                    </div>
+                    <div>
+                      <h4 style={{ color: "#F8FAFC", fontSize: "1rem", fontWeight: 700 }}>{t.name}</h4>
+                      <span style={{ color: "#94A3B8", fontSize: "0.85rem" }}>{t.role}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* ====== FAQ PREVIEW ====== */}
+      <section className="faq-section-v3" style={{ padding: "100px 0", background: "#0B0F19" }}>
+        <div className="container">
+          <div className="faq-grid-v3" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "40px", alignItems: "flex-start" }}>
             <div className="faq-content-v3">
               <AnimateOnScroll>
-                <span className="faq-badge-v3">F. A. Q</span>
-                <h2 className="faq-title-v3">Frequently Asked Questions</h2>
-                <p className="faq-desc-v3">
-                  Find answers to common questions about our genuine sanitary products,
-                  expert plumbing services, and how we serve customers across Rajasthan.
+                <span className="faq-badge-v3" style={{ color: "#06B6D4", textTransform: "uppercase", letterSpacing: "2px", fontWeight: 700 }}>FREQUENTLY ASKED</span>
+                <h2 className="faq-title-v3" style={{ color: "#F8FAFC", fontSize: "2.2rem", fontWeight: 800, marginTop: "10px", marginBottom: "20px" }}>Have Questions About Digital Growth?</h2>
+                <p className="faq-desc-v3" style={{ color: "#94A3B8", lineHeight: "1.8", marginBottom: "30px" }}>
+                  Find quick answers about our digital marketing process, local SEO in Udaipur, custom website timelines, and performance advertising contracts.
                 </p>
-                <div className="faq-accent-line"></div>
+                <Link href="/faq" className="btn btn-primary" style={{ background: "linear-gradient(135deg, #06B6D4, #6366F1)", border: "none", borderRadius: "100px" }}>
+                  View All FAQs <FaArrowRight />
+                </Link>
               </AnimateOnScroll>
             </div>
 
@@ -616,83 +576,76 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====== CTA (V3 PREMIUM) ====== */}
-      {/* ====== CTA (PREMIUM ENFORCED) ====== */}
+      {/* ====== HIGH-CONVERTING CTA ====== */}
       <section style={{
-        margin: '20px auto 100px',
+        margin: '40px auto 100px',
         width: 'calc(100% - 40px)',
-        maxWidth: '1050px',
-        padding: '110px 24px',
-        background: 'radial-gradient(circle at center, #2F4156 0%, #1e2d3d 100%)',
+        maxWidth: '1100px',
+        padding: '90px 30px',
+        background: 'radial-gradient(circle at center, #151D2A 0%, #070A10 100%)',
         position: 'relative',
         overflow: 'hidden',
         color: '#fff',
         textAlign: 'center',
-        borderRadius: '50px',
-        boxShadow: '0 40px 80px rgba(0,0,0,0.12)'
+        borderRadius: '36px',
+        border: '1px solid rgba(6, 182, 212, 0.3)',
+        boxShadow: '0 30px 80px rgba(0,0,0,0.6)'
       }}>
-        {/* Decorative atmospheric elements */}
-        <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(209, 23, 75, 0.12) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
-        <div style={{ position: 'absolute', bottom: '-10%', left: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(86, 124, 141, 0.15) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
-
-        {/* Floating Icons */}
-        <div style={{ position: 'absolute', top: '12%', left: '8%', opacity: 0.03, fontSize: '8rem', transform: 'rotate(-15deg)', pointerEvents: 'none' }}><FaTools /></div>
-        <div style={{ position: 'absolute', bottom: '12%', right: '8%', opacity: 0.03, fontSize: '10rem', transform: 'rotate(15deg)', pointerEvents: 'none' }}><FaHandshake /></div>
+        <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', bottom: '-10%', left: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+          <div style={{ maxWidth: '750px', margin: '0 auto' }}>
             <AnimateOnScroll>
-              <h2 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '35px' }}>
+              <h2 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '24px' }}>
                 <span style={{
-                  color: '#6a95a8',
+                  color: '#06B6D4',
                   fontSize: '0.85rem',
                   textTransform: 'uppercase',
-                  letterSpacing: '4px',
+                  letterSpacing: '3px',
                   marginBottom: '15px',
-                  fontWeight: 700,
-                  fontFamily: 'Inter, sans-serif'
+                  fontWeight: 700
                 }}>
-                  Ready to start your project?
+                  READY TO SCALE YOUR BUSINESS?
                 </span>
-                <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 4.5vw, 3rem)', fontWeight: 800, lineHeight: 1.15 }}>
-                  Looking for Genuine Sanitary Fittings &amp; Plumbing Supplies?
+                <span style={{ fontSize: 'clamp(2rem, 4.5vw, 3rem)', fontWeight: 800, lineHeight: 1.2, color: '#F8FAFC' }}>
+                  Let’s Build Your Digital Growth Funnel Today
                 </span>
               </h2>
-              <p style={{ fontSize: '1.15rem', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.8, marginBottom: '50px' }}>
-                Join thousands of satisfied homeowners and professionals who trust Nalwaya Fitting Suppliers
-                for authentic products and expert solutions across Rajasthan.
+              <p style={{ fontSize: '1.15rem', color: '#94A3B8', lineHeight: 1.8, marginBottom: '40px' }}>
+                Schedule a free 30-minute strategic consultation with FutureX Digital Marketing. We will audit your current online footprint and present a tailored ROI roadmap.
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-                <Link href="tel:+919983174974" style={{
+                <Link href="tel:+917733977227" style={{
                   padding: '18px 40px',
                   borderRadius: '100px',
-                  background: '#fff',
-                  color: '#2F4156',
+                  background: 'linear-gradient(135deg, #06B6D4, #6366F1)',
+                  color: '#FFF',
                   fontWeight: 800,
                   fontSize: '1rem',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '12px',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease'
+                  boxShadow: '0 10px 30px rgba(6, 182, 212, 0.3)',
+                  textDecoration: 'none'
                 }}>
-                  <FaPhoneAlt /> Call Now
+                  <FaPhoneAlt /> Call +91 77339 77227
                 </Link>
                 <Link href="/contact" style={{
                   padding: '18px 40px',
                   borderRadius: '100px',
-                  background: 'rgba(255, 255, 255, 0.08)',
-                  color: '#fff',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  color: '#FFF',
                   fontWeight: 800,
                   fontSize: '1rem',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '12px',
-                  border: '1px solid rgba(255,255,255,0.3)',
+                  border: '1px solid rgba(255,255,255,0.2)',
                   backdropFilter: 'blur(10px)',
-                  transition: 'all 0.3s ease'
+                  textDecoration: 'none'
                 }}>
-                  Contact Us <FaArrowRight />
+                  Book Consultation <FaArrowRight />
                 </Link>
               </div>
             </AnimateOnScroll>

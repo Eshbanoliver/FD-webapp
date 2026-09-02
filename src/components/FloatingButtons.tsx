@@ -23,7 +23,7 @@ export default function FloatingButtons() {
             {/* Left Side – WhatsApp + Call */}
             <div className="floating-left">
                 <a
-                    href="https://wa.me/919983174974"
+                    href="https://wa.me/917733977227"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="floating-btn floating-whatsapp"
@@ -32,9 +32,9 @@ export default function FloatingButtons() {
                     <FaWhatsapp />
                 </a>
                 <a
-                    href="tel:+919983174974"
+                    href="tel:+917733977227"
                     className="floating-btn floating-call"
-                    aria-label="Call us"
+                    aria-label="Call FutureX Digital Marketing"
                 >
                     <FaPhoneAlt />
                 </a>

@@ -1,13 +1,13 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = 'https://nalwayasanitary.com';
+    const baseUrl = 'https://futurexdigitalmarketing.com';
 
     return {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: ['/private/', '/api/'], // Generic disallows to protect any prospective private APIs
+            disallow: ['/private/', '/api/'],
         },
         sitemap: `${baseUrl}/sitemap.xml`,
     };
