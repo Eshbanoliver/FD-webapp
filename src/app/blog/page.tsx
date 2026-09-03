@@ -1,71 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { blogPosts } from "../data/blogs";
 import PremiumCTA from "@/components/PremiumCTA";
-import { FaHome, FaChevronRight, FaCalendarAlt, FaTag, FaWhatsapp, FaShareAlt } from "react-icons/fa";
+import { FaHome, FaChevronRight, FaCalendarAlt, FaTag, FaWhatsapp, FaShareAlt, FaClock, FaUser } from "react-icons/fa";
 
 export const metadata: Metadata = {
     title: "Digital Marketing Blog & Insights | FutureX Agency Udaipur",
     description:
-        "Actionable guides on Local SEO in Udaipur, Next.js web development, Google & Meta Ads ROI, and AI marketing automation from FutureX Digital Marketing.",
+        "Actionable guides on Local SEO in Udaipur, Next.js web development, Google & Meta Ads ROI, IT services, and software engineering from FutureX Digital Marketing.",
     keywords: [
-        "Digital Marketing Blog",
-        "Local SEO Udaipur Guide",
-        "Next.js vs WordPress",
-        "Meta Ads ROI strategy",
-        "FutureX Digital Marketing blog"
+        "best digital marketing agency",
+        "Website development company in udaipur",
+        "IT Company in udaipur",
+        "Software Company in udaipur",
+        "best seo services in udaipur",
+        "Digital Marketing Blog Udaipur"
     ],
     alternates: {
         canonical: "https://futurexdigitalmarketing.com/blog",
     },
     openGraph: {
-        title: "Digital Marketing Blog & Insights | FutureX Udaipur",
-        description: "Actionable growth guides on Local SEO, Next.js web development, and performance PPC.",
+        title: "Digital Marketing & Tech Blog | FutureX Agency Udaipur",
+        description: "High-authority growth guides on Local SEO, Next.js web development, IT solutions, and custom software in Udaipur.",
         url: "https://futurexdigitalmarketing.com/blog",
         type: "website",
-        images: [{ url: "/hero-1.png", width: 1200, height: 630, alt: "FutureX Digital Marketing Blog" }]
+        images: [{ url: "/hero-1.png", width: 1200, height: 630, alt: "FutureX Digital Marketing & Tech Blog" }]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Digital Marketing Blog & Insights | FutureX Udaipur",
-        description: "SEO, Web Dev & Advertising ROI guides.",
+        title: "Digital Marketing & Tech Blog | FutureX Agency Udaipur",
+        description: "SEO, Web Dev, IT & Custom Software Engineering guides.",
         images: ["/hero-1.png"]
     }
 };
-
-const blogPosts = [
-    {
-        title: "Top 7 Local SEO Strategies for Udaipur Businesses in 2026",
-        slug: "local-seo-udaipur-strategies-2026",
-        date: "September 2026",
-        category: "SEO Strategy",
-        image: "/service-seo.png",
-        excerpt: "Learn how to optimize your Google Business Profile, target localized search queries in Udaipur, and dominate local map rankings to generate high-intent customer phone calls.",
-    },
-    {
-        title: "Why Next.js Outperforms Legacy WordPress for E-Commerce & Agencies",
-        slug: "nextjs-vs-wordpress-web-development",
-        date: "August 2026",
-        category: "Web Development",
-        image: "/service-webdev.png",
-        excerpt: "Sub-second load times, core web vitals optimization, and server-side rendering make Next.js the modern gold standard for high-converting commercial websites.",
-    },
-    {
-        title: "How to Achieve a 4x ROAS on Meta & Google Ads Campaigns",
-        slug: "maximize-roas-meta-google-ads",
-        date: "August 2026",
-        category: "Performance PPC",
-        image: "/service-ppc.png",
-        excerpt: "A deep dive into lead form funnels, audience retargeting vectors, persuasive ad copy, and conversion rate optimization (CRO) strategies.",
-    },
-    {
-        title: "Integrating WhatsApp API & AI Chatbots to Automate 24/7 Lead Capture",
-        slug: "ai-whatsapp-lead-automation-guide",
-        date: "July 2026",
-        category: "AI Automation",
-        image: "/service-ai.png",
-        excerpt: "Never lose an online inquiry again. Learn how automated WhatsApp workflows convert casual website visitors into confirmed appointments.",
-    },
-];
 
 const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -94,8 +61,8 @@ const articlesJsonLd = blogPosts.map(post => ({
     "image": `https://futurexdigitalmarketing.com${post.image}`,
     "author": {
         "@type": "Person",
-        "name": "Akshay Jain",
-        "jobTitle": "Managing Director"
+        "name": post.author.name,
+        "jobTitle": post.author.role
     },
     "publisher": {
         "@type": "Organization",
@@ -105,13 +72,13 @@ const articlesJsonLd = blogPosts.map(post => ({
             "url": "https://futurexdigitalmarketing.com/logo.png"
         }
     },
-    "datePublished": "2026-08-01T10:00:00+05:30",
-    "dateModified": "2026-09-01T10:00:00+05:30",
+    "datePublished": "2026-09-01T10:00:00+05:30",
+    "dateModified": "2026-09-03T10:00:00+05:30",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://futurexdigitalmarketing.com/blog`
+        "@id": `https://futurexdigitalmarketing.com/blog/${post.slug}`
     },
-    "keywords": post.category
+    "keywords": post.targetKeyword
 }));
 
 export default function BlogPage() {
@@ -135,9 +102,9 @@ export default function BlogPage() {
                         <FaChevronRight aria-hidden="true" />
                         <span>Insights &amp; Blog</span>
                     </nav>
-                    <h1>Digital Marketing Insights &amp; SEO Guides</h1>
+                    <h1>Digital Marketing &amp; Technology Insights</h1>
                     <p>
-                        Expert analysis, SEO growth guides, web development trends, and ad scaling strategies from FutureX Digital Marketing.
+                        High-authority growth blueprints on Local SEO, Next.js web engineering, IT infrastructure, and custom software from FutureX Digital Marketing in Udaipur.
                     </p>
                 </div>
             </section>
@@ -145,41 +112,49 @@ export default function BlogPage() {
             {/* Articles Grid */}
             <section className="section bg-light">
                 <div className="container">
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "32px" }}>
                         {blogPosts.map((post, idx) => (
-                            <article key={idx} className="glass-card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-                                <div style={{ height: "220px", overflow: "hidden" }}>
-                                    <img src={post.image} alt={`FutureX Blog - ${post.title}`} width={400} height={220} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                            <article key={idx} className="glass-card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column", borderRadius: "24px", border: "1px solid var(--border)" }}>
+                                <div style={{ height: "230px", overflow: "hidden", position: "relative" }}>
+                                    <img src={post.image} alt={`FutureX Blog - ${post.title}`} width={400} height={230} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                                    <div style={{ position: "absolute", top: "16px", left: "16px", background: "var(--teal)", color: "#fff", padding: "4px 14px", borderRadius: "100px", fontSize: "0.78rem", fontWeight: 800 }}>
+                                        {post.category}
+                                    </div>
                                 </div>
                                 <div style={{ padding: "30px", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                                     <div>
-                                        <div style={{ display: "flex", gap: "16px", color: "var(--text-secondary)", fontSize: "0.82rem", marginBottom: "12px" }}>
-                                            <span style={{ display: "flex", alignItems: "center", gap: "6px" }}><FaTag style={{ color: "var(--teal)" }} /> {post.category}</span>
+                                        <div style={{ display: "flex", gap: "16px", color: "var(--text-muted)", fontSize: "0.82rem", marginBottom: "14px", flexWrap: "wrap" }}>
+                                            <span style={{ display: "flex", alignItems: "center", gap: "6px" }}><FaUser style={{ color: "var(--teal)" }} /> {post.author.name}</span>
                                             <span style={{ display: "flex", alignItems: "center", gap: "6px" }}><FaCalendarAlt style={{ color: "var(--navy)" }} /> {post.date}</span>
+                                            <span style={{ display: "flex", alignItems: "center", gap: "6px" }}><FaClock style={{ color: "var(--teal-light)" }} /> {post.readTime}</span>
                                         </div>
-                                        <h3 style={{ color: "var(--navy)", fontSize: "1.3rem", fontWeight: 700, lineHeight: 1.4, marginBottom: "12px" }}>{post.title}</h3>
-                                        <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "24px" }}>{post.excerpt}</p>
+                                        <h3 style={{ color: "var(--navy)", fontSize: "1.3rem", fontWeight: 800, lineHeight: 1.4, marginBottom: "14px" }}>
+                                            <Link href={`/blog/${post.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
+                                                {post.title}
+                                            </Link>
+                                        </h3>
+                                        <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.65", marginBottom: "24px" }}>{post.excerpt}</p>
                                     </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "16px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-                                        <Link href="/contact" style={{ color: "var(--teal)", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none", display: "flex", alignItems: "center", gap: "8px" }}>
-                                            Read Full Article &rarr;
+                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "18px", borderTop: "1px solid rgba(34, 121, 190, 0.15)" }}>
+                                        <Link href={`/blog/${post.slug}`} style={{ color: "var(--teal)", fontWeight: 800, fontSize: "0.95rem", textDecoration: "none", display: "flex", alignItems: "center", gap: "8px" }}>
+                                            Read Full Blueprint &rarr;
                                         </Link>
-                                        <div style={{ display: "flex", gap: "10px" }}>
+                                        <div style={{ display: "flex", gap: "12px" }}>
                                             <a
-                                                href={`https://wa.me/?text=${encodeURIComponent(post.title + " - https://futurexdigitalmarketing.com/blog")}`}
+                                                href={`https://wa.me/?text=${encodeURIComponent(post.title + " - https://futurexdigitalmarketing.com/blog/" + post.slug)}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Share on WhatsApp"
-                                                style={{ color: "#25D366", fontSize: "1.1rem" }}
+                                                style={{ color: "#25D366", fontSize: "1.15rem" }}
                                             >
                                                 <FaWhatsapp />
                                             </a>
                                             <a
-                                                href="https://futurexdigitalmarketing.com/blog"
+                                                href={`https://futurexdigitalmarketing.com/blog/${post.slug}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Share article"
-                                                style={{ color: "var(--navy)", fontSize: "1.1rem" }}
+                                                style={{ color: "var(--navy)", fontSize: "1.15rem" }}
                                             >
                                                 <FaShareAlt />
                                             </a>

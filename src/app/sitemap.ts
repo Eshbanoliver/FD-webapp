@@ -1,11 +1,19 @@
 import { MetadataRoute } from 'next';
 import { serviceCategories } from './data/services';
+import { blogPosts } from './data/blogs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://futurexdigitalmarketing.com';
 
     const servicesUrls = serviceCategories.map((category) => ({
         url: `${baseUrl}/services/${category.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+    }));
+
+    const blogUrls = blogPosts.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.8,
@@ -61,5 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.7,
         },
         ...servicesUrls,
+        ...blogUrls,
     ];
 }

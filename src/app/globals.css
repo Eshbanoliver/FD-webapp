@@ -8440,3 +8440,95 @@ body {
 .s-v2-btn:hover svg {
   transform: translateX(6px);
 }
+
+/* ==========================================================================
+   EEAT & GEO BLOG ARTICLE STYLING
+   ========================================================================== */
+.blog-article-html {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #334155;
+}
+
+.blog-article-html h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 40px 0 20px 0;
+  scroll-margin-top: 100px;
+  line-height: 1.3;
+}
+
+.blog-article-html h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 30px 0 16px 0;
+}
+
+.blog-article-html p {
+  margin-bottom: 24px;
+}
+
+.blog-article-html ul,
+.blog-article-html ol {
+  margin: 0 0 28px 24px;
+  padding: 0;
+}
+
+.blog-article-html li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.blog-article-html strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.blog-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 32px 0;
+}
+
+.blog-service-card {
+  background: rgba(34, 121, 190, 0.04);
+  border: 1px solid rgba(34, 121, 190, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.blog-service-card h3 {
+  font-size: 1.15rem;
+  margin-top: 0;
+  color: var(--teal-dark);
+}
+
+.blog-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(29, 49, 82, 0.05);
+}
+
+.blog-comparison-table th,
+.blog-comparison-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(34, 121, 190, 0.12);
+  font-size: 0.95rem;
+}
+
+.blog-comparison-table th {
+  background: var(--navy);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.blog-comparison-table tr:nth-child(even) {
+  background: rgba(34, 121, 190, 0.03);
+}

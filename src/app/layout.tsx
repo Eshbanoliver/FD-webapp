@@ -66,6 +66,12 @@ export const metadata: Metadata = {
     title: "Digital Marketing Company in Udaipur | FutureX Digital Marketing",
     description: "Scale your revenue with Udaipur's trusted SEO, web development & digital marketing agency.",
     images: ["/hero-1.png"]
+  },
+  other: {
+    "geo.region": "IN-RJ",
+    "geo.placename": "Udaipur, Rajasthan, India",
+    "geo.position": "24.5854;73.7125",
+    "ICBM": "24.5854, 73.7125"
   }
 };
 
@@ -134,6 +140,10 @@ export default function RootLayout({
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="theme-color" content="#2279be" />
         <meta name="msapplication-TileColor" content="#2279be" />
+        <meta name="geo.region" content="IN-RJ" />
+        <meta name="geo.placename" content="Udaipur, Rajasthan, India" />
+        <meta name="geo.position" content="24.5854;73.7125" />
+        <meta name="ICBM" content="24.5854, 73.7125" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
