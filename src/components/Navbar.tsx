@@ -92,7 +92,7 @@ export default function Navbar() {
                         <img
                             src="/logo.png"
                             alt="FutureX Digital Marketing Logo"
-                            style={{ height: '90px', width: 'auto', objectFit: 'contain', maxWidth: '350px', display: 'block', margin: '-10px 0' }}
+                            style={{ height: '125px', width: 'auto', objectFit: 'contain', maxWidth: '380px', display: 'block', margin: '-18px 0' }}
                         />
                     </Link>
                 </div>
