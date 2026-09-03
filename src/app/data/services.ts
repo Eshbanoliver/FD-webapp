@@ -396,5 +396,75 @@ export const serviceCategories: ServiceCategory[] = [
             { name: "360-Degree Growth Retainer", desc: "Complete digital marketing takeover including SEO, paid ads, web management, graphics, and social content." },
             { name: "Performance Marketing & Funnel Build", desc: "High-speed conversion funnel design paired with aggressive multi-channel ad scaling." }
         ],
+    },
+    {
+        slug: "nfc-smart-cards",
+        title: "NFC Smart Business Cards",
+        shortDesc: "Contactless digital business cards that instant-share your contact, social links & website with one tap.",
+        longDesc: "Upgrade your professional networking with FutureX NFC Smart Business Cards. Crafted with premium matte PVC, brushed metal, or eco-friendly wood, our contactless NFC cards allow you to instantly share your vCard contact details, social media handles, website, brochure, and payment links with a single tap on any smartphone—no app required.",
+        keyPoints: [
+            "One-Tap Instant Contact Sharing (No App Required)",
+            "Custom Metallic, Matte & Wooden Card Finishes",
+            "Dynamic Real-Time Profile Updates via Cloud Dashboard",
+            "Eco-Friendly & Lifetime Reusable — No More Paper Waste",
+            "Embedded QR Code Backup for Universal Compatibility"
+        ],
+        faqs: [
+            { question: "Do recipient phones need an app to read NFC cards?", answer: "No! All modern iPhones and Android smartphones read NFC cards natively upon tap." },
+            { question: "Can I update my phone number or links after buying?", answer: "Yes! Your NFC card is linked to your online profile, allowing real-time cloud updates anytime without replacing the card." }
+        ],
+        image: "/service-nfc-card.png",
+        galleryImages: ["/service-nfc-standy.png", "/service-webdev.png"],
+        products: [
+            { name: "Custom Branded NFC Cards", desc: "Personalized matte or glossy PVC NFC business cards customized with your company logo and design." },
+            { name: "Luxury Metallic & Wood NFC Cards", desc: "Ultra-premium stainless steel, black metal, or natural bamboo NFC cards designed for executives and founders." },
+            { name: "Digital Business Profile Cloud Setup", desc: "Cloud-hosted mobile digital business card landing page with tap-to-call, WhatsApp, and social buttons." }
+        ],
+    },
+    {
+        slug: "nfc-smart-standees",
+        title: "NFC Review Standys & Displays",
+        shortDesc: "Instant Google review & social follow counter standees for restaurants, retail shops & offices.",
+        longDesc: "Boost your Google Maps reviews, Instagram followers, and customer engagement on autopilot with FutureX NFC Smart Standys. Place our high-durability acrylic contactless counter displays at your cash counter or tables to let customers tap their smartphone and leave a 5-star Google review or follow your Instagram page in under 3 seconds.",
+        keyPoints: [
+            "Instant 1-Tap Google Reviews & Instagram Follows",
+            "High-Quality Custom Acrylic & Metal Counter Displays",
+            "Boosts Local SEO & Google Maps Rank Automatically",
+            "Custom QR Code Backup & Vibrant Branding",
+            "Zero Monthly Fees — Buy Once, Collect Unlimited Reviews"
+        ],
+        faqs: [
+            { question: "How do NFC Standys help increase Google Reviews for my shop or restaurant in Udaipur?", answer: "Instead of customers typing your business name on Google, they tap their phone on your counter standy and are immediately taken directly to your Google review rating box!" }
+        ],
+        image: "/service-nfc-standy.png",
+        galleryImages: ["/service-nfc-card.png", "/portfolio-2.png"],
+        products: [
+            { name: "Google Review NFC Acrylic Counter Standy", desc: "Sleek acrylic counter standy pre-programmed to open your Google Business review form upon phone tap." },
+            { name: "Instagram & Social Follow NFC Displays", desc: "Interactive desk displays configured to boost Instagram followers and Wi-Fi password access for cafes & salons." },
+            { name: "Custom Table Top NFC Menu & Payment Blocks", desc: "Durable wooden or acrylic table displays for restaurants with digital NFC menu tap and UPI payment QR codes." }
+        ],
+    },
+    {
+        slug: "saas-development",
+        title: "SaaS Software Development",
+        shortDesc: "Custom SaaS applications, cloud software platforms, multi-tenant architectures & API integration.",
+        longDesc: "Turn your business idea into a scalable, revenue-generating Cloud Software as a Service (SaaS). At FutureX Digital Marketing, we engineer robust multi-tenant SaaS platforms, subscription billing engines, customer portals, and enterprise Web APIs powered by Next.js, React, Node.js, PostgreSQL, and AWS/Vercel cloud infrastructure.",
+        keyPoints: [
+            "Multi-Tenant Architecture & Cloud Scalability",
+            "Automated Stripe / Razorpay Subscription Billing",
+            "Role-Based User Permissions & Security",
+            "Interactive Real-Time Analytics & Admin Portals",
+            "RESTful & GraphQL API Integration"
+        ],
+        faqs: [
+            { question: "Can FutureX handle full-cycle SaaS product development from MVP to launch?", answer: "Yes! We build complete SaaS solutions including UI/UX wireframing, frontend React/Next.js interfaces, database models, payment gateways, and cloud deployment." }
+        ],
+        image: "/service-saas-dev.png",
+        galleryImages: ["/service-webdev.png", "/service-ai.png"],
+        products: [
+            { name: "Full-Cycle SaaS MVP Build", desc: "Rapid 6-to-8 week SaaS product development to launch your software idea to early adopters." },
+            { name: "Custom Client & Admin Portals", desc: "Secure customer management dashboards with real-time analytics, user roles, and reporting toolkits." },
+            { name: "Subscription & Micro-SaaS Platforms", desc: "Cloud platforms built with automated recurring billing, user authentication, and API webhooks." }
+        ],
     }
 ];
