@@ -20,9 +20,72 @@ import {
 } from "react-icons/fa";
 
 export const metadata: Metadata = {
-    title: "About Us | FutureX Digital Marketing – Udaipur",
+    title: "About Us | Best Digital Marketing Agency in Udaipur – FutureX",
     description:
-        "Learn about FutureX Digital Marketing – Udaipur's trusted digital marketing agency specializing in SEO, web development, PPC, and performance marketing since 2020.",
+        "Learn about FutureX Digital Marketing – Udaipur's top-rated digital marketing agency founded by Akshay Jain, specializing in SEO services, web development, Meta & Google Ads.",
+    keywords: [
+        "best digital marketing agency",
+        "digital marketing company in udaipur",
+        "Akshay Jain FutureX",
+        "SEO services in udaipur",
+        "Website development company in udaipur",
+        "IT Company in udaipur"
+    ],
+    alternates: {
+        canonical: "https://futurexdigitalmarketing.com/about",
+    },
+    openGraph: {
+        title: "About FutureX Digital Marketing Agency Udaipur",
+        description: "Founded by Akshay Jain in 2020. 5+ years of digital marketing, SEO, web development & ad campaign success in Udaipur.",
+        url: "https://futurexdigitalmarketing.com/about",
+        type: "website",
+        images: [{ url: "/about-agency.png", width: 1200, height: 630, alt: "FutureX Agency Studio Udaipur" }]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About FutureX Digital Marketing Agency Udaipur",
+        description: "5+ years of trusted digital growth leadership in Udaipur.",
+        images: ["/about-agency.png"]
+    }
+};
+
+const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Akshay Jain",
+    "jobTitle": "Founder & Managing Director",
+    "description": "Founder of FutureX Digital Marketing in Udaipur specializing in SEO, web development, and performance advertising.",
+    "url": "https://futurexdigitalmarketing.com/about",
+    "worksFor": {
+        "@type": "Organization",
+        "name": "FutureX Digital Marketing",
+        "url": "https://futurexdigitalmarketing.com"
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Udaipur",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "IN"
+    }
+};
+
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://futurexdigitalmarketing.com"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://futurexdigitalmarketing.com/about"
+        }
+    ]
 };
 
 const commitments = [
@@ -73,14 +136,22 @@ const commitments = [
 export default function AboutPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             {/* Page Header */}
             <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb">
+                    <nav aria-label="breadcrumb" className="breadcrumb">
                         <Link href="/">Home</Link>
-                        <span>/</span>
+                        <span aria-hidden="true">/</span>
                         <span>About Us</span>
-                    </div>
+                    </nav>
                     <h1>About FutureX Digital Marketing</h1>
                     <p>
                         Over 5 years of trust, data-driven strategy, and digital growth leadership in Udaipur.

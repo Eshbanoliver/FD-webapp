@@ -70,6 +70,25 @@ const contactInfo = [
     },
 ];
 
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://futurexdigitalmarketing.com"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://futurexdigitalmarketing.com/contact"
+        }
+    ]
+};
+
 export default function ContactPage() {
     const [formData, setFormData] = useState({
         name: "",
@@ -88,17 +107,21 @@ export default function ContactPage() {
 
     return (
         <div className="contact-page-wrapper">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             {/* ====== PAGE HEADER ====== */}
             <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb">
+                    <nav aria-label="breadcrumb" className="breadcrumb">
                         <Link href="/">
                             <FaHome />
                         </Link>
-                        <FaChevronRight />
+                        <FaChevronRight aria-hidden="true" />
                         <span>Contact</span>
-                    </div>
-                    <h1>Get In Touch</h1>
+                    </nav>
+                    <h1>Contact FutureX Digital Marketing Udaipur</h1>
                     <p>
                         Have a question about our services or need a professional growth audit?
                         Our team in Udaipur is here to provide expert guidance.
@@ -107,7 +130,7 @@ export default function ContactPage() {
             </section>
 
             {/* ====== CONTACT SECTION V2 ====== */}
-            <section className="contact-page-v2">
+            <section className="contact-page-v2" id="contact-info">
                 <div className="contact-blobs">
                     <div className="contact-blob blob-1"></div>
                     <div className="contact-blob blob-2"></div>
@@ -226,7 +249,7 @@ export default function ContactPage() {
             </section>
 
             {/* ====== MAP SECTION ====== */}
-            <section className="map-section-v2" style={{ padding: '0 0 100px' }}>
+            <section className="map-section-v2" id="location-map" style={{ padding: '0 0 100px' }}>
                 <div className="container">
                     <AnimateOnScroll>
                         <div style={{

@@ -7,6 +7,28 @@ export const metadata: Metadata = {
     title: "Portfolio & Case Studies | FutureX Digital Marketing Udaipur",
     description:
         "Explore real digital growth case studies, website designs, local SEO wins, and high-ROAS ad campaigns by FutureX Digital Marketing in Udaipur.",
+    keywords: [
+        "Digital Marketing Portfolio",
+        "Local SEO Case Studies Udaipur",
+        "Next.js Web Dev Portfolio",
+        "FutureX Success Stories"
+    ],
+    alternates: {
+        canonical: "https://futurexdigitalmarketing.com/portfolio",
+    },
+    openGraph: {
+        title: "Portfolio & Case Studies | FutureX Digital Marketing Udaipur",
+        description: "Explore real growth case studies, website designs, and SEO wins in Udaipur.",
+        url: "https://futurexdigitalmarketing.com/portfolio",
+        type: "website",
+        images: [{ url: "/portfolio-2.png", width: 1200, height: 630, alt: "FutureX Case Studies" }]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Portfolio & Case Studies | FutureX Udaipur",
+        description: "Client success stories and ROI case studies.",
+        images: ["/portfolio-2.png"]
+    }
 };
 
 const caseStudies = [
@@ -44,20 +66,43 @@ const caseStudies = [
     },
 ];
 
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://futurexdigitalmarketing.com"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfolio",
+            "item": "https://futurexdigitalmarketing.com/portfolio"
+        }
+    ]
+};
+
 export default function PortfolioPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             {/* Page Header */}
             <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb">
+                    <nav aria-label="breadcrumb" className="breadcrumb">
                         <Link href="/">
                             <FaHome />
                         </Link>
-                        <FaChevronRight />
+                        <FaChevronRight aria-hidden="true" />
                         <span>Portfolio &amp; Case Studies</span>
-                    </div>
-                    <h1>Our Work &amp; Client Success Stories</h1>
+                    </nav>
+                    <h1>Digital Marketing Work &amp; Client Success Stories</h1>
                     <p>
                         Concrete proof of how FutureX Digital Marketing helps businesses in Udaipur and globally scale traffic, leads, and revenue.
                     </p>
@@ -71,7 +116,7 @@ export default function PortfolioPage() {
                         {caseStudies.map((item, idx) => (
                             <div key={idx} className="glass-card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                                 <div style={{ height: "240px", overflow: "hidden", position: "relative" }}>
-                                    <img src={item.image} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                                    <img src={item.image} alt={`FutureX Case Study - ${item.title}`} width={400} height={240} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                     <div style={{ position: "absolute", top: "16px", right: "16px", background: "var(--navy)", color: "var(--white)", fontWeight: 800, padding: "6px 16px", borderRadius: "100px", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "1px" }}>
                                         {item.metrics}
                                     </div>

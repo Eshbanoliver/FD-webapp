@@ -7,23 +7,36 @@ import FloatingButtons from "@/components/FloatingButtons";
 export const metadata: Metadata = {
   metadataBase: new URL('https://futurexdigitalmarketing.com'),
   title: {
-    default: "FutureX Digital Marketing | Digital Marketing Agency in Udaipur",
+    default: "Digital Marketing Company in Udaipur | FutureX Digital Marketing",
     template: "%s | FutureX Digital Marketing"
   },
   description:
-    "FutureX Digital Marketing is Udaipur's premier digital marketing agency specializing in local SEO, Next.js web development, performance marketing, PPC ads, and AI lead automation.",
+    "FutureX Digital Marketing is the best digital marketing company in Udaipur specializing in SEO services, website development, Meta & Google Ads, and AI automation. Hire top IT & software experts today.",
   keywords: [
-    "Digital Marketing in Udaipur",
-    "Digital Marketing Agency in Udaipur",
-    "SEO Services in Udaipur",
-    "Web Development in Udaipur",
-    "IT Company in Udaipur",
-    "Software Company in Udaipur",
-    "FutureX Digital Marketing",
-    "PPC Ads Agency Udaipur",
-    "Social Media Marketing Udaipur"
+    "Future X digital marketing",
+    "digital marketing services",
+    "digital marketing company in udaipur",
+    "online marketing company",
+    "internet marketing agency",
+    "best digital marketing agency",
+    "affordable digital marketing agency in udaipur",
+    "digital marketing services near me",
+    "best seo services in udaipur",
+    "social media marketing near me",
+    "SEO services in udaipur",
+    "Website development company in udaipur",
+    "digital marketing in udaipur",
+    "IT Company in udaipur",
+    "Software Company in udaipur"
   ],
   authors: [{ name: "Akshay Jain" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://futurexdigitalmarketing.com',
+  },
   icons: {
     icon: [
       { url: "/logo.png" },
@@ -33,9 +46,9 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   openGraph: {
-    title: "FutureX Digital Marketing - Leading Digital Marketing Agency in Udaipur",
-    description: "Growth-driven digital agency in Udaipur specializing in Search Engine Optimization, Web Development, Meta & Google Ads, and AI Automation.",
-    url: "https://www.futurexdigitalmarketing.com",
+    title: "Digital Marketing Company in Udaipur | FutureX Digital Marketing",
+    description: "Scale your revenue with Udaipur's premier digital marketing agency. SEO services, website development, Meta & Google Ads, and lead automation.",
+    url: "https://futurexdigitalmarketing.com",
     siteName: "FutureX Digital Marketing",
     images: [
       {
@@ -50,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FutureX Digital Marketing Agency Udaipur",
+    title: "Digital Marketing Company in Udaipur | FutureX Digital Marketing",
     description: "Scale your revenue with Udaipur's trusted SEO, web development & digital marketing agency.",
     images: ["/hero-1.png"]
   }
@@ -103,6 +116,11 @@ export default function RootLayout({
       "name": "Akshay Jain"
     },
     "foundingDate": "2020",
+    "sameAs": [
+      "https://www.instagram.com/futurexdigitalmarketing/",
+      "https://www.facebook.com/profile.php?id=61582411168285",
+      "https://www.linkedin.com/company/futurex-digital-marketing"
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
@@ -111,8 +129,9 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
+        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="theme-color" content="#2279be" />
         <meta name="msapplication-TileColor" content="#2279be" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -124,6 +143,18 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* Google Analytics 4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FUTUREXGA4ID"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FUTUREXGA4ID');
+            `,
+          }}
         />
       </head>
       <body>

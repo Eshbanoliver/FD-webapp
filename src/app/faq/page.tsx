@@ -39,6 +39,40 @@ const faqCategories = [
     }
 ];
 
+const allFaqs = faqCategories.flatMap(c => c.items);
+
+const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": allFaqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+        }
+    }))
+};
+
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://futurexdigitalmarketing.com"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQ",
+            "item": "https://futurexdigitalmarketing.com/faq"
+        }
+    ]
+};
+
 function FAQAccordionItem({ q, a, num }: { q: string; a: string; num: number }) {
     const [open, setOpen] = useState(false);
     return (
@@ -64,17 +98,25 @@ function FAQAccordionItem({ q, a, num }: { q: string; a: string; num: number }) 
 export default function FAQPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             {/* Page Header */}
             <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb">
+                    <nav aria-label="breadcrumb" className="breadcrumb">
                         <Link href="/">
                             <FaHome />
                         </Link>
-                        <FaChevronRight />
+                        <FaChevronRight aria-hidden="true" />
                         <span>Frequently Asked Questions</span>
-                    </div>
-                    <h1>Frequently Asked Questions</h1>
+                    </nav>
+                    <h1>Digital Marketing FAQ | FutureX Udaipur</h1>
                     <p>
                         Everything you need to know about partnering with FutureX Digital Marketing in Udaipur.
                     </p>
@@ -86,7 +128,7 @@ export default function FAQPage() {
                 <div className="container" style={{ maxWidth: "900px" }}>
                     {faqCategories.map((cat, idx) => (
                         <div key={idx} style={{ marginBottom: "50px" }}>
-                            <h2 style={{ color: "var(--navy)", fontSize: "1.4rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>
+                            <h2 id={`category-${idx + 1}`} style={{ color: "var(--navy)", fontSize: "1.4rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>
                                 {cat.category}
                             </h2>
                             {cat.items.map((item, itemIdx) => (

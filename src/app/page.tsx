@@ -132,6 +132,19 @@ const whyChoose = [
   { title: "Dedicated Agency Support", desc: "Direct access to digital strategy experts and fast turnaround times.", image: "/about-agency.png" },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a,
+    },
+  })),
+};
+
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -144,6 +157,10 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ====== MODERN HERO SLIDER (Original Template Style) ====== */}
       <section className="hero-modern">
         <div className="hero-modern-bg">
@@ -151,7 +168,7 @@ export default function HomePage() {
             <img
               key={index}
               src={slide}
-              alt={`Slide ${index + 1}`}
+              alt={`FutureX Digital Marketing Agency Slide ${index + 1}`}
               style={{
                 position: 'absolute',
                 top: 0,
@@ -168,10 +185,10 @@ export default function HomePage() {
               <FaRocket /> Premier Digital Marketing Agency
             </div>
             <h1 className="hero-title-modern">
-              Scale Your Business With <span>Future-Ready Digital Marketing</span>
+              <strong>Digital Marketing Company in Udaipur</strong> | Scale Your Business With Future-Ready Growth
             </h1>
             <p className="hero-subtitle-modern">
-              Your trusted growth partner for high-ranking SEO, custom web development, precision PPC campaigns, and AI lead automation in Udaipur since 2020.
+              Your trusted growth partner for <strong>SEO services in Udaipur</strong>, website development, Meta &amp; Google Ads, and AI lead automation since 2020.
             </p>
             <div className="hero-actions-modern">
               <Link href="/services" className="btn btn-primary">
@@ -243,7 +260,7 @@ export default function HomePage() {
       {/* ====== MODERN ABOUT US (Original Template Style) ====== */}
       <section className="about-modern-section">
         <div className="container" style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h2 className="section-title">About Us</h2>
+          <h2 className="section-title" id="about-us">About Us</h2>
           <div style={{ width: '60px', height: '3px', background: 'var(--teal)', margin: '0 auto' }}></div>
         </div>
 
@@ -348,7 +365,7 @@ export default function HomePage() {
             <div className="services-v2-header">
               <div className="services-v2-title-area">
                 <span className="section-label-v2">OUR SERVICES</span>
-                <h2 className="section-title-v2">Our Excellent Solutions</h2>
+                <h2 className="section-title-v2" id="our-services">Our Excellent Solutions</h2>
               </div>
               <div className="services-v2-nav">
                 <button
@@ -421,7 +438,7 @@ export default function HomePage() {
             <div className="mv-grid-creative">
               <div className="mv-text-content">
                 <span className="mv-badge">Strategic Path</span>
-                <h2 className="mv-main-title">
+                <h2 className="mv-main-title" id="core-purpose">
                   Defining Our <span>Core Purpose</span>
                 </h2>
                 <p className="mv-main-desc">
@@ -469,7 +486,7 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span className="section-label">Our Principles</span>
-              <h2 className="section-title">Core Values</h2>
+              <h2 className="section-title" id="core-values">Core Values</h2>
               <p className="section-subtitle" style={{ margin: "0 auto" }}>
                 The principles that guide everything we do at FutureX Digital Marketing.
               </p>
@@ -503,7 +520,7 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <span className="section-label">Our Advantages</span>
-              <h2 className="section-title">Why Choose Us</h2>
+              <h2 className="section-title" id="why-choose-us">Why Choose Us</h2>
               <p className="section-subtitle" style={{ margin: "0 auto" }}>
                 Discover what sets FutureX Digital Marketing apart from generic agencies.
               </p>
@@ -537,7 +554,7 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div style={{ textAlign: "center", marginBottom: 60 }}>
               <span className="mv-badge">What People Say</span>
-              <h2 className="mv-main-title">Customer <span>Reviews</span></h2>
+              <h2 className="mv-main-title" id="customer-reviews">Customer <span>Reviews</span></h2>
               <p className="mv-main-desc" style={{ margin: "0 auto", maxWidth: 600 }}>
                 Hear from satisfied business owners and marketing leaders who trust FutureX for their digital growth.
               </p>
@@ -586,7 +603,7 @@ export default function HomePage() {
             <div className="faq-content-v3">
               <AnimateOnScroll>
                 <span className="faq-badge-v3">F. A. Q</span>
-                <h2 className="faq-title-v3">Frequently Asked Questions</h2>
+                <h2 className="faq-title-v3" id="faq">Frequently Asked Questions</h2>
                 <p className="faq-desc-v3">
                   Find answers to common questions about our SEO campaigns, Next.js web applications,
                   performance advertising, and AI lead automation solutions in Udaipur.

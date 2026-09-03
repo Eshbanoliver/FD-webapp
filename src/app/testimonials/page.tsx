@@ -47,20 +47,43 @@ const reviews = [
     }
 ];
 
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://futurexdigitalmarketing.com"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Testimonials",
+            "item": "https://futurexdigitalmarketing.com/testimonials"
+        }
+    ]
+};
+
 export default function TestimonialsPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             {/* Page Header */}
             <section className="page-header">
                 <div className="container">
-                    <div className="breadcrumb">
+                    <nav aria-label="breadcrumb" className="breadcrumb">
                         <Link href="/">
                             <FaHome />
                         </Link>
-                        <FaChevronRight />
+                        <FaChevronRight aria-hidden="true" />
                         <span>Client Reviews</span>
-                    </div>
-                    <h1>Client Reviews &amp; Testimonials</h1>
+                    </nav>
+                    <h1>Client Reviews &amp; Growth Testimonials</h1>
                     <p>
                         See what business owners and marketing executives say about working with FutureX Digital Marketing.
                     </p>
