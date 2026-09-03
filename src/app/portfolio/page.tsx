@@ -67,7 +67,7 @@ export default function PortfolioPage() {
             {/* Case Studies Grid */}
             <section className="section bg-light">
                 <div className="container">
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "30px" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
                         {caseStudies.map((item, idx) => (
                             <div key={idx} className="glass-card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                                 <div style={{ height: "240px", overflow: "hidden", position: "relative" }}>

@@ -67,7 +67,7 @@ export default function BlogPage() {
             {/* Articles Grid */}
             <section className="section bg-light">
                 <div className="container">
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "30px" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
                         {blogPosts.map((post, idx) => (
                             <article key={idx} className="glass-card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                                 <div style={{ height: "220px", overflow: "hidden" }}>

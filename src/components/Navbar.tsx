@@ -164,11 +164,11 @@ export default function Navbar() {
                                 </a>
                                 <div className={`mobile-mega-menu ${mobileMegaOpen ? "open" : ""}`}>
                                     {serviceCategories.map(cat => (
-                                        <Link key={cat.slug} href={`/services/${cat.slug}`} className="mobile-mega-item">
+                                        <Link key={cat.slug} href={`/services/${cat.slug}`} className="mobile-mega-item" onClick={() => setMobileOpen(false)}>
                                             {cat.title}
                                         </Link>
                                     ))}
-                                    <Link href="/services" className="mobile-mega-item view-all">
+                                    <Link href="/services" className="mobile-mega-item view-all" onClick={() => setMobileOpen(false)}>
                                         View All Services &rarr;
                                     </Link>
                                 </div>
@@ -177,6 +177,7 @@ export default function Navbar() {
                             <Link
                                 href={link.href}
                                 className={`mobile-nav-link ${pathname === link.href ? "active" : ""}`}
+                                onClick={() => setMobileOpen(false)}
                             >
                                 {link.label}
                             </Link>
