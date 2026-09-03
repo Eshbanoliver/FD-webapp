@@ -49,12 +49,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             "FutureX Digital Marketing"
         ],
         alternates: {
-            canonical: `https://futurexdigitalmarketing.com/blog/${post.slug}`,
+            canonical: `https://futurexdigital.in/blog/${post.slug}`,
         },
         openGraph: {
             title: post.title,
             description: post.excerpt,
-            url: `https://futurexdigitalmarketing.com/blog/${post.slug}`,
+            url: `https://futurexdigital.in/blog/${post.slug}`,
             type: "article",
             publishedTime: "2026-09-01T10:00:00+05:30",
             modifiedTime: "2026-09-03T10:00:00+05:30",
@@ -99,19 +99,19 @@ export default async function BlogPostPage({ params }: Props) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://futurexdigitalmarketing.com"
+                "item": "https://futurexdigital.in"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Blog",
-                "item": "https://futurexdigitalmarketing.com/blog"
+                "item": "https://futurexdigital.in/blog"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": post.title,
-                "item": `https://futurexdigitalmarketing.com/blog/${post.slug}`
+                "item": `https://futurexdigital.in/blog/${post.slug}`
             }
         ]
     };
@@ -121,26 +121,26 @@ export default async function BlogPostPage({ params }: Props) {
         "@type": "Article",
         "headline": post.title,
         "description": post.excerpt,
-        "image": `https://futurexdigitalmarketing.com${post.image}`,
+        "image": `https://futurexdigital.in${post.image}`,
         "author": {
             "@type": "Person",
             "name": post.author.name,
             "jobTitle": post.author.role,
-            "url": "https://futurexdigitalmarketing.com/about"
+            "url": "https://futurexdigital.in/about"
         },
         "publisher": {
             "@type": "Organization",
             "name": "FutureX Digital Marketing",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://futurexdigitalmarketing.com/logo.png"
+                "url": "https://futurexdigital.in/logo.png"
             }
         },
         "datePublished": "2026-09-01T10:00:00+05:30",
         "dateModified": "2026-09-03T10:00:00+05:30",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://futurexdigitalmarketing.com/blog/${post.slug}`
+            "@id": `https://futurexdigital.in/blog/${post.slug}`
         },
         "keywords": post.targetKeyword
     };

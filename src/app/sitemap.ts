@@ -2,8 +2,10 @@ import { MetadataRoute } from 'next';
 import { serviceCategories } from './data/services';
 import { blogPosts } from './data/blogs';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://futurexdigitalmarketing.com';
+    const baseUrl = 'https://futurexdigital.in';
 
     const servicesUrls = serviceCategories.map((category) => ({
         url: `${baseUrl}/services/${category.slug}`,

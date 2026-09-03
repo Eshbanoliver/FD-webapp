@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://futurexdigitalmarketing.com',
+    canonical: 'https://futurexdigital.in',
   },
   icons: {
     icon: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital Marketing Company in Udaipur | FutureX Digital Marketing",
     description: "Scale your revenue with Udaipur's premier digital marketing agency. SEO services, website development, Meta & Google Ads, and lead automation.",
-    url: "https://futurexdigitalmarketing.com",
+    url: "https://futurexdigital.in",
     siteName: "FutureX Digital Marketing",
     images: [
       {
@@ -87,10 +87,10 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://futurexdigitalmarketing.com/#organization",
+    "@id": "https://futurexdigital.in/#organization",
     "name": "FutureX Digital Marketing",
-    "image": "https://futurexdigitalmarketing.com/logo.png",
-    "url": "https://futurexdigitalmarketing.com",
+    "image": "https://futurexdigital.in/logo.png",
+    "url": "https://futurexdigital.in",
     "telephone": "+917733977227",
     "email": "futurexdigitalmarketing@gmail.com",
     "address": {

@@ -1,7 +1,6 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import { serviceCategories } from "../../data/services";
 import PremiumCTA from "@/components/PremiumCTA";
 import {
@@ -15,20 +14,52 @@ import {
     FaCheckCircle,
 } from "react-icons/fa";
 
-export default function ServiceCategoryPage() {
-    const params = useParams();
-    const slug = params.slug as string;
+interface Props {
+    params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+    return serviceCategories.map((cat) => ({
+        slug: cat.slug,
+    }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params;
     const category = serviceCategories.find((c) => c.slug === slug);
 
     if (!category) {
-        return (
-            <div style={{ padding: "200px 0", textAlign: "center" }}>
-                <h1 style={{ fontSize: "2rem", marginBottom: 20 }}>Service Not Found</h1>
-                <Link href="/services" className="btn btn-primary">
-                    Back to Services <FaArrowRight />
-                </Link>
-            </div>
-        );
+        return {
+            title: "Service Not Found | FutureX Digital Marketing",
+        };
+    }
+
+    return {
+        title: `${category.title} Services in Udaipur | FutureX Digital Marketing`,
+        description: category.shortDesc,
+        keywords: [
+            category.title,
+            "digital marketing services in udaipur",
+            "FutureX Digital Marketing"
+        ],
+        alternates: {
+            canonical: `https://futurexdigital.in/services/${category.slug}`,
+        },
+        openGraph: {
+            title: `${category.title} Services in Udaipur`,
+            description: category.shortDesc,
+            url: `https://futurexdigital.in/services/${category.slug}`,
+            images: [{ url: category.image }],
+        },
+    };
+}
+
+export default async function ServiceCategoryPage({ params }: Props) {
+    const { slug } = await params;
+    const category = serviceCategories.find((c) => c.slug === slug);
+
+    if (!category) {
+        notFound();
     }
 
     const breadcrumbJsonLd = {
@@ -39,19 +70,19 @@ export default function ServiceCategoryPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://futurexdigitalmarketing.com"
+                "item": "https://futurexdigital.in"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://futurexdigitalmarketing.com/services"
+                "item": "https://futurexdigital.in/services"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": category.title,
-                "item": `https://futurexdigitalmarketing.com/services/${category.slug}`
+                "item": `https://futurexdigital.in/services/${category.slug}`
             }
         ]
     };

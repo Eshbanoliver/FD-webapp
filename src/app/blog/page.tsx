@@ -17,12 +17,12 @@ export const metadata: Metadata = {
         "Digital Marketing Blog Udaipur"
     ],
     alternates: {
-        canonical: "https://futurexdigitalmarketing.com/blog",
+        canonical: "https://futurexdigital.in/blog",
     },
     openGraph: {
         title: "Digital Marketing & Tech Blog | FutureX Agency Udaipur",
         description: "High-authority growth guides on Local SEO, Next.js web development, IT solutions, and custom software in Udaipur.",
-        url: "https://futurexdigitalmarketing.com/blog",
+        url: "https://futurexdigital.in/blog",
         type: "website",
         images: [{ url: "/hero-1.png", width: 1200, height: 630, alt: "FutureX Digital Marketing & Tech Blog" }]
     },
@@ -42,13 +42,13 @@ const breadcrumbJsonLd = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://futurexdigitalmarketing.com"
+            "item": "https://futurexdigital.in"
         },
         {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://futurexdigitalmarketing.com/blog"
+            "item": "https://futurexdigital.in/blog"
         }
     ]
 };
@@ -58,7 +58,7 @@ const articlesJsonLd = blogPosts.map(post => ({
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
-    "image": `https://futurexdigitalmarketing.com${post.image}`,
+    "image": `https://futurexdigital.in${post.image}`,
     "author": {
         "@type": "Person",
         "name": post.author.name,
@@ -69,14 +69,14 @@ const articlesJsonLd = blogPosts.map(post => ({
         "name": "FutureX Digital Marketing",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://futurexdigitalmarketing.com/logo.png"
+            "url": "https://futurexdigital.in/logo.png"
         }
     },
     "datePublished": "2026-09-01T10:00:00+05:30",
     "dateModified": "2026-09-03T10:00:00+05:30",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://futurexdigitalmarketing.com/blog/${post.slug}`
+        "@id": `https://futurexdigital.in/blog/${post.slug}`
     },
     "keywords": post.targetKeyword
 }));
