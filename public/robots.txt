@@ -1,0 +1,8 @@
+# Robots.txt for FutureX Digital Marketing
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://futurexdigitalmarketing.com/sitemap.xml
