@@ -7,6 +7,9 @@ import {
     FaArrowRight,
     FaHome,
     FaChevronRight,
+    FaCheckCircle,
+    FaLayerGroup,
+    FaRocket,
 } from "react-icons/fa";
 
 const breadcrumbJsonLd = {
@@ -69,13 +72,49 @@ export default function ServicesPage() {
                             <div key={i} className="service-v2-card">
                                 <div className="s-v2-image">
                                     <img src={cat.image} alt={`FutureX Digital Marketing ${cat.title} Service`} width={400} height={260} loading="lazy" />
+                                    
+                                    {/* Number Badge */}
+                                    <div className="s-v2-num-tag">
+                                        {i < 9 ? `0${i + 1}` : i + 1}
+                                    </div>
+
+                                    {/* Modules Badge */}
+                                    <div className="s-v2-badge">
+                                        <FaLayerGroup /> {cat.products?.length || 0} Modules
+                                    </div>
+
+                                    {/* Overlapping Floating Icon */}
+                                    <div className="s-v2-floating-icon">
+                                        <FaRocket />
+                                    </div>
                                 </div>
+
                                 <div className="s-v2-content">
                                     <h3>{cat.title}</h3>
                                     <p>{cat.shortDesc}</p>
-                                    <Link href={`/services/${cat.slug}`} className="s-v2-btn">
-                                        Discover More <FaArrowRight />
-                                    </Link>
+
+                                    {/* Structured Highlights Box */}
+                                    {cat.products && cat.products.length > 0 && (
+                                        <div className="s-v2-highlights-box">
+                                            <div className="s-v2-highlights-title">Key Modules Included:</div>
+                                            <div className="s-v2-highlights-list">
+                                                {cat.products.slice(0, 3).map((prod, pIdx) => (
+                                                    <div key={pIdx} className="s-v2-pill">
+                                                        <div className="s-v2-check-circle">
+                                                            <FaCheckCircle />
+                                                        </div>
+                                                        <span>{prod.name}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    <div className="s-v2-footer">
+                                        <Link href={`/services/${cat.slug}`} className="s-v2-btn">
+                                            <span>Explore Solutions &amp; Pricing</span> <FaArrowRight />
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         ))}
