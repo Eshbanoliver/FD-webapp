@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://futurexdigitalmarketing.com'),
+  metadataBase: new URL('https://futurexdigital.in'),
   title: {
     default: "Digital Marketing Company in Udaipur | FutureX Digital Marketing",
     template: "%s | FutureX Digital Marketing"

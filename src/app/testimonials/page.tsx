@@ -55,13 +55,13 @@ const breadcrumbJsonLd = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://futurexdigitalmarketing.com"
+            "item": "https://futurexdigital.in"
         },
         {
             "@type": "ListItem",
             "position": 2,
             "name": "Testimonials",
-            "item": "https://futurexdigitalmarketing.com/testimonials"
+            "item": "https://futurexdigital.in/testimonials"
         }
     ]
 };

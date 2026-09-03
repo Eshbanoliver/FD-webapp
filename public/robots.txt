@@ -5,4 +5,4 @@ Disallow: /private/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://futurexdigitalmarketing.com/sitemap.xml
+Sitemap: https://futurexdigital.in/sitemap.xml

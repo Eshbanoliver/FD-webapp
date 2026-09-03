@@ -141,7 +141,7 @@ export default function BlogPage() {
                                         </Link>
                                         <div style={{ display: "flex", gap: "12px" }}>
                                             <a
-                                                href={`https://wa.me/?text=${encodeURIComponent(post.title + " - https://futurexdigitalmarketing.com/blog/" + post.slug)}`}
+                                                href={`https://wa.me/?text=${encodeURIComponent(post.title + " - https://futurexdigital.in/blog/" + post.slug)}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Share on WhatsApp"
@@ -150,7 +150,7 @@ export default function BlogPage() {
                                                 <FaWhatsapp />
                                             </a>
                                             <a
-                                                href={`https://futurexdigitalmarketing.com/blog/${post.slug}`}
+                                                href={`https://futurexdigital.in/blog/${post.slug}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Share article"

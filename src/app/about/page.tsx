@@ -32,12 +32,12 @@ export const metadata: Metadata = {
         "IT Company in udaipur"
     ],
     alternates: {
-        canonical: "https://futurexdigitalmarketing.com/about",
+        canonical: "https://futurexdigital.in/about",
     },
     openGraph: {
         title: "About FutureX Digital Marketing Agency Udaipur",
         description: "Founded by Akshay Jain in 2020. 5+ years of digital marketing, SEO, web development & ad campaign success in Udaipur.",
-        url: "https://futurexdigitalmarketing.com/about",
+        url: "https://futurexdigital.in/about",
         type: "website",
         images: [{ url: "/about-agency.png", width: 1200, height: 630, alt: "FutureX Agency Studio Udaipur" }]
     },
@@ -55,11 +55,11 @@ const personJsonLd = {
     "name": "Akshay Jain",
     "jobTitle": "Founder & Managing Director",
     "description": "Founder of FutureX Digital Marketing in Udaipur specializing in SEO, web development, and performance advertising.",
-    "url": "https://futurexdigitalmarketing.com/about",
+    "url": "https://futurexdigital.in/about",
     "worksFor": {
         "@type": "Organization",
         "name": "FutureX Digital Marketing",
-        "url": "https://futurexdigitalmarketing.com"
+        "url": "https://futurexdigital.in"
     },
     "address": {
         "@type": "PostalAddress",
@@ -77,13 +77,13 @@ const breadcrumbJsonLd = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://futurexdigitalmarketing.com"
+            "item": "https://futurexdigital.in"
         },
         {
             "@type": "ListItem",
             "position": 2,
             "name": "About Us",
-            "item": "https://futurexdigitalmarketing.com/about"
+            "item": "https://futurexdigital.in/about"
         }
     ]
 };

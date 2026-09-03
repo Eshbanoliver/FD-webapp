@@ -14,12 +14,12 @@ export const metadata: Metadata = {
         "FutureX Success Stories"
     ],
     alternates: {
-        canonical: "https://futurexdigitalmarketing.com/portfolio",
+        canonical: "https://futurexdigital.in/portfolio",
     },
     openGraph: {
         title: "Portfolio & Case Studies | FutureX Digital Marketing Udaipur",
         description: "Explore real growth case studies, website designs, and SEO wins in Udaipur.",
-        url: "https://futurexdigitalmarketing.com/portfolio",
+        url: "https://futurexdigital.in/portfolio",
         type: "website",
         images: [{ url: "/portfolio-2.png", width: 1200, height: 630, alt: "FutureX Case Studies" }]
     },
@@ -74,13 +74,13 @@ const breadcrumbJsonLd = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://futurexdigitalmarketing.com"
+            "item": "https://futurexdigital.in"
         },
         {
             "@type": "ListItem",
             "position": 2,
             "name": "Portfolio",
-            "item": "https://futurexdigitalmarketing.com/portfolio"
+            "item": "https://futurexdigital.in/portfolio"
         }
     ]
 };
