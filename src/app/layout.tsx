@@ -25,9 +25,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Akshay Jain" }],
   icons: {
-    icon: "/icon.png",
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/logo.png" },
+      { url: "/icon.png", type: "image/png" }
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     title: "FutureX Digital Marketing - Leading Digital Marketing Agency in Udaipur",
